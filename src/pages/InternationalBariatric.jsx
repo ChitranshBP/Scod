@@ -197,7 +197,7 @@ const InternationalBariatric = () => {
             
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-                <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="Africa Focus" className="w-full h-[500px] object-cover" />
+                <img src="assets/scod/africa/african-1.webp" alt="Africa Focus" className="w-full h-[500px] object-cover" />
               </div>
             </motion.div>
           </div>
@@ -298,7 +298,7 @@ const InternationalBariatric = () => {
       <section className="py-20 bg-gray-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-end mb-10">
-            <h2 className="text-4xl font-bold">International <span className="text-blue-400">Smiles</span></h2>
+            <h2 className="text-4xl text-white font-bold">International <span className="text-blue-400">Smiles</span></h2>
             <div className="flex gap-3">
               <button onClick={() => handlePrev(galleryIndex, setGalleryIndex, galleryImages.length)} className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><SafeIcon icon={FiChevronLeft} className="w-6 h-6" /></button>
               <button onClick={() => handleNext(galleryIndex, setGalleryIndex, galleryImages.length)} className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><SafeIcon icon={FiChevronRight} className="w-6 h-6" /></button>
