@@ -291,7 +291,7 @@ const BariatricSurgery = () => {
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-50">
                 <img 
-                  src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" 
+                  src="https://brandingpioneers.co.in/scod/b461ecb8-4def-4ef8-a9d6-45e3326bc646.png" 
                   alt="Medical Consultation" 
                   className="w-full h-auto object-cover" 
                 />

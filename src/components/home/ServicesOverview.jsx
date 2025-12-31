@@ -38,7 +38,7 @@ const ServicesOverview = () => {
         'Fast recovery time',
         'Same-day discharge (often)'
       ],
-      image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80',
+      image: 'assets/scod/Laparoscopic Surgery.webp',
       link: '/services/laparoscopic-surgery',
       stats: { value: '100%', label: 'Precision Tech' }
     },
@@ -54,7 +54,7 @@ const ServicesOverview = () => {
         'Removal of excess skin',
         'Enhanced confidence'
       ],
-      image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80',
+      image: 'assets/scod/Body Contouring.webp',
       link: '/services/body-contouring',
       stats: { value: 'Top', label: 'Aesthetic Results' }
     }

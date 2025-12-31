@@ -253,7 +253,7 @@ const FeelGreatSystem = () => {
       <section className="py-20 bg-slate-900 text-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Integrated Patient Care</h2>
+            <h2 className="text-4xl text-white font-bold mb-4">Integrated Patient Care</h2>
             <p className="text-blue-200">How FGS fits into your surgical or non-surgical journey.</p>
           </div>
 

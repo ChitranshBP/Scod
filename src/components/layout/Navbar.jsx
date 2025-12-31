@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 
-const { 
-  FiMenu, FiX, FiChevronDown, FiPhone, FiGlobe, FiActivity, 
-  FiShield, FiFileText, FiUsers, FiAward, FiHeart, 
-  FiTrendingUp, FiPlus, FiMinus, FiUser, FiZap, FiHelpCircle
+const {
+  FiMenu, FiX, FiChevronDown, FiPhone, FiGlobe, FiActivity,
+  FiShield, FiFileText, FiUsers, FiAward, FiHeart,
+  FiTrendingUp, FiPlus, FiMinus, FiUser, FiZap, FiHelpCircle, FiPlane
 } = FiIcons;
 
 const Navbar = () => {
@@ -17,6 +17,7 @@ const Navbar = () => {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [medicalOpen, setMedicalOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [internationalOpen, setInternationalOpen] = useState(false);
   const [mobileActiveTab, setMobileActiveTab] = useState(null);
   
   const location = useLocation();
@@ -61,6 +62,7 @@ const Navbar = () => {
           setServicesOpen(false);
           setMedicalOpen(false);
           setResourcesOpen(false);
+          setInternationalOpen(false);
         }}
       >
         <div className={`mr-3 ${isActive || isHeader ? 'text-scod' : 'text-gray-400 group-hover:text-scod'}`}>
@@ -135,6 +137,23 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
+            {/* International Dropdown */}
+            <div className="relative h-full flex items-center group" onMouseEnter={() => setInternationalOpen(true)} onMouseLeave={() => setInternationalOpen(false)}>
+              <button className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/international') || location.pathname.includes('/patient-journey') ? activeColor : textColor}`}>
+                <span>International</span>
+                <SafeIcon icon={FiChevronDown} className="w-4 h-4 transition-transform group-hover:rotate-180" />
+              </button>
+              <AnimatePresence>
+                {internationalOpen && (
+                  <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border-t-4 border-scod ring-1 ring-black/5 overflow-hidden">
+                    <DesktopSubmenuItem to="/international-patients" icon={FiGlobe} label="Overseas Patient Guide" isHeader={true} />
+                    <DesktopSubmenuItem to="/international-bariatric" icon={FiPlane} label="Bariatric Medical Travel" />
+                    <DesktopSubmenuItem to="/patient-journey" icon={FiActivity} label="International Patient Journey" />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {/* Resources Dropdown - Added FGS Here */}
             <div className="relative h-full flex items-center group" onMouseEnter={() => setResourcesOpen(true)} onMouseLeave={() => setResourcesOpen(false)}>
               <button className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/resources') || location.pathname.includes('/feel-great-system') ? activeColor : textColor}`}>
@@ -146,7 +165,6 @@ const Navbar = () => {
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border-t-4 border-scod ring-1 ring-black/5 overflow-hidden" >
                     <DesktopSubmenuItem to="/resources" icon={FiHelpCircle} label="FAQs & Guides" />
                     <DesktopSubmenuItem to="/feel-great-system" icon={FiZap} label="Feel Great System (FGS)" />
-                    <DesktopSubmenuItem to="/patient-journey" icon={FiActivity} label="Patient Journey" />
                     <DesktopSubmenuItem to="/testimonials" icon={FiUsers} label="Success Stories" />
                   </motion.div>
                 )}
@@ -174,7 +192,23 @@ const Navbar = () => {
             <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 rounded-b-2xl overflow-hidden max-h-[85vh] overflow-y-auto" >
               <div className="px-4 py-6 space-y-2">
                 <Link to="/" className={`block font-bold text-lg px-2 py-2 rounded-lg ${location.pathname === '/' ? 'text-scod bg-blue-50' : 'text-gray-700'}`}>Home</Link>
-                
+
+                <div className="border-b border-gray-100 pb-2">
+                  <button onClick={() => toggleMobileTab('international')} className="flex items-center justify-between w-full px-2 py-3 text-left">
+                    <span className="font-bold text-lg text-gray-700">International</span>
+                    <SafeIcon icon={mobileActiveTab === 'international' ? FiMinus : FiPlus} className="w-5 h-5" />
+                  </button>
+                  <AnimatePresence>
+                    {mobileActiveTab === 'international' && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
+                        <Link to="/international-patients" className="block px-3 py-3 text-gray-600 font-medium">Overseas Patient Guide</Link>
+                        <Link to="/international-bariatric" className="block px-3 py-3 text-gray-600 font-medium">Bariatric Medical Travel</Link>
+                        <Link to="/patient-journey" className="block px-3 py-3 text-gray-600 font-medium">International Patient Journey</Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
                 <div className="border-b border-gray-100 pb-2">
                   <button onClick={() => toggleMobileTab('resources')} className="flex items-center justify-between w-full px-2 py-3 text-left">
                     <span className="font-bold text-lg text-gray-700">Resources</span>
@@ -183,9 +217,9 @@ const Navbar = () => {
                   <AnimatePresence>
                     {mobileActiveTab === 'resources' && (
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
-                        <Link to="/resources" className="block px-3 py-3 text-gray-600 font-medium">FAQs</Link>
-                        <Link to="/feel-great-system" className="block px-3 py-3 text-scod font-bold">Feel Great System</Link>
-                        <Link to="/patient-journey" className="block px-3 py-3 text-gray-600 font-medium">Patient Journey</Link>
+                        <Link to="/resources" className="block px-3 py-3 text-gray-600 font-medium">FAQs & Guides</Link>
+                        <Link to="/feel-great-system" className="block px-3 py-3 text-gray-600 font-medium">Feel Great System</Link>
+                        <Link to="/testimonials" className="block px-3 py-3 text-gray-600 font-medium">Success Stories</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>

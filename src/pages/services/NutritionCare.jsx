@@ -239,17 +239,17 @@ const NutritionCare = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             <div className="p-6">
               <SafeIcon icon={FiBarChart2} className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Biometric Tracking</h3>
+              <h3 className="text-xl text-white font-bold mb-2">Biometric Tracking</h3>
               <p className="text-blue-200">Regular BMI and body composition analysis to track fat mass vs. muscle mass.</p>
             </div>
             <div className="p-6 border-l border-r border-gray-700">
               <SafeIcon icon={FiSearch} className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Lab Monitoring</h3>
+              <h3 className="text-xl text-white font-bold mb-2">Lab Monitoring</h3>
               <p className="text-blue-200">Checking for vitamin deficiencies (Iron, B12, D3) which can affect metabolism and energy.</p>
             </div>
             <div className="p-6">
               <SafeIcon icon={FiUsers} className="w-12 h-12 text-emerald-400 mx-auto mb-4" />
-              <h3 className="text-xl font-bold mb-2">Support Groups</h3>
+              <h3 className="text-xl text-white font-bold mb-2">Support Groups</h3>
               <p className="text-blue-200">Connect with others who have navigated regain. Peer support is a proven factor in long-term success.</p>
             </div>
           </div>
