@@ -97,7 +97,7 @@ const BodyContouring = () => {
       indications: "Hanging abdominal skin (pannus), separated muscles (diastasis recti), and rashes/infections in skin folds.",
       benefits: "Improved posture, relief from back pain, better fitting clothes, and elimination of skin irritation.",
       recovery: "2-4 weeks off work. Strict avoidance of heavy lifting for 6 weeks. Compression garment worn for 6-8 weeks.",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/body contouring/Abdominoplasty (Tummy Tuck).webp"
     },
     breast: {
       title: "Breast Procedures",
@@ -106,7 +106,7 @@ const BodyContouring = () => {
       indications: "Ptosis (sagging) due to weight loss, loss of breast volume, or asymmetry.",
       benefits: "Restored feminine contour, improved breast shape and projection, and youthful appearance.",
       recovery: "1-2 weeks off work. Avoid upper body exercise for 4-6 weeks.",
-      image: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/body contouring/Breast Procedures.webp"
     },
     limbs: {
       title: "Arm & Thigh Lifts",
@@ -115,7 +115,7 @@ const BodyContouring = () => {
       indications: "'Bat wings' on arms or rubbing/chaffing of inner thighs causing difficulty in walking.",
       benefits: "Toned appearance, ability to wear sleeveless tops, and improved comfort during movement.",
       recovery: "2-3 weeks. Compression garments are essential to minimize swelling.",
-      image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/body contouring/Arm & Thigh Lifts.webp"
     },
     lipo: {
       title: "Liposuction Adjunct",
@@ -124,7 +124,7 @@ const BodyContouring = () => {
       indications: "Localized fat pockets that persist despite weight loss, often in the flanks, hips, or knees.",
       benefits: "Smoother contours and better definition when combined with lifting procedures.",
       recovery: "Varies, but usually shorter than excisional surgery. 3-5 days for small areas.",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/body contouring/Liposuction Adjunct.webp"
     }
   };
 
@@ -305,17 +305,17 @@ const BodyContouring = () => {
                 </div>
               </div>
             </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img 
-                  src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80" 
-                  alt="Fitness and Body Contouring" 
-                  className="w-full h-auto object-cover" 
+                <img
+                  src="/assets/scod/treatment/body contouring/Loose Skin.webp"
+                  alt="Loose Skin After Weight Loss"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </motion.div>

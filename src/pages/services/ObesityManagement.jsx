@@ -153,7 +153,7 @@ const ObesityManagement = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=800&q=80" alt="Healthy Food Plate" className="w-full h-auto object-cover" />
+                <img src="/assets/scod/treatment/medical management/Lifestyle Medicine.webp" alt="Healthy Food and Lifestyle" className="w-full h-auto object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 max-w-xs hidden md:block">
                 <p className="text-scod font-bold text-4xl mb-1">80g</p>

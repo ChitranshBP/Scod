@@ -96,7 +96,7 @@ const LaparoscopicSurgery = () => {
       indications: "Symptomatic gallstones (pain after eating), gallbladder infection (cholecystitis), or pancreatitis caused by stones.",
       benefits: "Minimal post-operative pain, cosmetic advantage (tiny scars), and many patients go home the same day.",
       recovery: "Most patients return to normal activities within 1 week. Short-term dietary adjustments (low fat) are recommended.",
-      image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/laparoscopic/gallstones.webp"
     },
     hernia: {
       title: "Laparoscopic Hernia Repair",
@@ -114,7 +114,7 @@ const LaparoscopicSurgery = () => {
       indications: "Acute Appendicitis (sudden severe pain) or occasionally for chronic recurring abdominal pain.",
       benefits: "Better visualization of the abdomen, lower risk of wound complications, and shorter hospital stay.",
       recovery: "1-2 days hospital stay. Return to school or work typically within 1-2 weeks.",
-      image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/laparoscopic/apendix.webp"
     },
     reflux: {
       title: "Anti-Reflux Surgery",
@@ -123,7 +123,7 @@ const LaparoscopicSurgery = () => {
       indications: "Severe GERD not responding to medication, presence of Hiatal Hernia, or desire to stop long-term medication.",
       benefits: "Long-term relief from heartburn and regurgitation. Most patients can stop taking acid suppression medication.",
       recovery: "Soft diet is required for 2-4 weeks post-surgery. Full recovery and return to normal diet by 6 weeks.",
-      image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/laparoscopic/Anti-Reflux.webp"
     }
   };
 
@@ -299,17 +299,17 @@ const LaparoscopicSurgery = () => {
                 </div>
               </div>
             </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="relative"
             >
               <div className="rounded-2xl overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img 
-                  src="https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80" 
-                  alt="Laparoscopic Instruments" 
-                  className="w-full h-auto object-cover" 
+                <img
+                  src="/assets/scod/Laparoscopic Surgery.webp"
+                  alt="Laparoscopic Surgery"
+                  className="w-full h-auto object-cover"
                 />
               </div>
             </motion.div>

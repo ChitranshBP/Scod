@@ -106,12 +106,12 @@ const BariatricSurgery = () => {
   ];
 
   const indications = [
-    { title: "Obesity Class II & III", desc: "BMI ≥35 with comorbidities or BMI ≥40 regardless of health status.", image: "https://images.unsplash.com/photo-1573883431205-98b5f10aaedb?auto=format&fit=crop&w=600&q=80" },
-    { title: "Type 2 Diabetes", desc: "Uncontrolled blood sugar despite medication, targeting remission.", image: "https://images.unsplash.com/photo-1628771065518-0d82f1938462?auto=format&fit=crop&w=600&q=80" },
+    { title: "Obesity Class II & III", desc: "BMI ≥35 with comorbidities or BMI ≥40 regardless of health status.", image: "/assets/scod/treatment/Obesity Class II & III.webp" },
+    { title: "Type 2 Diabetes", desc: "Uncontrolled blood sugar despite medication, targeting remission.", image: "/assets/scod/treatment/Type 2 Diabetes.webp" },
     { title: "PCOD / PCOS", desc: "Hormonal imbalances and infertility issues related to excess weight.", image: "https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=600&q=80" },
     { title: "Sleep Apnea", desc: "Obstructive sleep apnea requiring CPAP or causing severe fatigue.", image: "https://images.unsplash.com/photo-1520206183501-b80df61043c2?auto=format&fit=crop&w=600&q=80" },
     { title: "Hypertension", desc: "High blood pressure resistant to standard medical therapy.", image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&w=600&q=80" },
-    { title: "Joint Pain", desc: "Osteoarthritis aggravated by excess weight load on joints.", image: "https://images.unsplash.com/photo-1588756565975-aa5ed97d27ef?auto=format&fit=crop&w=600&q=80" }
+    { title: "Joint Pain", desc: "Osteoarthritis aggravated by excess weight load on joints.", image: "/assets/scod/treatment/Joint Pain.webp" }
   ];
 
   const testimonialVideos = [
@@ -417,10 +417,15 @@ const BariatricSurgery = () => {
                   {/* Right Column: Visual + FAQ */}
                   <div className="flex flex-col h-full">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 h-64 mb-8 flex items-center justify-center relative group">
-                       <img 
-                        src={activeTab === 'sleeve' ? 'https://brandingpioneers.co.in/scod/b461ecb8-4def-4ef8-a9d6-45e3326bc646.png' : 'https://brandingpioneers.co.in/scod/Metabolic.webp'} 
-                        alt={procedures[activeTab].title} 
-                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500" 
+                       <img
+                        src={
+                          activeTab === 'sleeve' ? '/assets/scod/treatment/bariatric/Laparoscopic Sleeve Gastrectomy (LSG).webp' :
+                          activeTab === 'rygb' ? '/assets/scod/treatment/bariatric/Roux-en-Y Gastric Bypass (RYGB).webp' :
+                          activeTab === 'revision' ? '/assets/scod/treatment/bariatric/Revisional Bariatric Surgery.webp' :
+                          'https://brandingpioneers.co.in/scod/Metabolic.webp'
+                        }
+                        alt={procedures[activeTab].title}
+                        className="w-full h-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 right-4 bg-scod text-white text-xs font-bold px-3 py-1 rounded-full">
                         Minimally Invasive

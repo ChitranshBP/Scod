@@ -21,7 +21,8 @@ const WeightLossInjectables = () => {
         "Improved cardiovascular health",
         "Proven long-term safety"
       ],
-      color: "bg-blue-50 border-blue-200 text-blue-800"
+      color: "bg-blue-50 border-blue-200 text-blue-800",
+      image: "/assets/scod/treatment/weight loss/Semaglutide.webp"
     },
     tirzepatide: {
       name: "Tirzepatide",
@@ -34,7 +35,8 @@ const WeightLossInjectables = () => {
         "Better blood sugar control",
         "Once-weekly dosing"
       ],
-      color: "bg-emerald-50 border-emerald-200 text-emerald-800"
+      color: "bg-emerald-50 border-emerald-200 text-emerald-800",
+      image: "/assets/scod/treatment/weight loss/Tirzepatide.webp"
     },
     liraglutide: {
       name: "Liraglutide",
@@ -47,7 +49,8 @@ const WeightLossInjectables = () => {
         "Good for maintenance",
         "Well-established safety profile"
       ],
-      color: "bg-cyan-50 border-cyan-200 text-cyan-800"
+      color: "bg-cyan-50 border-cyan-200 text-cyan-800",
+      image: "/assets/scod/treatment/weight loss/Liraglutide.webp"
     }
   };
 
@@ -160,7 +163,7 @@ const WeightLossInjectables = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?auto=format&fit=crop&w=800&q=80" alt="Pen Injector" className="w-full h-auto object-cover" />
+                <img src="/assets/scod/treatment/weight loss/Weight Loss.webp" alt="Weight Loss Injectables" className="w-full h-auto object-cover" />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-gray-100 max-w-xs hidden md:block">
                 <p className="text-scod font-bold text-4xl mb-1">20%</p>
@@ -227,12 +230,17 @@ const WeightLossInjectables = () => {
                     ))}
                   </ul>
                 </div>
-                
-                <div className="flex items-center justify-center bg-gray-50 rounded-2xl p-8">
+
+
+                <div className="flex flex-col items-center justify-center bg-gray-50 rounded-2xl p-8">
+                  <div className="w-full h-48 mb-6 rounded-xl overflow-hidden">
+                    <img
+                      src={drugs[activeDrug].image}
+                      alt={drugs[activeDrug].name}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="text-center">
-                    <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-md mx-auto mb-6 text-scod">
-                      <SafeIcon icon={FiDroplet} className="w-10 h-10" />
-                    </div>
                     <h4 className="text-xl font-bold text-gray-900 mb-2">Prescription Only</h4>
                     <p className="text-gray-500 text-sm max-w-xs mx-auto">
                       These medications must be prescribed by a specialist after a full metabolic evaluation to ensure safety and efficacy.
