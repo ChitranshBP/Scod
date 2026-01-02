@@ -58,38 +58,38 @@ const InternationalPatients = () => {
   ];
 
   const patientCollage = [
-    "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80",
-    "https://brandingpioneers.co.in/scod/patient2-scod.webp",
-    "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80",
-    "https://brandingpioneers.co.in/scod/patient4-scod.webp",
-    "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80",
-    "https://brandingpioneers.co.in/scod/patient1-scod.webp"
+    "/assets/scod/africa/african-weightloss.png",
+    "/assets/scod/africa/tanzanean-weightloss.png",
+    "/assets/scod/africa/african-weightloss-3.png",
+    "/assets/scod/africa/african-weightloss.png",
+    "/assets/scod/africa/tanzanean-weightloss.png",
+    "/assets/scod/africa/african-weightloss-3.png"
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION - Standardized */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/International Patient Guide.webp" 
-            alt="International Medical Travel" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/International Patient Guide.webp"
+            alt="International Medical Travel"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Consistent SCOD Blue Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -104,15 +104,15 @@ const InternationalPatients = () => {
               Seamless medical travel to India. We combine surgical excellence with compassionate hospitality to make your healing journey comfortable and successful.
             </p>
             <div className="flex flex-col sm:flex-row gap-5 items-start">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiPlane} className="w-5 h-5" />
                 <span>Get a Quote</span>
               </Link>
-              <a 
-                href="mailto:international@scodmedical.com" 
+              <a
+                href="mailto:international@scodmedical.com"
                 className="bg-transparent border-2 border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiMessageCircle} className="w-5 h-5" />
@@ -133,14 +133,14 @@ const InternationalPatients = () => {
               We understand the anxiety of traveling for surgery. Here is why patients from over 20 countries trust us.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {whyChooseSCOD.map((item, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true }} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-50 p-8 rounded-2xl border border-gray-100 hover:border-scod hover:shadow-xl transition-all duration-300 group text-left"
               >
@@ -172,7 +172,7 @@ const InternationalPatients = () => {
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 We have a special connection with East Africa. Dr. Arush Sabharwal regularly conducts OPDs in Dar es Salaam, making us the preferred choice for patients from Kenya, Uganda, and Tanzania.
               </p>
-              
+
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm border border-white/5">
                   <SafeIcon icon={FiCheck} className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
@@ -187,13 +187,13 @@ const InternationalPatients = () => {
                   <span>Direct flight connectivity to New Delhi</span>
                 </li>
               </ul>
-              
+
               <Link to="/contact" className="inline-flex items-center bg-emerald-500 text-white px-8 py-4 rounded-full font-bold hover:bg-emerald-600 transition-all shadow-lg">
                 <span>Check Next OPD Dates</span>
                 <SafeIcon icon={FiCalendar} className="ml-2 w-5 h-5" />
               </Link>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
                 <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="SCOD Africa Connection" className="w-full h-[500px] object-cover" />
@@ -218,14 +218,14 @@ const InternationalPatients = () => {
               No hidden costs. Our international packages are designed to cover your entire medical journey.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {packages.map((pkg, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true }} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-4 hover:shadow-md transition-shadow"
               >
@@ -252,7 +252,7 @@ const InternationalPatients = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Traveling for surgery can be daunting. Our concierge team takes care of the paperwork, stay, and communication so you can focus solely on your recovery.
               </p>
-              
+
               <div className="space-y-8">
                 {logistics.map((item, index) => (
                   <div key={index} className="flex items-start">
@@ -267,7 +267,7 @@ const InternationalPatients = () => {
                 ))}
               </div>
             </div>
-            
+
             <div className="lg:col-span-7">
               <div className="grid grid-cols-2 gap-4">
                 <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=600&q=80" alt="Luxury Hotel" className="rounded-2xl shadow-lg w-full h-64 object-cover transform translate-y-8" />
@@ -285,10 +285,10 @@ const InternationalPatients = () => {
             <span className="text-scod font-bold tracking-widest uppercase text-sm">Global Smiles</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-2">Our International Family</h2>
           </div>
-          
+
           <div className="columns-1 md:columns-3 gap-6 space-y-6">
             {patientCollage.map((src, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -314,7 +314,7 @@ const InternationalPatients = () => {
             <p className="text-xl text-blue-100 mb-8 max-w-2xl">
               Get a free treatment plan and cost estimate. Our international team will respond within 24 hours.
             </p>
-            
+
             <div className="bg-white/10 backdrop-blur-md p-8 rounded-3xl max-w-lg border border-white/20">
               <form className="space-y-4 text-left">
                 <div>
