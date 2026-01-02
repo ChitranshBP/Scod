@@ -17,7 +17,7 @@ const Footer = () => {
     { name: "Home", path: "/" },
     { name: "About SCOD Clinic", path: "/about-clinic" },
     { name: "Treatments", path: "/services" },
-    { name: "Feel Great System (FGS)", path: "/feel-great-system" },
+    { name: "Plant-Based Nutrition (FGS)", path: "/feel-great-system" },
     { name: "Patient Journey", path: "/patient-journey" },
     { name: "Resources & FAQ", path: "/resources" },
     { name: "Success Stories", path: "/testimonials" },
@@ -69,7 +69,7 @@ const Footer = () => {
               Our Locations
               <span className="absolute -bottom-2 left-0 w-8 h-1 bg-scod rounded-full"></span>
             </h3>
-            
+
             <div className="space-y-6">
               <div className="flex items-start space-x-3 group">
                 <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mt-1 shrink-0" />
@@ -82,14 +82,31 @@ const Footer = () => {
               <div className="flex flex-col space-y-2 border-t border-slate-800 pt-4">
                 <div className="flex items-center space-x-3 group">
                   <SafeIcon icon={FiPhone} className="w-5 h-5 text-scod shrink-0" />
-                  <a href="tel:+919873927874" className="text-slate-400 hover:text-white transition-colors">+91-9873927874</a>
+                  <a href="tel:+918130130489" className="text-slate-400 hover:text-white transition-colors">+91 8130130489</a>
                 </div>
                 <div className="flex items-center space-x-3 group">
                   <SafeIcon icon={FiMail} className="w-5 h-5 text-scod shrink-0" />
-                  <a href="mailto:info@scodmedical.com" className="text-slate-400 hover:text-white transition-colors">info@scodmedical.com</a>
+                  <a href="mailto:info@scodclinic.com" className="text-slate-400 hover:text-white transition-colors">info@scodclinic.com</a>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mb-16">
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3344885842643!2d77.15318687549895!3d28.58871418606939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dbe87c8c90b%3A0x7b6c7c7c7c7c7c7c!2s87%2C%20Paschimi%20Marg%2C%20Block%20D%2C%20Vasant%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110057!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="350"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="SCOD Medical Center Location"
+              className="w-full"
+            ></iframe>
           </div>
         </div>
 

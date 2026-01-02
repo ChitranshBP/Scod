@@ -103,7 +103,7 @@ const Navbar = () => {
 
             {/* Treatments Dropdown */}
             <div className="relative h-full flex items-center group" onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)}>
-              <Link to="/services" className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/services') ? activeColor : textColor}`}>
+              <Link to="/services" className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/services') || location.pathname.includes('/feel-great-system') ? activeColor : textColor}`}>
                 <span>Treatments</span>
                 <SafeIcon icon={FiChevronDown} className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </Link>
@@ -114,6 +114,7 @@ const Navbar = () => {
                     <DesktopSubmenuItem to="/services/bariatric-surgery" icon={FiTrendingUp} label="Bariatric Surgery" />
                     <DesktopSubmenuItem to="/services/laparoscopic-surgery" icon={FiActivity} label="Laparoscopic Surgery" />
                     <DesktopSubmenuItem to="/services/body-contouring" icon={FiUsers} label="Body Contouring" />
+                    <DesktopSubmenuItem to="/feel-great-system" icon={FiZap} label="Plant-Based Nutrition (FGS)" />
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -154,9 +155,9 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
 
-            {/* Resources Dropdown - Added FGS Here */}
+            {/* Resources Dropdown */}
             <div className="relative h-full flex items-center group" onMouseEnter={() => setResourcesOpen(true)} onMouseLeave={() => setResourcesOpen(false)}>
-              <button className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/resources') || location.pathname.includes('/feel-great-system') ? activeColor : textColor}`}>
+              <button className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/resources') ? activeColor : textColor}`}>
                 <span>Resources</span>
                 <SafeIcon icon={FiChevronDown} className="w-4 h-4 transition-transform group-hover:rotate-180" />
               </button>
@@ -164,7 +165,6 @@ const Navbar = () => {
                 {resourcesOpen && (
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl shadow-xl border-t-4 border-scod ring-1 ring-black/5 overflow-hidden" >
                     <DesktopSubmenuItem to="/resources" icon={FiHelpCircle} label="FAQs & Guides" />
-                    <DesktopSubmenuItem to="/feel-great-system" icon={FiZap} label="Feel Great System (FGS)" />
                     <DesktopSubmenuItem to="/testimonials" icon={FiUsers} label="Success Stories" />
                   </motion.div>
                 )}
@@ -175,7 +175,7 @@ const Navbar = () => {
           </div>
 
           <div className="hidden lg:flex items-center space-x-4">
-            <a href="tel:+919873927874" className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${isTransparent ? 'bg-white text-scod hover:bg-blue-50' : 'bg-scod text-white hover:bg-blue-700'}`}>
+            <a href="tel:+918130130489" className={`flex items-center space-x-2 px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 ${isTransparent ? 'bg-white text-scod hover:bg-blue-50' : 'bg-scod text-white hover:bg-blue-700'}`}>
               <SafeIcon icon={FiPhone} className="w-4 h-4" />
               <span className="text-sm font-bold">Call Now</span>
             </a>
@@ -210,6 +210,24 @@ const Navbar = () => {
                 </div>
 
                 <div className="border-b border-gray-100 pb-2">
+                  <button onClick={() => toggleMobileTab('treatments')} className="flex items-center justify-between w-full px-2 py-3 text-left">
+                    <span className="font-bold text-lg text-gray-700">Treatments</span>
+                    <SafeIcon icon={mobileActiveTab === 'treatments' ? FiMinus : FiPlus} className="w-5 h-5" />
+                  </button>
+                  <AnimatePresence>
+                    {mobileActiveTab === 'treatments' && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
+                        <Link to="/services/surgery-overview" className="block px-3 py-3 text-gray-600 font-medium">Surgery Overview</Link>
+                        <Link to="/services/bariatric-surgery" className="block px-3 py-3 text-gray-600 font-medium">Bariatric Surgery</Link>
+                        <Link to="/services/laparoscopic-surgery" className="block px-3 py-3 text-gray-600 font-medium">Laparoscopic Surgery</Link>
+                        <Link to="/services/body-contouring" className="block px-3 py-3 text-gray-600 font-medium">Body Contouring</Link>
+                        <Link to="/feel-great-system" className="block px-3 py-3 text-gray-600 font-medium">Plant-Based Nutrition (FGS)</Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <div className="border-b border-gray-100 pb-2">
                   <button onClick={() => toggleMobileTab('resources')} className="flex items-center justify-between w-full px-2 py-3 text-left">
                     <span className="font-bold text-lg text-gray-700">Resources</span>
                     <SafeIcon icon={mobileActiveTab === 'resources' ? FiMinus : FiPlus} className="w-5 h-5" />
@@ -218,7 +236,6 @@ const Navbar = () => {
                     {mobileActiveTab === 'resources' && (
                       <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
                         <Link to="/resources" className="block px-3 py-3 text-gray-600 font-medium">FAQs & Guides</Link>
-                        <Link to="/feel-great-system" className="block px-3 py-3 text-gray-600 font-medium">Feel Great System</Link>
                         <Link to="/testimonials" className="block px-3 py-3 text-gray-600 font-medium">Success Stories</Link>
                       </motion.div>
                     )}
@@ -228,9 +245,9 @@ const Navbar = () => {
                 <Link to="/contact" className={`block font-bold text-lg px-2 py-3 rounded-lg ${location.pathname === '/contact' ? 'text-scod' : 'text-gray-700'}`}>Contact</Link>
                 
                 <div className="pt-4">
-                  <a href="tel:+919873927874" className="flex items-center justify-center space-x-2 w-full bg-scod text-white py-4 rounded-xl font-bold shadow-lg">
+                  <a href="tel:+918130130489" className="flex items-center justify-center space-x-2 w-full bg-scod text-white py-4 rounded-xl font-bold shadow-lg">
                     <SafeIcon icon={FiPhone} className="w-5 h-5" />
-                    <span>Call +91-9873927874</span>
+                    <span>Call +91 8130130489</span>
                   </a>
                 </div>
               </div>

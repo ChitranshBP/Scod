@@ -19,16 +19,16 @@ const ContactPage = () => {
   };
 
   const contactCards = [
-    { icon: FiPhone, title: "Call Us", info: ["+91-9873927874", "+91-8130130489"], action: "Call Now", link: "tel:+919873927874", color: "bg-blue-50 text-blue-600" },
-    { icon: FiMail, title: "Email Us", info: ["info@scodmedical.com", "patients@scodmedical.com"], action: "Send Email", link: "mailto:info@scodmedical.com", color: "bg-emerald-50 text-emerald-600" },
+    { icon: FiPhone, title: "Call Us", info: ["+91 8130130489"], action: "Call Now", link: "tel:+918130130489", color: "bg-blue-50 text-blue-600" },
+    { icon: FiMail, title: "Email Us", info: ["info@scodclinic.com", "patients@scodclinic.com"], action: "Send Email", link: "mailto:info@scodclinic.com", color: "bg-emerald-50 text-emerald-600" },
     { icon: FiMapPin, title: "Headquarters", info: ["87, Paschimi Marg", "Vasant Vihar, New Delhi"], action: "Get Directions", link: "https://maps.google.com", color: "bg-indigo-50 text-indigo-600" },
     { icon: FiClock, title: "Working Hours", info: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"], action: "Book Appointment", link: "#appointment", color: "bg-orange-50 text-orange-600" }
   ];
 
   const locations = [
-    { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91-9873927874" },
-    { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91-8130130489" },
-    { city: "Noida, UP", address: "SCOD Clinic, Sector 51, Noida, Uttar Pradesh", phone: "+91-9873927874" },
+    { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91 8130130489" },
+    { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91 8130130489" },
+    { city: "Noida, UP", address: "SCOD Clinic, Sector 51, Noida, Uttar Pradesh", phone: "+91 8130130489" },
     { city: "Tanzania, Africa", address: "Dar es Salaam, Tanzania", phone: "+255 754 000 000" }
   ];
 
@@ -158,11 +158,8 @@ const ContactPage = () => {
             <h2 className="text-3xl font-bold mb-4">Medical Emergency?</h2>
             <p className="text-blue-100 mb-8 max-w-2xl"> For post-operative emergencies, please call our 24/7 helpline immediately. </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+919873927874" className="inline-flex items-center bg-white text-scod px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">
-                <SafeIcon icon={FiPhone} className="w-5 h-5 mr-2" /> Call: +91-9873927874
-              </a>
               <a href="tel:+918130130489" className="inline-flex items-center bg-white text-scod px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg">
-                <SafeIcon icon={FiPhone} className="w-5 h-5 mr-2" /> Call: +91-8130130489
+                <SafeIcon icon={FiPhone} className="w-5 h-5 mr-2" /> Call: +91 8130130489
               </a>
             </div>
           </motion.div>
