@@ -8,27 +8,27 @@ const { FiChevronLeft, FiChevronRight, FiStar } = FiIcons;
 const transformData = [
   {
     id: 1,
-    quote: "I struggled with my weight for years. The team at SCOD didn't just help me lose weight; they gave me the tools to keep it off forever. I feel like a completely new person.",
-    author: "Sarah Jenkins",
-    role: "Gastric Sleeve Patient",
+    quote: "Losing 45kg was just the beginning. The real victory was reversing my Type 2 Diabetes and regaining the energy to run with my grandchildren. Dr. Arush and his team didn't just perform a surgery; they gave me a second life.",
+    author: "Atul Kumar Singh",
+    role: "Bariatric Success Story",
     rating: 5,
     beforeImage: "https://brandingpioneers.co.in/scod/patient3-scod.webp",
     afterImage: "https://brandingpioneers.co.in/scod/patient2-scod.webp"
   },
   {
     id: 2,
-    quote: "Diabetes was controlling my life. After the metabolic surgery, my levels are normal and I'm off medication. It's truly a miracle.",
-    author: "Michael Ross",
-    role: "Metabolic Surgery",
+    quote: "I was hesitant about surgery, but the counseling at SCOD changed my perspective. Today, I am 38kg lighter and my hypertension is a thing of the past. The holistic approach—from nutrition to mental support—is what makes them the best.",
+    author: "Savita Ranga",
+    role: "Metabolic Transformation",
     rating: 5,
     beforeImage: "https://brandingpioneers.co.in/scod/patient4-scod.webp",
     afterImage: "https://brandingpioneers.co.in/scod/patient5-scod.webp"
   },
   {
     id: 3,
-    quote: "The recovery was faster than I expected, and the results have been life-changing. I can finally play with my kids without getting out of breath.",
-    author: "Emily Chen",
-    role: "Gastric Bypass",
+    quote: "The personalized care I received was unmatched. Every question was answered, and every fear was addressed. 18 months post-surgery, I have maintained my weight loss and feel stronger than I did in my 20s. Truly life-changing.",
+    author: "Anuj Gupta",
+    role: "Gastric Bypass Patient",
     rating: 5,
     beforeImage: "https://brandingpioneers.co.in/scod/patient1-scod.webp",
     afterImage: "https://brandingpioneers.co.in/scod/patient3-scod.webp"

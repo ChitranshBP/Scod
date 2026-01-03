@@ -36,21 +36,21 @@ const SurgeryOverview = () => {
       desc: "Procedures like Sleeve Gastrectomy and Gastric Bypass to restrict food intake and reduce hunger.",
       link: "/services/bariatric-surgery",
       color: "bg-blue-50 text-blue-700 hover:text-blue-800",
-      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/treatment/bariatric/Laparoscopic Sleeve Gastrectomy (LSG).webp"
     },
     {
       title: "Laparoscopic Surgery",
       desc: "Minimally invasive solutions for gallstones, hernias, and other abdominal conditions.",
       link: "/services/laparoscopic-surgery",
       color: "bg-indigo-50 text-indigo-700 hover:text-indigo-800",
-      image: "https://images.unsplash.com/photo-1579154204601-01588f351e67?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/Laparoscopic Surgery.webp"
     },
     {
       title: "Body Contouring",
       desc: "Reconstructive procedures to remove excess skin and restore body shape after weight loss.",
       link: "/services/body-contouring",
       color: "bg-purple-50 text-purple-700 hover:text-purple-800",
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80"
+      image: "/assets/scod/Body Contouring.webp"
     }
   ];
 
@@ -78,27 +78,27 @@ const SurgeryOverview = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Surgical Solutions.webp" 
-            alt="Surgical Solutions" 
-            className="w-full h-full object-cover object-center" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Surgical Solutions.webp"
+            alt="Surgical Solutions"
+            className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -121,10 +121,10 @@ const SurgeryOverview = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-5">
-              <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" 
-                alt="Doctor Consultation" 
-                className="rounded-2xl shadow-lg w-full h-[500px] object-cover" 
+              <img
+                src="/assets/scod/expertise/doctor-consultation.png"
+                alt="Doctor Consultation"
+                className="rounded-2xl shadow-lg w-full h-[500px] object-cover"
               />
             </div>
             <div className="lg:col-span-7">
@@ -134,7 +134,7 @@ const SurgeryOverview = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Surgery is a major medical decision. It is recommended when other methods haven't provided the necessary results or when specific medical conditions require intervention.
               </p>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                   <h4 className="font-bold text-xl text-gray-900 mb-3 flex items-center">
@@ -147,7 +147,7 @@ const SurgeryOverview = () => {
                     <li>• Previous unsuccessful treatments</li>
                   </ul>
                 </div>
-                
+
                 <div className="bg-gray-50 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
                   <h4 className="font-bold text-xl text-gray-900 mb-3 flex items-center">
                     <SafeIcon icon={FiHeart} className="text-scod mr-2" />
@@ -177,7 +177,7 @@ const SurgeryOverview = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {safetyFeatures.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -202,10 +202,10 @@ const SurgeryOverview = () => {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900">Our Surgical <span className="text-scod">Expertise</span></h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -213,10 +213,10 @@ const SurgeryOverview = () => {
                 className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col overflow-hidden group h-full"
               >
                 <div className="h-56 overflow-hidden relative">
-                  <img 
-                    src={service.image} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-80 group-hover:opacity-60 transition-opacity"></div>
                   <h3 className="absolute bottom-4 left-6 text-2xl font-bold text-white drop-shadow-md">{service.title}</h3>
@@ -240,14 +240,14 @@ const SurgeryOverview = () => {
             <h2 className="text-4xl font-bold text-gray-900">Your Journey <span className="text-scod">to Health</span></h2>
             <p className="text-gray-600 mt-4">A structured pathway designed for your comfort and success.</p>
           </div>
-          
+
           <div className="relative">
             {/* Connecting Line (Desktop) */}
             <div className="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -translate-y-1/2 z-0"></div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10">
               {pathway.map((step, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
