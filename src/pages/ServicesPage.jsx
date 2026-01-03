@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { 
-  FiAward, FiMic, FiVideo, FiDownload, FiFileText, 
+const {
+  FiAward, FiMic, FiVideo, FiDownload, FiFileText,
   FiGlobe, FiCalendar, FiArrowRight, FiCheck, FiCast,
   FiTrendingUp, FiImage
 } = FiIcons;
@@ -110,28 +110,28 @@ const ServicesPage = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      exit={{ opacity: 0 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900 bg-white"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative py-20 bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1920&q=80" 
-            alt="Press and Media" 
-            className="w-full h-full object-cover object-center opacity-20" 
+          <img
+            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1920&q=80"
+            alt="Press and Media"
+            className="w-full h-full object-cover object-center opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-scod via-scod/95 to-transparent mix-blend-multiply"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/20">
@@ -173,7 +173,7 @@ const ServicesPage = () => {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-            
+
             {/* Left: Heading */}
             <div className="lg:col-span-4">
               <span className="text-scod font-bold tracking-widest uppercase text-sm">Recognition</span>
@@ -194,7 +194,7 @@ const ServicesPage = () => {
             <div className="lg:col-span-8">
               <div className="relative border-l-4 border-gray-100 ml-4 md:ml-0 space-y-12">
                 {awards.map((award, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
@@ -204,7 +204,7 @@ const ServicesPage = () => {
                   >
                     {/* Dot */}
                     <div className="absolute -left-[10px] top-2 w-5 h-5 rounded-full bg-scod border-4 border-white shadow-md"></div>
-                    
+
                     <div className="flex flex-col md:flex-row md:items-center gap-2 mb-2">
                       <span className="text-3xl font-bold text-gray-200">{award.year}</span>
                       <h3 className="text-xl font-bold text-gray-900">{award.title}</h3>
@@ -230,7 +230,7 @@ const ServicesPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {mediaItems.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -276,7 +276,7 @@ const ServicesPage = () => {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <SafeIcon icon={FiMic} className="w-12 h-12 text-emerald-300 mx-auto mb-8" />
-          
+
           <div className="relative">
             {quotes.map((quote, index) => (
               <div key={index} className="mb-12 last:mb-0">
@@ -304,9 +304,9 @@ const ServicesPage = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {mediaResources.map((res, index) => (
-                <a 
-                  key={index} 
-                  href="#" 
+                <a
+                  key={index}
+                  href="#"
                   className="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 hover:border-scod hover:shadow-lg transition-all group flex flex-col items-center"
                 >
                   <div className="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-scod mb-4 group-hover:scale-110 transition-transform">
@@ -323,8 +323,8 @@ const ServicesPage = () => {
 
             <div className="mt-12 pt-8 border-t border-gray-200">
               <p className="text-gray-500 text-sm">
-                For press inquiries, interviews, or urgent requests, please contact:<br/>
-                <a href="mailto:press@scodmedical.com" className="text-scod font-bold hover:underline">press@scodmedical.com</a> or call <span className="font-bold text-gray-900">+1 (555) SCOD-PR</span>
+                For press inquiries, interviews, or urgent requests, please contact:<br />
+                <a href="mailto:info@scodclinic.com" className="text-scod font-bold hover:underline">info@scodclinic.com</a> or call <a href="tel:+918130130489" className="font-bold text-gray-900 hover:text-scod transition-colors">+91 8130130489</a>
               </p>
             </div>
           </div>

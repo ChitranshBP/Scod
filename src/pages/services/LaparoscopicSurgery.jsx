@@ -9,7 +9,7 @@ const { FiActivity, FiCheck, FiArrowRight, FiAlertTriangle, FiTrendingUp, FiDown
 const LaparoscopicSurgery = () => {
   const [activeTab, setActiveTab] = useState('gallbladder');
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
-  
+
   // Slider & Video States
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -198,30 +198,30 @@ const LaparoscopicSurgery = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Laparoscopic Surgery.webp" 
-            alt="Laparoscopic Surgery" 
-            className="w-full h-full object-cover object-center" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Laparoscopic Surgery.webp"
+            alt="Laparoscopic Surgery"
+            className="w-full h-full object-cover object-center"
           />
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
@@ -236,15 +236,15 @@ const LaparoscopicSurgery = () => {
               Minimally invasive solutions for hernias, gallstones, and abdominal conditions. Faster recovery, less pain, and minimal scarring.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiCalendar} className="w-5 h-5" />
                 <span>Book Consultation</span>
               </Link>
-              <a 
-                href="tel:+15557263633" 
+              <a
+                href="tel:+918130130489"
                 className="bg-transparent border-2 border-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-full font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiPhone} className="w-5 h-5" />
@@ -259,9 +259,9 @@ const LaparoscopicSurgery = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <div className="flex items-center space-x-4 mb-4">
@@ -269,7 +269,7 @@ const LaparoscopicSurgery = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">Technology</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                What is <br/><span className="text-scod">Laparoscopic Surgery?</span>
+                What is <br /><span className="text-scod">Laparoscopic Surgery?</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Often called "Keyhole Surgery," laparoscopic surgery is a modern technique where operations are performed through small incisions (usually 0.5–1.5 cm) far from the location.
@@ -277,7 +277,7 @@ const LaparoscopicSurgery = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Using a high-definition camera (laparoscope) and specialized precision instruments, Dr. Arush Sabharwal can perform complex procedures with enhanced vision and control, without the need for large open incisions.
               </p>
-              
+
               <div className="flex flex-col space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -328,7 +328,7 @@ const LaparoscopicSurgery = () => {
           {/* Tabs Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {Object.keys(procedures).map((key) => (
-              <button 
+              <button
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-sm border-2 ${activeTab === key ? 'bg-scod text-white border-scod shadow-lg scale-105' : 'bg-white text-gray-600 border-gray-100 hover:border-scod hover:text-scod'}`}
@@ -341,7 +341,7 @@ const LaparoscopicSurgery = () => {
           {/* Tab Content */}
           <div className="min-h-[400px]">
             <AnimatePresence mode="wait">
-              <motion.div 
+              <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -357,7 +357,7 @@ const LaparoscopicSurgery = () => {
                     <h3 className="text-3xl font-bold text-gray-900 mb-6">
                       {procedures[activeTab].title}
                     </h3>
-                    
+
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
@@ -386,16 +386,16 @@ const LaparoscopicSurgery = () => {
                   {/* Right Column: Image + Recovery */}
                   <div className="flex flex-col h-full">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 h-64 mb-8 flex items-center justify-center relative group">
-                      <img 
-                        src={procedures[activeTab].image} 
-                        alt={procedures[activeTab].title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      <img
+                        src={procedures[activeTab].image}
+                        alt={procedures[activeTab].title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-4 right-4 bg-scod text-white text-xs font-bold px-3 py-1 rounded-full">
                         Minimally Invasive
                       </div>
                     </div>
-                    
+
                     <div className="bg-emerald-50 p-8 rounded-2xl border border-emerald-100 mb-4 flex-grow">
                       <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                         <SafeIcon icon={FiClock} className="w-6 h-6 text-emerald-600 mr-2" />
@@ -420,10 +420,10 @@ const LaparoscopicSurgery = () => {
             {/* Image Column */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white h-[400px] lg:h-[500px] z-10">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png" 
-                  alt="Dr. Arush Sabharwal" 
-                  className="w-full h-full object-cover object-top" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png"
+                  alt="Dr. Arush Sabharwal"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               {/* Decorative background element behind image */}
@@ -449,7 +449,7 @@ const LaparoscopicSurgery = () => {
               <blockquote className="text-xl font-medium text-gray-800 italic mb-8 relative z-10">
                 "Precision in surgery translates to quality of life for the patient. My goal is to get you back to your routine as safely and quickly as possible."
               </blockquote>
-              
+
               <div className="flex flex-wrap gap-4 items-center">
                 <Link to="/about" className="inline-flex items-center space-x-2 bg-scod text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
                   <span>View Full Profile</span>
@@ -480,7 +480,7 @@ const LaparoscopicSurgery = () => {
       {/* 5. EMERGENCY WARNING SECTION (Moved Here) */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
@@ -543,7 +543,7 @@ const LaparoscopicSurgery = () => {
               <span className="uppercase tracking-widest text-sm font-bold text-scod">Success Stories</span>
               <h2 className="text-4xl font-bold text-gray-900 mt-2">Patient <span className="text-scod">Experiences</span></h2>
             </div>
-            
+
             {/* Slider Controls */}
             <div className="flex flex-col items-end gap-4">
               <div className="flex items-center gap-3">
@@ -559,19 +559,19 @@ const LaparoscopicSurgery = () => {
 
           {/* Videos Slider */}
           <div className="-mx-4 overflow-hidden px-4 md:px-0">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${testimonialIndex * (100 / testimonialVideos.length)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               style={{ width: `${(testimonialVideos.length * 100) / itemsPerView}%` }}
             >
               {testimonialVideos.map((video, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="w-full px-4 flex-shrink-0"
                   style={{ width: `${100 / testimonialVideos.length}%` }}
                 >
-                  <div 
+                  <div
                     className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer h-full flex flex-col"
                     onClick={() => setSelectedVideo(video)}
                   >
@@ -606,7 +606,7 @@ const LaparoscopicSurgery = () => {
                 Learn more about procedures, conditions, and recovery from Dr. Arush Sabharwal.
               </p>
             </div>
-            
+
             {/* Slider Controls */}
             <div className="flex flex-col items-end gap-4">
               <div className="flex items-center gap-3">
@@ -626,19 +626,19 @@ const LaparoscopicSurgery = () => {
 
           {/* Videos Slider */}
           <div className="-mx-4 overflow-hidden px-4 md:px-0">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${awarenessIndex * (100 / awarenessVideos.length)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               style={{ width: `${(awarenessVideos.length * 100) / itemsPerView}%` }}
             >
               {awarenessVideos.map((video, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="w-full px-4 flex-shrink-0"
                   style={{ width: `${100 / awarenessVideos.length}%` }}
                 >
-                  <div 
+                  <div
                     className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100 h-full flex flex-col"
                     onClick={() => setSelectedVideo(video)}
                   >
@@ -669,7 +669,7 @@ const LaparoscopicSurgery = () => {
           </div>
           <div className="space-y-4">
             {generalFaqs.map((faq, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -677,7 +677,7 @@ const LaparoscopicSurgery = () => {
                 transition={{ delay: index * 0.1 }}
                 className="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-white"
               >
-                <button 
+                <button
                   onClick={() => toggleFaq(index)}
                   className="w-full flex items-center justify-between p-6 text-left bg-white focus:outline-none"
                 >
@@ -688,7 +688,7 @@ const LaparoscopicSurgery = () => {
                 </button>
                 <AnimatePresence>
                   {openFaqIndex === index && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -712,7 +712,7 @@ const LaparoscopicSurgery = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Details */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Schedule Your <br/><span className="text-scod">Surgery</span></h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Schedule Your <br /><span className="text-scod">Surgery</span></h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Whether it's a planned hernia repair or a gallstone consultation, our expert team ensures your safety and comfort.
               </p>
@@ -723,7 +723,7 @@ const LaparoscopicSurgery = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) SCOD-MED</p>
+                    <p className="text-gray-600">+91 8130130489</p>
                     <p className="text-sm text-gray-400">Mon-Sat, 9am - 6pm</p>
                   </div>
                 </div>
@@ -733,7 +733,7 @@ const LaparoscopicSurgery = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Email Us</h4>
-                    <p className="text-gray-600">info@scodmedical.com</p>
+                    <a href="mailto:info@scodclinic.com" className="text-gray-600 hover:text-scod transition-colors">info@scodclinic.com</a>
                     <p className="text-sm text-gray-400">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -763,7 +763,7 @@ const LaparoscopicSurgery = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                     <div className="relative">
                       <SafeIcon icon={FiPhone} className="absolute left-3 top-3.5 text-gray-400 w-5 h-5" />
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="+1 (555) 000-0000" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scod focus:border-scod transition-all bg-white" />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="+91 00000 00000" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scod focus:border-scod transition-all bg-white" />
                     </div>
                   </div>
                 </div>
@@ -787,27 +787,27 @@ const LaparoscopicSurgery = () => {
       {/* Video Modal */}
       <AnimatePresence>
         {selectedVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
             onClick={() => setSelectedVideo(null)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800" onClick={e => e.stopPropagation()}>
-              <button 
+              <button
                 onClick={() => setSelectedVideo(null)}
                 className="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`} 
-                title={selectedVideo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>

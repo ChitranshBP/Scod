@@ -140,29 +140,29 @@ const PatientJourney = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Patient Journey.webp" 
-            alt="Patient Journey" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Patient Journey.webp"
+            alt="Patient Journey"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Consistent Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -177,8 +177,8 @@ const PatientJourney = () => {
               From your first consultation to your new healthy life, we are with you every step of the way. Explore our structured pathway to transformation.
             </p>
             <div className="mt-8">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="inline-flex items-center space-x-2 bg-white text-scod px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 <span>Start Your Journey</span>
@@ -202,10 +202,10 @@ const PatientJourney = () => {
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform md:-translate-x-1/2 rounded-full"></div>
 
             {journeySteps.map((step, index) => (
-              <motion.div 
-                key={step.id} 
-                initial={{ opacity: 0, y: 50 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className={`relative flex flex-col md:flex-row items-center mb-16 last:mb-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
@@ -227,7 +227,7 @@ const PatientJourney = () => {
 
                 {/* Content Card */}
                 <div className="flex-1 w-full pl-16 md:pl-0 md:px-12">
-                  <div 
+                  <div
                     className={`bg-white p-6 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 relative group cursor-pointer ${activeStep === step.id ? 'ring-2 ring-scod' : ''}`}
                     onClick={() => setActiveStep(activeStep === step.id ? null : step.id)}
                   >
@@ -244,7 +244,7 @@ const PatientJourney = () => {
                         {step.timeframe}
                       </span>
                     </div>
-                    
+
                     <p className="text-gray-600 mb-4 text-sm leading-relaxed">
                       {step.description}
                     </p>
@@ -258,10 +258,10 @@ const PatientJourney = () => {
                         </span>
                         <SafeIcon icon={FiArrowRight} className={`w-4 h-4 transform transition-transform duration-300 ${activeStep === step.id ? 'rotate-90' : ''}`} />
                       </button>
-                      
+
                       <AnimatePresence>
                         {(activeStep === step.id || window.innerWidth >= 768) && (
-                          <motion.ul 
+                          <motion.ul
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
@@ -303,7 +303,7 @@ const PatientJourney = () => {
               <Link to="/contact" className="bg-white text-scod px-8 py-4 rounded-full font-bold text-lg shadow-lg hover:bg-gray-50 transition-all transform hover:scale-105">
                 Book Consultation
               </Link>
-              <a href="tel:+15557263633" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+              <a href="tel:+918130130489" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
                 <SafeIcon icon={FiPhone} className="w-5 h-5" />
                 <span>Call Now</span>
               </a>

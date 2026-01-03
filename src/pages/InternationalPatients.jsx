@@ -112,7 +112,7 @@ const InternationalPatients = () => {
                 <span>Get a Quote</span>
               </Link>
               <a
-                href="mailto:international@scodmedical.com"
+                href="mailto:info@scodclinic.com"
                 className="bg-transparent border-2 border-white/30 backdrop-blur-sm text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiMessageCircle} className="w-5 h-5" />

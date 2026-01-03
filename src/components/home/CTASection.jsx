@@ -31,11 +31,11 @@ const CTASection = () => {
               <SafeIcon icon={FiArrowRight} className="w-5 h-5" />
             </Link>
             <a
-              href="tel:+1-555-SCOD-MED"
+              href="tel:+918130130489"
               className="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-scod transition-all duration-300 flex items-center space-x-3"
             >
               <SafeIcon icon={FiPhone} className="w-5 h-5" />
-              <span>Call (555) SCOD-MED</span>
+              <span>Call +91 8130130489</span>
             </a>
           </div>
         </motion.div>

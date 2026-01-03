@@ -72,29 +72,29 @@ const RisksCosts = () => {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Risks & Costs.webp" 
-            alt="Financial Planning" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Risks & Costs.webp"
+            alt="Financial Planning"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Consistent Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -128,12 +128,12 @@ const RisksCosts = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">Informed Consent</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Understanding <br/><span className="text-scod">The Risks</span>
+                Understanding <br /><span className="text-scod">The Risks</span>
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 While bariatric surgery is generally safe (comparable to gallbladder surgery), complications can occur. We use advanced protocols to minimize these risks, but it is vital for you to be informed.
               </p>
-              
+
               <div className="space-y-6">
                 {risks.map((risk, idx) => (
                   <div key={idx} className="bg-gray-50 p-6 rounded-xl border border-gray-100">
@@ -175,8 +175,8 @@ const RisksCosts = () => {
               </ul>
               <div className="bg-white p-6 rounded-xl border border-red-100 shadow-sm">
                 <p className="text-sm text-gray-500 mb-1">24/7 Emergency Helpline</p>
-                <a href="tel:+1-555-SCOD-SOS" className="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors block">
-                  +1 (555) SCOD-SOS
+                <a href="tel:+918130130489" className="text-2xl font-bold text-red-600 hover:text-red-700 transition-colors block">
+                  +91 8130130489
                 </a>
               </div>
             </motion.div>
@@ -197,7 +197,7 @@ const RisksCosts = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {costDrivers.map((driver, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -238,13 +238,13 @@ const RisksCosts = () => {
           {/* Insurance Toggle */}
           <div className="flex justify-start mb-10">
             <div className="bg-gray-100 p-1 rounded-full inline-flex">
-              <button 
+              <button
                 onClick={() => setActiveTab('covered')}
                 className={`px-8 py-3 rounded-full font-bold text-sm transition-all ${activeTab === 'covered' ? 'bg-emerald-500 text-white shadow-md' : 'text-gray-500 hover:text-gray-700'}`}
               >
                 What is Covered
               </button>
-              <button 
+              <button
                 onClick={() => setActiveTab('notCovered')}
                 className={`px-8 py-3 rounded-full font-bold text-sm transition-all ${activeTab === 'notCovered' ? 'bg-red-500 text-white shadow-md' : 'text-gray-500 hover:text-gray-700'}`}
               >
@@ -255,7 +255,7 @@ const RisksCosts = () => {
 
           {/* Content Card */}
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={activeTab}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -282,7 +282,7 @@ const RisksCosts = () => {
           </AnimatePresence>
 
           <div className="mt-8 flex justify-start gap-4 flex-wrap">
-            <img src="https://brandingpioneers.co.in/scod/insurance-logos.png" onError={(e) => e.target.style.display='none'} alt="Insurance Partners" className="h-12 opacity-70 grayscale hover:grayscale-0 transition-all" />
+            <img src="https://brandingpioneers.co.in/scod/insurance-logos.png" onError={(e) => e.target.style.display = 'none'} alt="Insurance Partners" className="h-12 opacity-70 grayscale hover:grayscale-0 transition-all" />
             <span className="text-gray-400 text-sm self-center">We work with all major TPA & Insurance providers.</span>
           </div>
         </div>
@@ -297,7 +297,7 @@ const RisksCosts = () => {
               <p className="text-blue-200 text-lg mb-8 leading-relaxed">
                 We believe cost should not be a barrier to health. We have partnered with leading financial institutions to offer easy EMI options.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-center bg-white/10 p-4 rounded-xl backdrop-blur-sm">
                   <SafeIcon icon={FiCreditCard} className="w-8 h-8 text-emerald-400 mr-4" />

@@ -82,29 +82,29 @@ const WeightLossInjectables = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Weight Loss Injectables.webp" 
-            alt="Weight Loss Injectables" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Weight Loss Injectables.webp"
+            alt="Weight Loss Injectables"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Updated Gradient to Match Surgery Overview */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -119,8 +119,8 @@ const WeightLossInjectables = () => {
               Discover the power of GLP-1 therapies like Ozempic, Wegovy, and Mounjaro. A scientifically proven, non-surgical path to significant weight loss under expert medical supervision.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiActivity} className="w-5 h-5" />
@@ -141,7 +141,7 @@ const WeightLossInjectables = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">The Science</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Not Just Willpower. <br/> <span className="text-scod">It's Biology.</span>
+                Not Just Willpower. <br /> <span className="text-scod">It's Biology.</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 You've likely heard names like <strong>Ozempic</strong>, <strong>Wegovy</strong>, or <strong>Mounjaro</strong>. These are not "magic diet pills" but advanced medications known as <strong>GLP-1 agonists</strong>.
@@ -149,7 +149,7 @@ const WeightLossInjectables = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 <strong>How they work in simple terms:</strong> Your body naturally produces a hormone called GLP-1 after you eat, which tells your brain "I'm full." In many people struggling with weight, this signal is weak. These injectables mimic that hormone at a higher level, quieting the "food noise" in your brain and slowing down digestion so you feel satisfied with smaller portions.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex items-center space-x-3 bg-blue-50 p-4 rounded-xl">
                   <SafeIcon icon={FiTrendingDown} className="w-6 h-6 text-scod" />
@@ -185,7 +185,7 @@ const WeightLossInjectables = () => {
           {/* Tabs */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {Object.keys(drugs).map((key) => (
-              <button 
+              <button
                 key={key}
                 onClick={() => setActiveDrug(key)}
                 className={`px-8 py-3 rounded-full font-bold text-sm transition-all duration-300 border-2 ${activeDrug === key ? 'bg-scod text-white border-scod shadow-lg scale-105' : 'bg-white text-gray-600 border-gray-200 hover:border-scod hover:text-scod'}`}
@@ -197,7 +197,7 @@ const WeightLossInjectables = () => {
 
           {/* Content */}
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={activeDrug}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -212,11 +212,11 @@ const WeightLossInjectables = () => {
                   </div>
                   <h3 className="text-3xl font-bold text-gray-900 mb-2">{drugs[activeDrug].name}</h3>
                   <p className="text-sm text-gray-500 font-medium mb-6">Common Brands: {drugs[activeDrug].brands}</p>
-                  
+
                   <p className="text-lg text-gray-700 leading-relaxed mb-8">
                     {drugs[activeDrug].desc}
                   </p>
-                  
+
                   <h4 className="font-bold text-gray-900 mb-4 flex items-center">
                     <SafeIcon icon={FiCheckCircle} className="w-5 h-5 mr-2 text-scod" />
                     Key Benefits
@@ -265,7 +265,7 @@ const WeightLossInjectables = () => {
               </h3>
               <div className="space-y-8 relative">
                 <div className="absolute left-4 top-4 bottom-4 w-0.5 bg-gray-100"></div>
-                
+
                 {[
                   { title: "Medical Assessment", desc: "Full blood panel, thyroid check, and history review." },
                   { title: "Customized Prescription", desc: "Selecting the right molecule starting at a low dose." },
@@ -294,7 +294,7 @@ const WeightLossInjectables = () => {
               <p className="text-gray-700 mb-6">
                 While highly effective, these medications are potent and require medical supervision. Most side effects are gastrointestinal and improve over time.
               </p>
-              
+
               <div className="space-y-4 mb-8">
                 <div className="bg-white p-4 rounded-xl border border-orange-100 shadow-sm">
                   <h5 className="font-bold text-gray-900 text-sm uppercase mb-2">Common Side Effects</h5>
@@ -304,7 +304,7 @@ const WeightLossInjectables = () => {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="bg-white p-4 rounded-xl border border-orange-100 shadow-sm">
                   <h5 className="font-bold text-gray-900 text-sm uppercase mb-2">Contraindications</h5>
                   <ul className="space-y-1 text-sm text-gray-600">
@@ -315,7 +315,7 @@ const WeightLossInjectables = () => {
                   </ul>
                 </div>
               </div>
-              
+
               <div className="flex items-start space-x-3 text-sm text-orange-800 font-medium bg-orange-100 p-4 rounded-lg">
                 <SafeIcon icon={FiClock} className="w-5 h-5 flex-shrink-0" />
                 <p>We start with a low dose and increase slowly ("titration") to help your body adapt comfortably.</p>
@@ -334,7 +334,7 @@ const WeightLossInjectables = () => {
               Understanding where medical therapy fits in the spectrum of obesity treatment.
             </p>
           </div>
-          
+
           <div className="overflow-x-auto">
             <table className="w-full text-left border-collapse">
               <thead>
@@ -357,7 +357,7 @@ const WeightLossInjectables = () => {
               </tbody>
             </table>
           </div>
-          
+
           <div className="mt-8 text-center">
             <p className="text-sm text-gray-400 italic">
               * Results vary by individual. Surgery is generally recommended for BMI &gt;35/40, while injectables are ideal for BMI 27-35 or pre-surgical optimization.
@@ -379,7 +379,7 @@ const WeightLossInjectables = () => {
                 <SafeIcon icon={FiCalendar} className="w-5 h-5" />
                 <span>Book Evaluation</span>
               </Link>
-              <a href="tel:+1-555-SCOD-MED" className="bg-scod border border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-lg flex items-center justify-center space-x-2">
+              <a href="tel:+918130130489" className="bg-scod border border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-lg flex items-center justify-center space-x-2">
                 <SafeIcon icon={FiClock} className="w-5 h-5" />
                 <span>Call to Inquire</span>
               </a>

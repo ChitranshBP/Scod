@@ -26,7 +26,7 @@ const PatientResources = () => {
   const faqData = [
     // --- GENERAL ---
     { category: 'General', q: "Why should I choose SCOD for my treatment?", a: "SCOD is a Center of Excellence led by Dr. Arush Sabharwal, carrying a 100-year medical legacy. We combine world-class surgical expertise with a holistic multidisciplinary approach.", link: "/about", linkText: "Learn about our legacy" },
-    { category: 'General', q: "How do I schedule a consultation?", a: "You can book an appointment online through our contact page, call our hotline at +1-555-SCOD-MED, or request a callback via WhatsApp.", link: "/contact", linkText: "Book Appointment" },
+    { category: 'General', q: "How do I schedule a consultation?", a: "You can book an appointment online through our contact page, call our hotline at +91 8130130489, or request a callback via WhatsApp.", link: "/contact", linkText: "Book Appointment" },
     { category: 'General', q: "Do you offer online video consultations?", a: "Yes, we offer secure video consultations for international and out-of-station patients to discuss treatment plans before traveling.", },
     { category: 'General', q: "What are your clinic hours?", a: "Our main center is open Monday to Saturday, 9:00 AM to 6:00 PM. Emergency services are available 24/7.", },
     { category: 'General', q: "Is there parking available at the center?", a: "Yes, we provide valet parking services for all patients and visitors at our main centers in Delhi and Noida.", },
@@ -77,8 +77,8 @@ const PatientResources = () => {
   ];
 
   // Filter Logic
-  const filteredFAQs = faqData.filter(item => 
-    (activeCategory === 'All' || item.category === activeCategory) && 
+  const filteredFAQs = faqData.filter(item =>
+    (activeCategory === 'All' || item.category === activeCategory) &&
     (item.q.toLowerCase().includes(searchQuery.toLowerCase()) || item.a.toLowerCase().includes(searchQuery.toLowerCase()))
   );
 
@@ -96,41 +96,41 @@ const PatientResources = () => {
         }
       }))
     };
-    
+
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.text = JSON.stringify(schemaData);
     document.head.appendChild(script);
-    
+
     return () => {
       document.head.removeChild(script);
     };
   }, [filteredFAQs]);
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900 bg-gray-50"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80" 
-            alt="Patient Resources" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1920&q=80"
+            alt="Patient Resources"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Consistent Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/20">
@@ -143,12 +143,12 @@ const PatientResources = () => {
             <p className="text-xl text-blue-100 max-w-2xl leading-relaxed mb-8">
               Find answers to your questions, understand procedures, and prepare for your journey to wellness with SCOD.
             </p>
-            
+
             {/* Search Bar */}
             <div className="max-w-xl relative">
-              <input 
-                type="text" 
-                placeholder="Search for answers (e.g., 'recovery', 'insurance')..." 
+              <input
+                type="text"
+                placeholder="Search for answers (e.g., 'recovery', 'insurance')..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-6 py-4 rounded-full text-gray-900 focus:outline-none focus:ring-4 focus:ring-emerald-500/30 shadow-xl"
@@ -163,16 +163,16 @@ const PatientResources = () => {
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
-            
+
             {/* Sidebar Categories (Desktop) */}
             <div className="lg:w-1/4">
               <div className="sticky top-24 space-y-2">
                 <h3 className="text-gray-900 font-bold text-lg mb-4 px-2">Browse Topics</h3>
-                
+
                 {/* Mobile Dropdown (Hidden on Desktop) */}
                 <div className="lg:hidden mb-6">
-                  <select 
-                    value={activeCategory} 
+                  <select
+                    value={activeCategory}
                     onChange={(e) => setActiveCategory(e.target.value)}
                     className="w-full p-4 rounded-xl border border-gray-200 bg-white font-bold text-gray-700 focus:ring-2 focus:ring-scod outline-none"
                   >
@@ -222,7 +222,7 @@ const PatientResources = () => {
                 <div className="text-center py-20 bg-white rounded-2xl border border-dashed border-gray-300">
                   <SafeIcon icon={FiSearch} className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                   <p className="text-gray-500 text-lg">No questions match your search.</p>
-                  <button 
+                  <button
                     onClick={() => { setSearchQuery(''); setActiveCategory('General') }}
                     className="mt-4 text-scod font-bold hover:underline"
                   >
@@ -232,14 +232,14 @@ const PatientResources = () => {
               ) : (
                 <div className="space-y-4">
                   {filteredFAQs.map((item, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
                       className={`bg-white rounded-xl border transition-all duration-300 ${openIndex === index ? 'border-scod shadow-md ring-1 ring-scod/10' : 'border-gray-200 hover:border-blue-300'}`}
                     >
-                      <button 
+                      <button
                         onClick={() => setOpenIndex(openIndex === index ? null : index)}
                         className="w-full flex items-start justify-between p-6 text-left"
                       >
@@ -252,7 +252,7 @@ const PatientResources = () => {
                       </button>
                       <AnimatePresence>
                         {openIndex === index && (
-                          <motion.div 
+                          <motion.div
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
@@ -287,7 +287,7 @@ const PatientResources = () => {
             {/* Decorative Background */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-500/20 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-            
+
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Personalized Answers?</h2>
               <p className="text-xl text-blue-100 max-w-2xl mb-10">
@@ -298,7 +298,7 @@ const PatientResources = () => {
                   <SafeIcon icon={FiActivity} className="w-5 h-5 mr-2" />
                   Book Consultation
                 </Link>
-                <a href="tel:+1-555-SCOD-MED" className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center">
+                <a href="tel:+918130130489" className="bg-transparent border-2 border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center justify-center">
                   <SafeIcon icon={FiCoffee} className="w-5 h-5 mr-2" />
                   Call Our Team
                 </a>

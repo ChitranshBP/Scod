@@ -9,7 +9,7 @@ const { FiActivity, FiCheck, FiArrowRight, FiAlertTriangle, FiTrendingUp, FiDown
 const BodyContouring = () => {
   const [activeTab, setActiveTab] = useState('tummy');
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
-  
+
   // Slider & Video States
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [testimonialIndex, setTestimonialIndex] = useState(0);
@@ -204,30 +204,30 @@ const BodyContouring = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      exit={{ opacity: 0 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Body Contouring.webp" 
-            alt="Body Contouring Surgery" 
-            className="w-full h-full object-cover object-center" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Body Contouring.webp"
+            alt="Body Contouring Surgery"
+            className="w-full h-full object-cover object-center"
           />
           {/* Gradient Overlay - Updated to SCOD Blue */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
@@ -242,15 +242,15 @@ const BodyContouring = () => {
               Complete your transformation. Remove excess skin, restore natural contours, and reveal the body you've worked so hard for.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiCalendar} className="w-5 h-5" />
                 <span>Book Consultation</span>
               </Link>
-              <a 
-                href="#gallery" 
+              <a
+                href="#gallery"
                 className="bg-transparent border-2 border-white/30 backdrop-blur-sm text-white px-8 py-3 rounded-full font-bold text-base hover:bg-white/10 transition-all flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiSmile} className="w-5 h-5" />
@@ -265,9 +265,9 @@ const BodyContouring = () => {
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
               <div className="flex items-center space-x-4 mb-4">
@@ -275,7 +275,7 @@ const BodyContouring = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">The Final Step</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Addressing <br/><span className="text-scod">Loose Skin</span>
+                Addressing <br /><span className="text-scod">Loose Skin</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 Massive weight loss is a tremendous achievement, but for many, it leaves behind significant amounts of loose, hanging skin. This skin often does not shrink back, regardless of exercise.
@@ -283,7 +283,7 @@ const BodyContouring = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 Beyond aesthetics, excess skin can cause functional issues like rashes, infections, back pain, and difficulty finding clothes that fit. Body contouring surgery is not just cosmetic; it is reconstructive surgery to restore function and comfort.
               </p>
-              
+
               <div className="flex flex-col space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
@@ -327,9 +327,9 @@ const BodyContouring = () => {
       <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-scod"
             >
@@ -342,10 +342,10 @@ const BodyContouring = () => {
                 <li className="flex items-start"><SafeIcon icon={FiCheck} className="w-5 h-5 text-emerald-500 mr-2 mt-1" /> <span>Realistic expectations about scarring.</span></li>
               </ul>
             </motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-emerald-500"
@@ -377,7 +377,7 @@ const BodyContouring = () => {
           {/* Tabs Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
             {Object.keys(procedures).map((key) => (
-              <button 
+              <button
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-6 py-3 rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-sm border-2 ${activeTab === key ? 'bg-scod text-white border-scod shadow-lg scale-105' : 'bg-white text-gray-600 border-gray-100 hover:border-scod hover:text-scod'}`}
@@ -390,7 +390,7 @@ const BodyContouring = () => {
           {/* Tab Content */}
           <div className="min-h-[400px]">
             <AnimatePresence mode="wait">
-              <motion.div 
+              <motion.div
                 key={activeTab}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -406,7 +406,7 @@ const BodyContouring = () => {
                     <h3 className="text-3xl font-bold text-gray-900 mb-6">
                       {procedures[activeTab].title}
                     </h3>
-                    
+
                     <div className="space-y-6">
                       <div>
                         <h4 className="text-lg font-bold text-gray-900 mb-2 flex items-center">
@@ -435,13 +435,13 @@ const BodyContouring = () => {
                   {/* Right Column: Image + Recovery */}
                   <div className="flex flex-col h-full">
                     <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 h-64 mb-8 flex items-center justify-center relative group">
-                      <img 
-                        src={procedures[activeTab].image} 
-                        alt={procedures[activeTab].title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      <img
+                        src={procedures[activeTab].image}
+                        alt={procedures[activeTab].title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
-                    
+
                     <div className="bg-blue-50 p-8 rounded-2xl border border-blue-100 mb-4 flex-grow">
                       <h4 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
                         <SafeIcon icon={FiClock} className="w-6 h-6 text-scod mr-2" />
@@ -468,7 +468,7 @@ const BodyContouring = () => {
           </div>
 
           <div className="relative max-w-4xl mx-auto">
-            <motion.div 
+            <motion.div
               key={galleryIndex}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -486,7 +486,7 @@ const BodyContouring = () => {
             </motion.div>
 
             <div className="flex justify-center mt-8 gap-4">
-              <button 
+              <button
                 onClick={() => setGalleryIndex(prev => (prev === 0 ? galleryImages.length - 1 : prev - 1))}
                 className="p-3 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-scod transition-all"
               >
@@ -495,7 +495,7 @@ const BodyContouring = () => {
               <div className="py-2 px-6 bg-gray-50 rounded-full font-bold text-gray-800">
                 {galleryImages[galleryIndex].label}
               </div>
-              <button 
+              <button
                 onClick={() => setGalleryIndex(prev => (prev === galleryImages.length - 1 ? 0 : prev + 1))}
                 className="p-3 rounded-full bg-gray-100 hover:bg-blue-100 text-gray-600 hover:text-scod transition-all"
               >
@@ -513,10 +513,10 @@ const BodyContouring = () => {
             {/* Image Column */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white h-[400px] lg:h-[500px] z-10">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png" 
-                  alt="Dr. Arush Sabharwal" 
-                  className="w-full h-full object-cover object-top" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png"
+                  alt="Dr. Arush Sabharwal"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               {/* Decorative background element behind image */}
@@ -542,7 +542,7 @@ const BodyContouring = () => {
               <blockquote className="text-xl font-medium text-gray-800 italic mb-8 relative z-10">
                 "The journey doesn't end at weight loss. Restoring your body's form is the final step in reclaiming your confidence and life."
               </blockquote>
-              
+
               <div className="flex flex-wrap gap-4 items-center">
                 <Link to="/about" className="inline-flex items-center space-x-2 bg-scod text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1" >
                   <span>View Full Profile</span>
@@ -562,7 +562,7 @@ const BodyContouring = () => {
               <span className="uppercase tracking-widest text-sm font-bold text-scod">Success Stories</span>
               <h2 className="text-4xl font-bold text-gray-900 mt-2">Patient <span className="text-scod">Experiences</span></h2>
             </div>
-            
+
             {/* Slider Controls */}
             <div className="flex flex-col items-end gap-4">
               <div className="flex items-center gap-3">
@@ -578,19 +578,19 @@ const BodyContouring = () => {
 
           {/* Videos Slider */}
           <div className="-mx-4 overflow-hidden px-4 md:px-0">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${testimonialIndex * (100 / testimonialVideos.length)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               style={{ width: `${(testimonialVideos.length * 100) / itemsPerView}%` }}
             >
               {testimonialVideos.map((video, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="w-full px-4 flex-shrink-0"
                   style={{ width: `${100 / testimonialVideos.length}%` }}
                 >
-                  <div 
+                  <div
                     className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-pointer h-full flex flex-col"
                     onClick={() => setSelectedVideo(video)}
                   >
@@ -625,7 +625,7 @@ const BodyContouring = () => {
                 Learn more about body contouring procedures and what to expect.
               </p>
             </div>
-            
+
             {/* Slider Controls */}
             <div className="flex flex-col items-end gap-4">
               <div className="flex items-center gap-3">
@@ -641,19 +641,19 @@ const BodyContouring = () => {
 
           {/* Videos Slider */}
           <div className="-mx-4 overflow-hidden px-4 md:px-0">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${awarenessIndex * (100 / awarenessVideos.length)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               style={{ width: `${(awarenessVideos.length * 100) / itemsPerView}%` }}
             >
               {awarenessVideos.map((video, index) => (
-                <motion.div 
+                <motion.div
                   key={index}
                   className="w-full px-4 flex-shrink-0"
                   style={{ width: `${100 / awarenessVideos.length}%` }}
                 >
-                  <div 
+                  <div
                     className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer border border-gray-100 h-full flex flex-col"
                     onClick={() => setSelectedVideo(video)}
                   >
@@ -684,7 +684,7 @@ const BodyContouring = () => {
           </div>
           <div className="space-y-4">
             {generalFaqs.map((faq, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -692,7 +692,7 @@ const BodyContouring = () => {
                 transition={{ delay: index * 0.1 }}
                 className="border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-gray-50"
               >
-                <button 
+                <button
                   onClick={() => toggleFaq(index)}
                   className="w-full flex items-center justify-between p-6 text-left bg-gray-50 focus:outline-none"
                 >
@@ -703,7 +703,7 @@ const BodyContouring = () => {
                 </button>
                 <AnimatePresence>
                   {openFaqIndex === index && (
-                    <motion.div 
+                    <motion.div
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
@@ -727,7 +727,7 @@ const BodyContouring = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             {/* Contact Details */}
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Schedule Your <br/><span className="text-scod">Consultation</span></h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">Schedule Your <br /><span className="text-scod">Consultation</span></h2>
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
                 Discuss your goals with our body contouring experts. We'll create a personalized plan to complete your transformation.
               </p>
@@ -738,7 +738,7 @@ const BodyContouring = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Call Us</h4>
-                    <p className="text-gray-600">+1 (555) SCOD-MED</p>
+                    <a href="tel:+918130130489" className="text-gray-600 hover:text-scod transition-colors">+91 8130130489</a>
                     <p className="text-sm text-gray-400">Mon-Sat, 9am - 6pm</p>
                   </div>
                 </div>
@@ -748,7 +748,7 @@ const BodyContouring = () => {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Email Us</h4>
-                    <p className="text-gray-600">info@scodmedical.com</p>
+                    <a href="mailto:info@scodclinic.com" className="text-gray-600 hover:text-scod transition-colors">info@scodclinic.com</a>
                     <p className="text-sm text-gray-400">We reply within 24 hours</p>
                   </div>
                 </div>
@@ -778,7 +778,7 @@ const BodyContouring = () => {
                     <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
                     <div className="relative">
                       <SafeIcon icon={FiPhone} className="absolute left-3 top-3.5 text-gray-400 w-5 h-5" />
-                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="+1 (555) 000-0000" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scod focus:border-scod transition-all bg-white" />
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="+91 00000 00000" className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-scod focus:border-scod transition-all bg-white" />
                     </div>
                   </div>
                 </div>
@@ -802,27 +802,27 @@ const BodyContouring = () => {
       {/* Video Modal */}
       <AnimatePresence>
         {selectedVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
             onClick={() => setSelectedVideo(null)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800" onClick={e => e.stopPropagation()}>
-              <button 
+              <button
                 onClick={() => setSelectedVideo(null)}
                 className="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`} 
-                title={selectedVideo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>
