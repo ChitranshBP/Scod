@@ -45,12 +45,6 @@ const BodyContouring = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    alert("Thank you for your inquiry. Our team will contact you shortly.");
-    setFormData({ name: '', email: '', phone: '', message: '' });
-  };
-
   const toggleFaq = (index) => {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
@@ -758,7 +752,7 @@ const BodyContouring = () => {
             {/* Form */}
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100" >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Request Appointment</h3>
-              <form onSubmit={handleFormSubmit} className="space-y-4">
+              <form acceptCharset="UTF-8" action="https://app.formester.com/forms/vt4kzZ2it/submissions" method="POST" className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
                   <div className="relative">

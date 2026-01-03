@@ -87,7 +87,7 @@ const ContactPage = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Send Us a Message</h2>
                 <p className="text-gray-600 mt-4"> Fill out the form below to request an appointment. We typically respond within 24 hours. </p>
               </div>
-              <form acceptCharset="UTF-8" action="https://app.formester.com/forms/vt4kzZ2it/submissions" method="POST" onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
+              <form acceptCharset="UTF-8" action="https://app.formester.com/forms/vt4kzZ2it/submissions" method="POST" className="space-y-6 bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
