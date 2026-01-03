@@ -12,7 +12,7 @@ const {
 } = FiIcons;
 
 const AboutPage = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false) ;
   const [activeVideo, setActiveVideo] = useState(null);
 
   // Slider State
