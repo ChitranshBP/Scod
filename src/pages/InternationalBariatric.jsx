@@ -72,11 +72,12 @@ const InternationalBariatric = () => {
   ];
 
   const galleryImages = [
-    { id: 1, src: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80", caption: "Sarah from Tanzania", desc: "6 Months Post-Op" },
-    { id: 2, src: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=800&q=80", caption: "Consultation Day", desc: "Pre-Op Planning" },
-    { id: 3, src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80", caption: "Amina from Kenya", desc: "Recovery Journey" },
-    { id: 4, src: "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=80", caption: "John from UK", desc: "Medical Tourism" },
-    { id: 5, src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80", caption: "Post-Surgery Checkup", desc: "Happy Patient" }
+    { id: 1, src: "/assets/scod/africa/african-weightloss.png", caption: "Patient from Tanzania", desc: "Successful Transformation" },
+    { id: 2, src: "/assets/scod/africa/tanzanean-weightloss.png", caption: "Tanzanian Success Story", desc: "Bariatric Journey" },
+    { id: 3, src: "/assets/scod/africa/african-weightloss-3.png", caption: "Patient from Kenya", desc: "Health Transformation" },
+    { id: 4, src: "/assets/scod/africa/african-realistic-1.png", caption: "International Patient", desc: "Realistic Progress" },
+    { id: 5, src: "/assets/scod/africa/african-realistic-2.png", caption: "Amina from Nairobi", desc: "Happy & Healthy" },
+    { id: 6, src: "/assets/scod/africa/tanzanean-realistic-3.png", caption: "John from Dar es Salaam", desc: "Life Changing Results" }
   ];
 
   const awarenessVideos = [
@@ -96,29 +97,29 @@ const InternationalBariatric = () => {
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION - Standardized */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/International Bariatric Surgery.webp" 
-            alt="International Bariatric" 
-            className="w-full h-full object-cover opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/International Bariatric Surgery.webp"
+            alt="International Bariatric"
+            className="w-full h-full object-cover opacity-40"
           />
           {/* Consistent SCOD Blue Gradient */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -149,14 +150,14 @@ const InternationalBariatric = () => {
             <span className="text-scod font-bold uppercase text-sm">The Advantage</span>
             <h2 className="text-4xl font-bold text-gray-900 mt-2">Why India & SCOD?</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             {whyIndia.map((item, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true }} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-gray-50 p-8 rounded-2xl border border-gray-100 text-left hover:shadow-xl transition-all"
               >
@@ -184,7 +185,7 @@ const InternationalBariatric = () => {
               <p className="text-xl text-blue-100 mb-8">
                 Dr. Arush Sabharwal regularly conducts OPDs in Dar es Salaam. We are the preferred choice for patients from Kenya, Uganda, and Tanzania.
               </p>
-              
+
               <ul className="space-y-4 mb-8">
                 {eastAfricaFocus.map((item, index) => (
                   <li key={index} className="flex items-center bg-white/10 px-4 py-3 rounded-lg backdrop-blur-sm">
@@ -194,7 +195,7 @@ const InternationalBariatric = () => {
                 ))}
               </ul>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
                 <img src="assets/scod/africa/african-1.webp" alt="Africa Focus" className="w-full h-[500px] object-cover" />
@@ -210,7 +211,7 @@ const InternationalBariatric = () => {
           <div className="text-left mb-16">
             <h2 className="text-4xl font-bold text-gray-900">Packages & Process</h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
             {packages.map((pkg, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center space-x-4">
@@ -224,7 +225,7 @@ const InternationalBariatric = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {processSteps.map((step, index) => (
               <div key={index} className="flex flex-col items-start text-left group">
@@ -261,7 +262,7 @@ const InternationalBariatric = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="lg:col-span-8">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900">Dr. Awareness Videos</h3>
@@ -270,9 +271,9 @@ const InternationalBariatric = () => {
                   <button onClick={() => handleNext(videoIndex, setVideoIndex, awarenessVideos.length)} className="p-2 rounded-full bg-gray-100 hover:bg-scod hover:text-white transition-colors"><SafeIcon icon={FiChevronRight} className="w-5 h-5" /></button>
                 </div>
               </div>
-              
+
               <div className="overflow-hidden">
-                <motion.div 
+                <motion.div
                   className="flex"
                   animate={{ x: `-${videoIndex * (100 / (window.innerWidth >= 1024 ? 2 : 1))}%` }}
                   style={{ width: `${awarenessVideos.length * (100 / (window.innerWidth >= 1024 ? 2 : 1))}%` }}
@@ -304,9 +305,9 @@ const InternationalBariatric = () => {
               <button onClick={() => handleNext(galleryIndex, setGalleryIndex, galleryImages.length)} className="w-12 h-12 rounded-full border border-gray-700 flex items-center justify-center hover:bg-white hover:text-black transition-all"><SafeIcon icon={FiChevronRight} className="w-6 h-6" /></button>
             </div>
           </div>
-          
+
           <div className="-mx-4 overflow-hidden">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${galleryIndex * (100 / galleryImages.length)}%` }}
               style={{ width: `${(galleryImages.length * 100) / itemsPerView}%` }}
@@ -339,28 +340,28 @@ const InternationalBariatric = () => {
       {/* Video Modal */}
       <AnimatePresence>
         {selectedVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
-            exit={{ opacity: 0 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
             onClick={() => setSelectedVideo(null)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
-              <button 
-                onClick={() => setSelectedVideo(null)} 
+              <button
+                onClick={() => setSelectedVideo(null)}
                 className="absolute top-4 right-4 z-10 text-white bg-black/50 rounded-full p-2"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`} 
-                title={selectedVideo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen 
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
                 className="w-full h-full"
               ></iframe>
             </div>

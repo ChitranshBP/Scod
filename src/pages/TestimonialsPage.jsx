@@ -71,15 +71,6 @@ const TestimonialsPage = () => {
       quote: "How specialized bariatric surgery helped overcome long-standing health challenges." 
     },
     { 
-      id: 10, 
-      title: "Patient Success Story 5", 
-      author: "Verified Patient", 
-      videoId: "69539d8d15b21a591c0e9c05", 
-      type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8d15b21a591c0e9c05/thumbnail-1-0.png", 
-      quote: "Life after surgery: More energy, better mobility, and a completely new outlook on health." 
-    },
-    { 
       id: 11, 
       title: "Patient Success Story 6", 
       author: "Verified Patient", 

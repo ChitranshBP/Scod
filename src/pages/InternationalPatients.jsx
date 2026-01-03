@@ -61,9 +61,9 @@ const InternationalPatients = () => {
     "/assets/scod/africa/african-weightloss.png",
     "/assets/scod/africa/tanzanean-weightloss.png",
     "/assets/scod/africa/african-weightloss-3.png",
-    "/assets/scod/africa/african-weightloss.png",
-    "/assets/scod/africa/tanzanean-weightloss.png",
-    "/assets/scod/africa/african-weightloss-3.png"
+    "/assets/scod/africa/african-realistic-1.png",
+    "/assets/scod/africa/african-realistic-2.png",
+    "/assets/scod/africa/tanzanean-realistic-3.png"
   ];
 
   return (
@@ -196,7 +196,7 @@ const InternationalPatients = () => {
 
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
-                <img src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=800&q=80" alt="SCOD Africa Connection" className="w-full h-[500px] object-cover" />
+                <img src="assets/scod/africa/african-1.webp" alt="SCOD Africa Connection" className="w-full h-[500px] object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 p-8">
                   <h3 className="text-2xl font-bold text-white mb-2">Bridging Continents</h3>

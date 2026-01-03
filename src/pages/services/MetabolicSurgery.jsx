@@ -53,7 +53,7 @@ const MedicalManagement = () => {
         "Sustainable nutrition planning",
         "Non-exercise activity thermogenesis (NEAT)"
       ],
-      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/scod/treatment/medical management/indian-lifestyle.png",
       color: "text-orange-600",
       bg: "bg-orange-50",
       border: "border-orange-200"
@@ -85,7 +85,7 @@ const MedicalManagement = () => {
         "Cognitive behavioral strategies",
         "Long-term habit formation"
       ],
-      image: "https://images.unsplash.com/photo-1573497620053-ea5300f94f21?auto=format&fit=crop&w=800&q=80",
+      image: "/assets/scod/treatment/medical management/indian-counselling.png",
       color: "text-pink-600",
       bg: "bg-pink-50",
       border: "border-pink-200"
@@ -118,30 +118,30 @@ const MedicalManagement = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Medical Metabolic Management.webp" 
-            alt="Medical Management" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Medical Metabolic Management.webp"
+            alt="Medical Management"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Gradient Overlay - Consistent with Treatment Pages */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -156,8 +156,8 @@ const MedicalManagement = () => {
               A scientific, non-invasive approach to weight loss and metabolic health. We combine advanced diagnostics, modern pharmacotherapy, and lifestyle precision to transform your health without surgery.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiClipboard} className="w-5 h-5" />
@@ -178,7 +178,7 @@ const MedicalManagement = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">Our Philosophy</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                Treating Obesity as a <br/> <span className="text-scod">Disease, Not a Choice</span>
+                Treating Obesity as a <br /> <span className="text-scod">Disease, Not a Choice</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 At SCOD, we understand that weight is regulated by complex biological systems, not just willpower. Our non-surgical approach respects your body's physiology.
@@ -186,7 +186,7 @@ const MedicalManagement = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 We believe in a tiered approach to metabolic care. While surgery is a powerful tool for severe cases, **Medical Management** is the foundation. It is designed for patients seeking significant health improvements through scientifically backed, non-invasive methods.
               </p>
-              
+
               <div className="flex items-center gap-4">
                 <div className="px-4 py-2 bg-blue-50 text-scod rounded-lg font-bold text-sm">Evidence Based</div>
                 <div className="px-4 py-2 bg-blue-50 text-scod rounded-lg font-bold text-sm">Physician Led</div>
@@ -195,7 +195,7 @@ const MedicalManagement = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
               <div className="rounded-3xl overflow-hidden shadow-2xl border-8 border-gray-50">
-                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=800&q=80" alt="Doctor Consultation" className="w-full h-auto object-cover" />
+                <img src="/assets/scod/treatment/medical management/indian-philosophy.png" alt="Doctor Consultation" className="w-full h-auto object-cover" />
               </div>
             </motion.div>
           </div>
@@ -212,12 +212,12 @@ const MedicalManagement = () => {
               Dr. Arush Sabharwal helps you decide between medical management and surgery based on clinical guidelines and your personal goals.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {/* Medical Management Card */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               className="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-emerald-500 relative overflow-hidden"
             >
@@ -226,7 +226,7 @@ const MedicalManagement = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Medical Management</h3>
               <p className="text-emerald-600 font-bold mb-6 text-sm uppercase tracking-wide">The Non-Surgical Path</p>
-              
+
               <ul className="space-y-4">
                 {comparison[0].features.map((item, idx) => (
                   <li key={idx} className="flex items-start">
@@ -238,9 +238,9 @@ const MedicalManagement = () => {
             </motion.div>
 
             {/* Surgery Card */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               className="bg-white rounded-3xl p-8 shadow-xl border-t-8 border-scod relative overflow-hidden"
@@ -250,7 +250,7 @@ const MedicalManagement = () => {
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-2">Bariatric Surgery</h3>
               <p className="text-scod font-bold mb-6 text-sm uppercase tracking-wide">The Surgical Intervention</p>
-              
+
               <ul className="space-y-4">
                 {comparison[1].features.map((item, idx) => (
                   <li key={idx} className="flex items-start">
@@ -279,8 +279,8 @@ const MedicalManagement = () => {
             {/* Left: Navigation List */}
             <div className="lg:col-span-5 space-y-3">
               {pillars.map((pillar, index) => (
-                <div 
-                  key={index} 
+                <div
+                  key={index}
                   className={`group relative p-4 rounded-xl cursor-pointer transition-all duration-300 border-2 flex items-center gap-4 ${activePillar === index ? 'bg-white border-scod shadow-lg translate-x-2' : 'bg-gray-50 border-transparent hover:bg-white hover:border-gray-200'}`}
                   onClick={() => setActivePillar(index)}
                 >
@@ -302,7 +302,7 @@ const MedicalManagement = () => {
             {/* Right: Active Content Display */}
             <div className="lg:col-span-7 h-full">
               <AnimatePresence mode="wait">
-                <motion.div 
+                <motion.div
                   key={activePillar}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -324,13 +324,13 @@ const MedicalManagement = () => {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Content Body */}
                   <div className="p-8 md:p-10">
                     <p className="text-lg text-gray-600 leading-relaxed mb-8">
                       {pillars[activePillar].desc}
                     </p>
-                    
+
                     <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
                       <h4 className="text-sm font-bold text-gray-900 uppercase tracking-widest mb-4 flex items-center">
                         <SafeIcon icon={FiTarget} className="w-4 h-4 mr-2 text-scod" />
@@ -369,7 +369,7 @@ const MedicalManagement = () => {
               <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                 For many patients, the best results come from a combination. We utilize medical management to <strong>optimize health before surgery</strong> and to <strong>prevent weight regain</strong> years after surgery.
               </p>
-              
+
               <ul className="space-y-4 mb-8">
                 <li className="flex items-center text-blue-50">
                   <SafeIcon icon={FiCheckCircle} className="w-6 h-6 text-emerald-400 mr-3" />
@@ -385,7 +385,7 @@ const MedicalManagement = () => {
                 </li>
               </ul>
             </motion.div>
-            
+
             <motion.div initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 text-center">
               <SafeIcon icon={FiTrendingUp} className="w-16 h-16 text-emerald-300 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Long-Term Success</h3>
