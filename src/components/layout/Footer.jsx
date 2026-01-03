@@ -120,9 +120,11 @@ const Footer = () => {
           <div className="text-slate-500 text-sm text-center md:text-left">
             © {new Date().getFullYear()} SCOD Medical Center. All rights reserved.
           </div>
+          <div className="text-slate-500 text-sm md:text-center">
+            Made and Design by <a href="https://brandingpioneers.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Branding Pioneers</a>
+          </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm">
-            <span className="text-slate-500 hover:text-white transition-colors cursor-pointer">Privacy Policy</span>
-            <span className="text-slate-500 hover:text-white transition-colors cursor-pointer">Sitemap</span>
+            <Link to="/privacy-policy" className="text-slate-500 hover:text-white transition-colors cursor-pointer">Privacy Policy</Link>
           </div>
         </div>
       </div>

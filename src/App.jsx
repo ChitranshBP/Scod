@@ -24,6 +24,7 @@ import TestimonialsPage from './pages/TestimonialsPage';
 import ContactPage from './pages/ContactPage';
 import ThankYouPage from './pages/ThankYouPage';
 import FeelGreatSystem from './pages/FeelGreatSystem';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import './App.css';
 
 // Component to scroll to top on route change
@@ -68,6 +69,7 @@ function App() {
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/thank-you" element={<ThankYouPage />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
         </AnimatePresence>
         <Footer />
