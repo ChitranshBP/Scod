@@ -19,7 +19,7 @@ const Navbar = () => {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [internationalOpen, setInternationalOpen] = useState(false);
   const [mobileActiveTab, setMobileActiveTab] = useState(null);
-  
+
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -54,8 +54,8 @@ const Navbar = () => {
   const DesktopSubmenuItem = ({ to, icon, label, isHeader = false }) => {
     const isActive = location.pathname === to;
     return (
-      <Link 
-        to={to} 
+      <Link
+        to={to}
         className={`flex items-center px-4 py-3 transition-colors ${isActive ? `bg-blue-50 text-scod font-medium ${isHeader ? 'border-b border-blue-100' : ''}` : isHeader ? 'text-gray-900 font-medium border-b border-gray-100 hover:bg-gray-50 hover:text-scod' : 'text-gray-600 hover:bg-gray-50 hover:text-scod'}`}
         onClick={() => {
           setAboutOpen(false);
@@ -83,7 +83,7 @@ const Navbar = () => {
 
           <div className="hidden lg:flex items-center space-x-6">
             <Link to="/" className={getLinkClass('/')}>Home</Link>
-            
+
             {/* About Dropdown */}
             <div className="relative h-full flex items-center group" onMouseEnter={() => setAboutOpen(true)} onMouseLeave={() => setAboutOpen(false)}>
               <button className={`font-medium flex items-center space-x-1 transition-colors duration-300 ${location.pathname.includes('/about') ? activeColor : textColor}`}>
@@ -95,7 +95,7 @@ const Navbar = () => {
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border-t-4 border-scod ring-1 ring-black/5 overflow-hidden" >
                     <DesktopSubmenuItem to="/about" icon={FiUser} label="About Dr. Arush" />
                     <DesktopSubmenuItem to="/about-clinic" icon={FiActivity} label="About SCOD Clinic" />
-                    <DesktopSubmenuItem to="/media-page" icon={FiAward} label="Press & Achievements" />
+                    {/* <DesktopSubmenuItem to="/media-page" icon={FiAward} label="Press & Achievements" /> */}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -243,7 +243,7 @@ const Navbar = () => {
                 </div>
 
                 <Link to="/contact" className={`block font-bold text-lg px-2 py-3 rounded-lg ${location.pathname === '/contact' ? 'text-scod' : 'text-gray-700'}`}>Contact</Link>
-                
+
                 <div className="pt-4">
                   <a href="tel:+918130130489" className="flex items-center justify-center space-x-2 w-full bg-scod text-white py-4 rounded-xl font-bold shadow-lg">
                     <SafeIcon icon={FiPhone} className="w-5 h-5" />

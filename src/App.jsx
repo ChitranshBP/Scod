@@ -45,7 +45,7 @@ function App() {
             <Route path="/services/weight-regain" element={<NutritionCare />} />
             <Route path="/services/weight-loss-injectables" element={<WeightLossInjectables />} />
             <Route path="/services/risks-costs" element={<RisksCosts />} />
-            <Route path="/media-page" element={<ServicesPage />} />
+            {/* <Route path="/media-page" element={<ServicesPage />} /> */}
             <Route path="/medical-management" element={<MetabolicSurgery />} />
             <Route path="/resources" element={<PatientResources />} />
             <Route path="/feel-great-system" element={<FeelGreatSystem />} />

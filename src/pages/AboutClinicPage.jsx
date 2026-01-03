@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 
-const { 
-  FiAward, FiUsers, FiHeart, FiCheck, FiGlobe, FiMapPin, 
+const {
+  FiAward, FiUsers, FiHeart, FiCheck, FiGlobe, FiMapPin,
   FiActivity, FiArrowRight, FiX, FiPhone, FiPlusCircle,
   FiChevronRight, FiUser, FiStethoscope, FiClock, FiCalendar
 } = FiIcons;
@@ -26,9 +26,9 @@ const AboutClinicPage = () => {
   const mainLocation = {
     city: "New Delhi",
     type: "Headquarters & Main Clinic",
-    address: "Jeewan Mala Hospital, New Rohtak Road",
+    address: "Vasant Vihar, New Delhi",
     description: "Our primary center offering daily OPDs, comprehensive pre-operative evaluations, and state-of-the-art surgical facilities. This is where Dr. Arush Sabharwal is available for regular consultations.",
-    image: "https://images.unsplash.com/photo-1587351021759-3e566b9af922?auto=format&fit=crop&w=800&q=80",
+    image: "https://brandingpioneers.co.in/scod/scod-clinic.webp",
     schedule: "Mon - Sat: 9:00 AM - 6:00 PM"
   };
 
@@ -37,80 +37,96 @@ const AboutClinicPage = () => {
     {
       city: "Noida",
       type: "Visiting Surgery Center",
-      address: "Sector 51, Noida, Uttar Pradesh",
-      image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80",
+      address: "Shri Ram Singh Hospital Sector 70,Village: Basai, Noida",
+      image: "/assets/scod/locations/noida-center.png",
       note: "Scheduled Surgeries & Weekly OPDs"
     },
     {
       city: "Chandigarh",
       type: "Visiting Surgery Center",
       address: "Sector 34-A, Chandigarh",
-      image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80",
+      image: "/assets/scod/locations/chandigarh-center.png",
       note: "Monthly OPDs & Scheduled Surgeries"
     },
     {
       city: "Tanzania, Africa",
       type: "International Center",
       address: "Dar es Salaam, Tanzania",
-      image: "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?auto=format&fit=crop&w=600&q=80",
+      image: "/assets/scod/locations/tanzania-center.png",
       note: "Quarterly Surgical Camps"
     }
   ];
 
   // Team Data
   const team = [
-    { name: "Dr. Arush Sabharwal", role: "Chairman & Chief Surgeon", bio: "A pioneer in bariatric & metabolic surgery with over 15 years of global experience.", image: "https://brandingpioneers.co.in/scod/dr-arush-final-image.png" },
-    { name: "Dt. Simran Saini", role: "Head of Nutrition", bio: "Expert in post-bariatric nutrition and metabolic lifestyle management.", image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" },
-    { name: "Dr. Priya Kapoor", role: "Clinical Psychologist", bio: "Specializes in behavioral therapy and emotional support for weight loss patients.", image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=400&q=80" },
-    { name: "Dr. Rajesh Verma", role: "Senior Consultant", bio: "Specialist in laparoscopic procedures and patient safety protocols.", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" }
+    {
+      name: "Dr. Arush Sabharwal",
+      role: "Chairman & Chief Surgeon",
+      bio: "A pioneer in bariatric & metabolic surgery with over 15 years of global experience.",
+      image: "https://brandingpioneers.co.in/scod/dr-arush-final-image.png"
+    },
+    {
+      name: "Dt. Kanak Agarwal",
+      role: "Chief Bariatric Nutritionist",
+      bio: "Specializes in clinical nutrition and personalized metabolic diet planning for long-term success.",
+      image: "/assets/scod/team/Kanak-scod.webp"
+    },
+    {
+      name: "Dr. Vishal Garg",
+      role: "Bariatric Physician",
+      bio: "Expert in medical management of obesity and metabolic syndrome pre and post-surgery.",
+      image: "/assets/scod/team/vishalgarg-scod.webp"
+    },
+    {
+      name: "Dr. Pankaj Kumar",
+      role: "Bariatric Physician",
+      bio: "Dedicated to metabolic optimization and long-term medical follow-up of bariatric patients.",
+      image: "/assets/scod/team/dr-pankaj-scod.webp"
+    },
+    {
+      name: "Dr. Abhishek Srivastav",
+      role: "Bariatric Anesthesiologist",
+      bio: "Specialist in safe anesthesia protocols specifically tailored for high-BMI and complex metabolic cases.",
+      image: "/assets/scod/team/dr-abhishek-scod.webp"
+    },
+    {
+      name: "Dr. Sumer Chauhan, MD",
+      role: "Chief Bariatric and Metabolic Councellor",
+      bio: "Focuses on behavioral transformation and psychological resilience throughout the medical journey.",
+      image: "/assets/scod/team/Dr.-Sumerendra-Vir-Singh-Chauhan-scod.webp"
+    }
   ];
 
   // Allied Specialties Data
   const alliedSpecialties = [
     {
-      specialty: "Endocrinology & Diabetology",
-      desc: "Comprehensive management of hormonal imbalances and diabetes care.",
+      specialty: "Obstetrics, Gynaecology & Fertility",
+      desc: "Advanced care for maternal health and fertility enhancement.",
       doctors: [
-        { name: "Dr. Meera Malhotra", degrees: "MD, DM (Endocrinology)", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" },
-        { name: "Dr. Suresh Gupta", degrees: "MD (Medicine), DNB", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=300&q=80" }
+        { name: "Dr. Shivani Sabharwal", degrees: "MS, DNB (Obstetrics & Gynaecology)", image: "/assets/scod/allied/Shivani-scod.webp" },
+        { name: "Dr. Malvika Sabharwal", degrees: "MD, MNAMS (Obstetrics & Gynaecology)", image: "/assets/scod/allied/malvika-scod.webp" },
+        { name: "Dr. Nymphia Walecha", degrees: "MD, DNB (Obstetrics & Gynaecology)", image: "/assets/scod/allied/drnymphia-scod.webp" }
       ]
     },
     {
       specialty: "Plastic & Reconstructive Surgery",
       desc: "Expert body contouring and reconstructive procedures post-weight loss.",
       doctors: [
-        { name: "Dr. Ananya Singh", degrees: "MCh (Plastic Surgery)", image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=300&q=80" }
+        { name: "Dr. Tapeshwar Sehgal", degrees: "MS, MCh (Plastic Surgery)", image: "/assets/scod/allied/tapeshwar-scod.webp" }
       ]
     },
     {
-      specialty: "Gastroenterology",
-      desc: "Advanced care for digestive system disorders and liver health.",
+      specialty: "Urology & Robotic Surgery",
+      desc: "Specialized care for urological conditions using advanced robotic techniques.",
       doctors: [
-        { name: "Dr. Vikram Reddy", degrees: "MD, DM (Gastro)", image: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=300&q=80" },
-        { name: "Dr. Neha Kapoor", degrees: "MD (Medicine)", image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=300&q=80" }
+        { name: "Dr. Ashish Sabharwal", degrees: "MS, MCh (Urology)", image: "/assets/scod/allied/ashish-scod.webp" }
       ]
     },
     {
-      specialty: "Cardiology & Critical Care",
-      desc: "Heart health monitoring and critical care support for surgical patients.",
+      specialty: "Orthopaedics & Joint Replacement",
+      desc: "Comprehensive care for joint health and mobility enhancement.",
       doctors: [
-        { name: "Dr. Rohan Das", degrees: "MD, DM (Cardiology)", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=300&q=80" }
-      ]
-    },
-    {
-      specialty: "Physiotherapy & Rehabilitation",
-      desc: "Physical therapy to enhance mobility and recovery post-surgery.",
-      doctors: [
-        { name: "Dr. Amit Kumar", degrees: "BPT, MPT (Sports)", image: "https://images.unsplash.com/photo-1612916628679-66821a81232c?auto=format&fit=crop&w=300&q=80" },
-        { name: "Dr. Suman Verma", degrees: "BPT, MPT (Ortho)", image: "https://images.unsplash.com/photo-1527613426441-4da17471b66d?auto=format&fit=crop&w=300&q=80" }
-      ]
-    },
-    {
-      specialty: "Anesthesiology",
-      desc: "Safe and effective anesthesia management for all surgical procedures.",
-      doctors: [
-        { name: "Dr. Rahul Sharma", degrees: "MD (Anaesthesia)", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=300&q=80" },
-        { name: "Dr. Preeti Jain", degrees: "DA, DNB", image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=300&q=80" }
+        { name: "Dr. Anil Raheja", degrees: "MS (Orthopaedics)", image: "/assets/scod/allied/anil-scod.webp" }
       ]
     }
   ];
@@ -128,7 +144,7 @@ const AboutClinicPage = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column: Text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -154,18 +170,18 @@ const AboutClinicPage = () => {
             </motion.div>
 
             {/* Right Column: Clinic Image - Height Increased */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
               <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative z-10 h-[450px] md:h-[500px] lg:h-[650px]">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/scod-clinic.webp" 
-                  onError={(e) => {e.target.src='https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80'}} 
-                  alt="SCOD Clinic Interior" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/scod-clinic.webp"
+                  onError={(e) => { e.target.src = 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80' }}
+                  alt="SCOD Clinic Interior"
+                  className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                 <div className="absolute bottom-8 left-8 text-white">
@@ -185,7 +201,7 @@ const AboutClinicPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Story Text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -196,7 +212,7 @@ const AboutClinicPage = () => {
                 <span className="text-scod font-bold uppercase tracking-widest">Our Heritage</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                A Century of <br/> <span className="text-scod">Healing</span>
+                A Century of <br /> <span className="text-scod">Healing</span>
               </h2>
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
@@ -214,17 +230,17 @@ const AboutClinicPage = () => {
             </motion.div>
 
             {/* Visual */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="order-1 lg:order-2 relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 h-[600px]">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/sabharwal-family.webp" 
-                  alt="Medical History" 
-                  className="w-full h-full object-cover  transition-all duration-700" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/sabharwal-family.webp"
+                  alt="Medical History"
+                  className="w-full h-full object-cover  transition-all duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
@@ -249,7 +265,7 @@ const AboutClinicPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -278,21 +294,21 @@ const AboutClinicPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column: Vector Image */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="hidden lg:flex justify-center items-center"
             >
-              <img 
-                src="https://img.freepik.com/free-vector/doctor-examining-patient-clinic-illustrated_23-2148856559.jpg?w=900&t=st=1698765432~exp=1698766032~hmac=..." 
-                onError={(e) => {e.target.src='https://cdn-icons-png.flaticon.com/512/3063/3063822.png'}}
-                alt="Patient Care Illustration" 
+              <img
+                src="https://img.freepik.com/free-vector/doctor-examining-patient-clinic-illustrated_23-2148856559.jpg?w=900&t=st=1698765432~exp=1698766032~hmac=..."
+                onError={(e) => { e.target.src = 'https://cdn-icons-png.flaticon.com/512/3063/3063822.png' }}
+                alt="Patient Care Illustration"
                 className="max-w-md w-full drop-shadow-2xl rounded-3xl bg-white/10 p-4 backdrop-blur-sm"
               />
             </motion.div>
             {/* Right Column: Content */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -324,7 +340,7 @@ const AboutClinicPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -366,11 +382,10 @@ const AboutClinicPage = () => {
                 <button
                   key={index}
                   onClick={() => setActiveSpecialty(index)}
-                  className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 flex items-center justify-between group ${
-                    activeSpecialty === index
-                      ? 'bg-scod text-white shadow-lg shadow-blue-900/20'
-                      : 'bg-gray-50 text-gray-600 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100'
-                  }`}
+                  className={`w-full text-left px-6 py-4 rounded-xl transition-all duration-300 flex items-center justify-between group ${activeSpecialty === index
+                    ? 'bg-scod text-white shadow-lg shadow-blue-900/20'
+                    : 'bg-gray-50 text-gray-600 hover:bg-white hover:shadow-md border border-transparent hover:border-gray-100'
+                    }`}
                 >
                   <span className="font-bold text-lg">{item.specialty}</span>
                   {activeSpecialty === index && <SafeIcon icon={FiChevronRight} className="w-5 h-5" />}
@@ -392,7 +407,7 @@ const AboutClinicPage = () => {
                   <div className="flex items-start justify-between mb-8">
                     <div className="flex items-center space-x-4">
                       <div className="p-3 bg-white rounded-xl shadow-sm text-scod">
-                         <SafeIcon icon={FiStethoscope} className="w-6 h-6" />
+                        <SafeIcon icon={FiStethoscope} className="w-6 h-6" />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold text-gray-900">{alliedSpecialties[activeSpecialty].specialty}</h3>
@@ -422,16 +437,16 @@ const AboutClinicPage = () => {
                       </div>
                     ))}
                   </div>
-                   {/* Contextual Info */}
-                   <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 gap-4">
-                      <p className="flex items-center">
-                        <SafeIcon icon={FiActivity} className="w-4 h-4 mr-2" />
-                        Integrated care with bariatric protocols.
-                      </p>
-                      <Link to="/contact" className="font-bold text-scod hover:underline flex items-center">
-                        Book Appointment <SafeIcon icon={FiArrowRight} className="ml-1 w-4 h-4" />
-                      </Link>
-                   </div>
+                  {/* Contextual Info */}
+                  <div className="mt-8 pt-6 border-t border-gray-200 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-500 gap-4">
+                    <p className="flex items-center">
+                      <SafeIcon icon={FiActivity} className="w-4 h-4 mr-2" />
+                      Integrated care with bariatric protocols.
+                    </p>
+                    <Link to="/contact" className="font-bold text-scod hover:underline flex items-center">
+                      Book Appointment <SafeIcon icon={FiArrowRight} className="ml-1 w-4 h-4" />
+                    </Link>
+                  </div>
                 </motion.div>
               </AnimatePresence>
             </div>
@@ -452,7 +467,7 @@ const AboutClinicPage = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
             {/* Main Center - Prominent Display */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -494,7 +509,7 @@ const AboutClinicPage = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {visitingLocations.map((loc, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -532,7 +547,7 @@ const AboutClinicPage = () => {
       {/* Video Modal */}
       <AnimatePresence>
         {isVideoOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -540,17 +555,17 @@ const AboutClinicPage = () => {
             onClick={() => setIsVideoOpen(false)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-              <button 
+              <button
                 onClick={() => setIsVideoOpen(false)}
                 className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-white hover:text-black transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <video 
-                src="https://brandingpioneers.co.in/scod/Dr.Arush%20Sabarwal.mp4" 
-                className="w-full h-full object-cover" 
-                controls 
-                autoPlay 
+              <video
+                src="https://brandingpioneers.co.in/scod/Dr.Arush%20Sabarwal.mp4"
+                className="w-full h-full object-cover"
+                controls
+                autoPlay
               />
             </div>
           </motion.div>

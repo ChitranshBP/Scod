@@ -28,8 +28,7 @@ const ContactPage = () => {
   const locations = [
     { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91 8130130489" },
     { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91 8130130489" },
-    { city: "Noida, UP", address: "SCOD Clinic, Sector 51, Noida, Uttar Pradesh", phone: "+91 8130130489" },
-    { city: "Tanzania, Africa", address: "Dar es Salaam, Tanzania", phone: "+255 754 000 000" }
+  
   ];
 
   return (
