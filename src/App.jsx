@@ -1,5 +1,5 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
@@ -22,12 +22,25 @@ import InternationalPatients from './pages/InternationalPatients';
 import InternationalBariatric from './pages/InternationalBariatric';
 import TestimonialsPage from './pages/TestimonialsPage';
 import ContactPage from './pages/ContactPage';
+import ThankYouPage from './pages/ThankYouPage';
 import FeelGreatSystem from './pages/FeelGreatSystem';
 import './App.css';
+
+// Component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white text-gray-900">
         <Navbar />
         <AnimatePresence mode="wait">
@@ -54,6 +67,7 @@ function App() {
             <Route path="/international-bariatric" element={<InternationalBariatric />} />
             <Route path="/testimonials" element={<TestimonialsPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/thank-you" element={<ThankYouPage />} />
           </Routes>
         </AnimatePresence>
         <Footer />
