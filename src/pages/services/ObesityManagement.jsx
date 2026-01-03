@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 import SEO from '../../components/common/SEO';
+import MedicalAwareness from '../../components/common/MedicalAwareness';
 
 const { FiActivity, FiCheck, FiArrowRight, FiClock, FiDroplet, FiPieChart, FiCoffee, FiSmile, FiHeart, FiClipboard, FiAlertCircle, FiCalendar, FiUsers, FiBookOpen } = FiIcons;
 
@@ -382,6 +383,9 @@ const ObesityManagement = () => {
           </div>
         </div>
       </section>
+
+      {/* Medical Awareness Section */}
+      <MedicalAwareness />
 
       {/* 7. CTA SECTION */}
       <section className="py-20 bg-scod text-white">

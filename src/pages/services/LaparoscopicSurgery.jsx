@@ -154,41 +154,226 @@ const LaparoscopicSurgery = () => {
   ];
 
   const testimonialVideos = [
+    // YouTube Testimonials First
+    { id: 1, title: "Weight Loss Surgery", author: "Mr. Sudesh Gupta", videoId: "R_1SeIg3FaQ", type: "youtube", thumbnail: "https://img.youtube.com/vi/NnSd1zg_Ndk/maxresdefault.jpg", quote: "Mr. Sudesh Gupta shares all the things he is able to do and how much more he enjoys life since having weight loss surgery." },
+    { id: 2, title: "Gastric Bypass", author: "Akanksha Bhardwaj", videoId: "u_dbxl4Y7Vs", type: "youtube", thumbnail: "https://img.youtube.com/vi/u_dbxl4Y7Vs/maxresdefault.jpg", quote: "Akanksha Bhardwaj underwent a Gastric Bypass with HDFC ERGO Insurance." },
+    { id: 3, title: "Super Obesity Transformation", author: "Mrs. Noor Bano", videoId: "1QnINDPc1WU", type: "youtube", thumbnail: "https://img.youtube.com/vi/1GjE_mEZMBM/maxresdefault.jpg", quote: "Mrs. Noor Bano who fought the battle suffering from Super obesity with Multiple Obesity associated comorbidities." },
+    { id: 4, title: "Metabolic Surgery", author: "Mrs. Neetu Aggarwal", videoId: "_IBJ0_YzXog", type: "youtube", thumbnail: "https://img.youtube.com/vi/_IBJ0_YzXog/maxresdefault.jpg", quote: "Mrs. Neetu Aggarwal is a story worth sharing. Before the surgery, her weight was 88 kg with diabetes level very low." },
+    { id: 5, title: "Laparoscopic Gastric Sleeve", author: "Mrs. Shabana", videoId: "6Z4eXkmuRJU", type: "youtube", thumbnail: "https://img.youtube.com/vi/6Z4eXkmuRJU/maxresdefault.jpg", quote: "Mrs. Shabana from Roorkee who underwent Laparoscopic Gastric Sleeve." },
+
+    // Gumlet Testimonials Following
     {
-      title: "Gallbladder Surgery Recovery",
-      author: "Priya Sharma",
-      videoId: "G4Cqz8ZMGts",
-      thumbnail: "https://img.youtube.com/vi/G4Cqz8ZMGts/hqdefault.jpg"
+      id: 6,
+      title: "Patient Success Story 1",
+      author: "Verified Patient",
+      videoId: "69539d8dd73a53e69e26a898",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8dd73a53e69e26a898/thumbnail-1-0.png",
+      quote: "Witness the life-changing results and incredible journey of our patients who chose health and vitality."
     },
     {
-      title: "Hernia Repair Success",
-      author: "Rahul Verma",
-      videoId: "JPaK5uLhBsw",
-      thumbnail: "https://img.youtube.com/vi/JPaK5uLhBsw/hqdefault.jpg"
+      id: 7,
+      title: "Patient Success Story 2",
+      author: "Verified Patient",
+      videoId: "69539d8df3928b38fcf8f0a8",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8df3928b38fcf8f0a8/thumbnail-1-0.png",
+      quote: "A remarkable journey of regaining health and confidence through advanced metabolic care."
     },
     {
-      title: "Patient Experience",
-      author: "Amit Kumar",
-      videoId: "TaOuNUjv_Dc",
-      thumbnail: "https://img.youtube.com/vi/TaOuNUjv_Dc/hqdefault.jpg"
+      id: 8,
+      title: "Patient Success Story 3",
+      author: "Verified Patient",
+      videoId: "69539d9415b21a591c0e9cde",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d9415b21a591c0e9cde/thumbnail-1-0.png",
+      quote: "Sharing the experience of transformation and the support received during the recovery phase."
+    },
+    {
+      id: 9,
+      title: "Patient Success Story 4",
+      author: "Verified Patient",
+      videoId: "69539d8ef3928b38fcf8f0cd",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8ef3928b38fcf8f0cd/thumbnail-1-0.png",
+      quote: "How specialized bariatric surgery helped overcome long-standing health challenges."
+    },
+    {
+      id: 11,
+      title: "Patient Success Story 6",
+      author: "Verified Patient",
+      videoId: "69539d56f3928b38fcf8ec28",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d56f3928b38fcf8ec28/thumbnail-1-0.png",
+      quote: "Every step of the way was handled with care, from the first consult to post-op follow-ups."
+    },
+    {
+      id: 12,
+      title: "Patient Success Story 7",
+      author: "Verified Patient",
+      videoId: "69539d5615b21a591c0e97c5",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d5615b21a591c0e97c5/thumbnail-1-0.png",
+      quote: "Finding health and wellness again. A heartfelt testimonial of a life transformed."
+    },
+    {
+      id: 13,
+      title: "Patient Success Story 8",
+      author: "Verified Patient",
+      videoId: "69539d53d73a53e69e26a3b4",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d53d73a53e69e26a3b4/thumbnail-1-0.png",
+      quote: "Overcoming obesity and diabetes. A true story of resilience and medical excellence."
+    },
+    {
+      id: 14,
+      title: "Patient Success Story 9",
+      author: "Verified Patient",
+      videoId: "69539c6df3928b38fcf8d9dd",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6df3928b38fcf8d9dd/thumbnail-1-0.png",
+      quote: "A journey of hope turned into reality. Witness the metabolic transformation that changed everything."
+    },
+    {
+      id: 15,
+      title: "Patient Success Story 10",
+      author: "Verified Patient",
+      videoId: "69539cf4d73a53e69e269ca1",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539cf4d73a53e69e269ca1/thumbnail-1-0.png",
+      quote: "Reclaiming vitality and freedom. How our specialized care protocols supported this patient's success."
+    },
+    {
+      id: 16,
+      title: "Patient Success Story 11",
+      author: "Verified Patient",
+      videoId: "69539c6dd73a53e69e2691c8",
+      type: "gumlet",
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6dd73a53e69e2691c8/thumbnail-1-0.png",
+      quote: "Sustainable results and a brand new lifestyle. A powerful account of the SCOD surgical experience."
     }
   ];
 
   const awarenessVideos = [
     {
-      title: "Understanding Gallstones",
+      id: 1,
+      title: "Weightloss Experience with Bariatric Surgery and Options for weight regain explained with GLP1",
+      category: "Awareness",
+      thumbnail: "https://img.youtube.com/vi/TaOuNUjv_Dc/hqdefault.jpg",
+      videoId: "TaOuNUjv_Dc",
+      duration: ""
+    },
+    {
+      id: 2,
+      title: "Shri Durgiana Temple, Amritsar is the oldest temple of lord hanuman",
+      category: "Awareness",
+      thumbnail: "https://img.youtube.com/vi/G4Cqz8ZMGts/hqdefault.jpg",
+      videoId: "G4Cqz8ZMGts",
+      duration: ""
+    },
+    {
+      id: 3,
+      title: "A New Beginning Post-Surgery at SCOD Clinic Associated Hospital, New Delhi",
+      category: "Recovery",
+      thumbnail: "https://img.youtube.com/vi/JPaK5uLhBsw/hqdefault.jpg",
+      videoId: "JPaK5uLhBsw",
+      duration: ""
+    },
+    {
+      id: 4,
+      title: "Happy Diwali to you and your loved ones from SCOD Family",
+      category: "Festive",
+      thumbnail: "https://img.youtube.com/vi/SKy44XwIORo/hqdefault.jpg",
+      videoId: "SKy44XwIORo",
+      duration: ""
+    },
+    {
+      id: 5,
+      title: "Enjoy festive feast without any guilt!",
+      category: "Festive",
+      thumbnail: "https://img.youtube.com/vi/XOm8ba9_h4M/hqdefault.jpg",
+      videoId: "XOm8ba9_h4M",
+      duration: ""
+    },
+    {
+      id: 6,
+      title: "Types of weight loss surgeries",
+      category: "Education",
+      thumbnail: "https://img.youtube.com/vi/rEd-4Pov_iw/hqdefault.jpg",
       videoId: "rEd-4Pov_iw",
-      thumbnail: "https://img.youtube.com/vi/rEd-4Pov_iw/hqdefault.jpg"
+      duration: ""
     },
     {
-      title: "Hernia Symptoms & Repair",
+      id: 7,
+      title: "The truth about diabetes!",
+      category: "Diabetes",
+      thumbnail: "https://img.youtube.com/vi/V-gaaGIaKGw/hqdefault.jpg",
+      videoId: "V-gaaGIaKGw",
+      duration: ""
+    },
+    {
+      id: 8,
+      title: "OMAD- Shortcut or Setback?",
+      category: "Lifestyle",
+      thumbnail: "https://img.youtube.com/vi/c0s3MIIC4Nc/hqdefault.jpg",
+      videoId: "c0s3MIIC4Nc",
+      duration: ""
+    },
+    {
+      id: 9,
+      title: "How Bariatric Surgery is done?",
+      category: "Education",
+      thumbnail: "https://img.youtube.com/vi/bNoFXoLDnEc/hqdefault.jpg",
+      videoId: "bNoFXoLDnEc",
+      duration: ""
+    },
+    {
+      id: 10,
+      title: "Is Bariatric Surgery covered in Insurance?",
+      category: "Insurance",
+      thumbnail: "https://img.youtube.com/vi/wBhZyyHeWtI/hqdefault.jpg",
       videoId: "wBhZyyHeWtI",
-      thumbnail: "https://img.youtube.com/vi/wBhZyyHeWtI/hqdefault.jpg"
+      duration: ""
     },
     {
-      title: "Benefits of Laparoscopy",
+      id: 11,
+      title: "PM targets obesity crisis",
+      category: "Awareness",
+      thumbnail: "https://img.youtube.com/vi/xeHuxyORptg/hqdefault.jpg",
+      videoId: "xeHuxyORptg",
+      duration: ""
+    },
+    {
+      id: 12,
+      title: "Changes after Bariatric Surgery!",
+      category: "Post-Surgery",
+      thumbnail: "https://img.youtube.com/vi/vs2gB7Zyuks/hqdefault.jpg",
       videoId: "vs2gB7Zyuks",
-      thumbnail: "https://img.youtube.com/vi/vs2gB7Zyuks/hqdefault.jpg"
+      duration: ""
+    },
+    {
+      id: 13,
+      title: "TIPS FOR GUT HEALTH!",
+      category: "Gut Health",
+      thumbnail: "https://img.youtube.com/vi/RxVX8HEQULc/hqdefault.jpg",
+      videoId: "RxVX8HEQULc",
+      duration: ""
+    },
+    {
+      id: 14,
+      title: "Amit Shah beats diabetes: Dr. Arush’s take!",
+      category: "Diabetes",
+      thumbnail: "https://img.youtube.com/vi/RXYX-e51hsA/hqdefault.jpg",
+      videoId: "RXYX-e51hsA",
+      duration: ""
+    },
+    {
+      id: 15,
+      title: "Is Bariatric Surgery cheating?",
+      category: "Myths",
+      thumbnail: "https://img.youtube.com/vi/N1eoPQnLlis/hqdefault.jpg",
+      videoId: "N1eoPQnLlis",
+      duration: ""
     }
   ];
 
@@ -599,10 +784,10 @@ const LaparoscopicSurgery = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
             <div className="text-left">
-              <span className="uppercase tracking-widest text-sm font-bold text-scod">Medical Education</span>
-              <h2 className="text-4xl font-bold text-gray-900 mt-2">Educational <span className="text-scod">Resources</span></h2>
+              <span className="uppercase tracking-widest text-sm font-bold text-scod">Expert Insights</span>
+              <h2 className="text-4xl font-bold text-gray-900 mt-2">Medical <span className="text-scod">Awareness</span></h2>
               <p className="text-gray-600 mt-4 max-w-2xl">
-                Learn more about procedures, conditions, and recovery from Dr. Arush Sabharwal.
+                Empowering you with knowledge. Watch Dr. Arush Sabharwal explain complex medical topics in simple terms.
               </p>
             </div>
 
@@ -616,8 +801,8 @@ const LaparoscopicSurgery = () => {
                   <SafeIcon icon={FiChevronRight} className="w-5 h-5" />
                 </button>
               </div>
-              <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-scod font-bold hover:text-blue-700 transition-colors">
-                <span>View All Videos</span>
+              <a href="https://www.youtube.com/@drarushsabharwal" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-2 text-scod font-bold hover:text-blue-700 transition-colors">
+                <span>Visit YouTube Channel</span>
                 <SafeIcon icon={FiYoutube} className="w-5 h-5" />
               </a>
             </div>
@@ -803,7 +988,7 @@ const LaparoscopicSurgery = () => {
               <iframe
                 width="100%"
                 height="100%"
-                src={`https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                src={selectedVideo.type === 'gumlet' ? `https://play.gumlet.io/embed/${selectedVideo.videoId}` : `https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
                 title={selectedVideo.title}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

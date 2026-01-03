@@ -21,7 +21,7 @@ const ContactPage = () => {
 
   const contactCards = [
     { icon: FiPhone, title: "Call Us", info: ["+91 8130130489"], action: "Call Now", link: "tel:+918130130489", color: "bg-blue-50 text-blue-600" },
-    { icon: FiMail, title: "Email Us", info: ["info@scodclinic.com", "patients@scodclinic.com"], action: "Send Email", link: "mailto:info@scodclinic.com", color: "bg-emerald-50 text-emerald-600" },
+    { icon: FiMail, title: "Email Us", info: ["info@scodclinic.com"], action: "Send Email", link: "mailto:info@scodclinic.com", color: "bg-emerald-50 text-emerald-600" },
     { icon: FiMapPin, title: "Headquarters", info: ["87, Paschimi Marg", "Vasant Vihar, New Delhi"], action: "Get Directions", link: "https://maps.google.com", color: "bg-indigo-50 text-indigo-600" },
     { icon: FiClock, title: "Working Hours", info: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"], action: "Book Appointment", link: "#appointment", color: "bg-orange-50 text-orange-600" }
   ];
