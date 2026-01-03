@@ -113,7 +113,7 @@ const MoreStories = () => {
             className="mb-2 md:mb-0"
           >
             <Link
-              to="/resources"
+              to="/testimonials"
               className="group flex items-center gap-2 text-scod font-bold text-lg hover:gap-3 transition-all"
             >
               <span>View All Reviews</span>

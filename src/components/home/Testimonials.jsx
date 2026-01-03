@@ -123,7 +123,7 @@ const Testimonials = () => {
             viewport={{ once: true }}
             className="mb-4 md:mb-0"
           >
-             <Link to="/resources" className="group flex items-center gap-2 text-scod font-bold text-lg hover:gap-3 transition-all">
+             <Link to="/testimonials" className="group flex items-center gap-2 text-scod font-bold text-lg hover:gap-3 transition-all">
                 <span>View All Stories</span>
                 <SafeIcon icon={FiArrowRight} className="w-5 h-5" />
             </Link>

@@ -709,7 +709,7 @@ const LaparoscopicSurgery = () => {
                     </li>
                   </ul>
                 </div>
-                <a href="tel:911" className="inline-flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors" >
+                <a href="tel:+918130130489" className="inline-flex items-center space-x-2 bg-red-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-700 transition-colors" >
                   <SafeIcon icon={FiPhone} className="w-5 h-5" />
                   <span>Call Emergency Services or Visit ER</span>
                 </a>

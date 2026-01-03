@@ -237,7 +237,7 @@ const MedicalAwareness = () => {
             
             {/* YouTube Link */}
             <a 
-              href="https://www.youtube.com/" 
+              href="https://www.youtube.com/@drarushsabharwal" 
               target="_blank" 
               rel="noopener noreferrer"
               className="group flex items-center gap-2 text-scod font-bold text-lg hover:text-blue-700 transition-all"
