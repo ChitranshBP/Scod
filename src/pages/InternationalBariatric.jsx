@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiGlobe, FiMapPin, FiCheck, FiPhone, FiCalendar, FiHome, FiActivity, FiPlane, FiFileText, FiMessageCircle, FiShield, FiSun, FiChevronLeft, FiChevronRight, FiCamera, FiPlay, FiX, FiDollarSign, FiAward, FiHeart } = FiIcons;
 
@@ -103,6 +104,10 @@ const InternationalBariatric = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Global Bariatric Excellence | International Centers - SCOD"
+        description="Bringing SCOD Clinic's surgical excellence to the world. Learn about our international footprint and dedication to providing high-quality bariatric and metabolic care across diverse borders and cultures."
+      />
 
       {/* 1. HERO SECTION - Standardized */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

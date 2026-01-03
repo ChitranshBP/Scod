@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
-const { 
-  FiAward, FiUsers, FiHeart, FiTarget, FiCheck, FiGlobe, 
-  FiBookOpen, FiActivity, FiArrowRight, FiPlay, FiX, FiYoutube, 
-  FiClock, FiChevronLeft, FiChevronRight 
+const {
+  FiAward, FiUsers, FiHeart, FiTarget, FiCheck, FiGlobe,
+  FiBookOpen, FiActivity, FiArrowRight, FiPlay, FiX, FiYoutube,
+  FiClock, FiChevronLeft, FiChevronRight
 } = FiIcons;
 
 const AboutPage = () => {
@@ -139,22 +140,26 @@ const AboutPage = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
-      exit={{ opacity: 0 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans bg-white text-gray-900"
     >
+      <SEO
+        title="Dr. Arush Sabharwal | Chairman & Chief Surgeon at SCOD Clinic"
+        description="Meet Dr. Arush Sabharwal, a pioneer in bariatric and metabolic surgery with 15+ years of global experience. Expert in laparoscopic procedures that transform lives and restore metabolic health."
+      />
       {/* 1. HERO SECTION - Light Theme */}
       <section className="relative py-12 lg:py-14 bg-blue-50 overflow-hidden">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-white opacity-50 transform skew-x-12 translate-x-20"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }} 
-              animate={{ opacity: 1, x: 0 }} 
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
               <div className="flex items-center space-x-4 mb-6">
@@ -175,13 +180,13 @@ const AboutPage = () => {
                 A legacy of healing passed down through generations. Building a healthier future for India through advanced metabolic care.
               </p>
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href="#origin" 
+                <a
+                  href="#origin"
                   className="bg-scod text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all shadow-lg"
                 >
                   Read The Origin Story
                 </a>
-                <button 
+                <button
                   onClick={() => setIsVideoOpen(true)}
                   className="group flex items-center space-x-3 bg-white text-scod border border-scod px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-all"
                 >
@@ -193,22 +198,22 @@ const AboutPage = () => {
 
             {/* Hero Video - Replaced Image */}
             <motion.div
-               initial={{ opacity: 0, x: 30 }}
-               animate={{ opacity: 1, x: 0 }}
-               transition={{ duration: 0.8, delay: 0.2 }}
-               className="relative hidden lg:block"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative hidden lg:block"
             >
-               <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white aspect-video bg-black">
-                 <video 
-                   src="https://brandingpioneers.co.in/scod/Dr-Arush-Video-2.mp4" 
-                   className="w-full h-full object-cover" 
-                   autoPlay 
-                   loop 
-                   muted 
-                   playsInline
-                   controls
-                 />
-               </div>
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white aspect-video bg-black">
+                <video
+                  src="https://brandingpioneers.co.in/scod/Dr-Arush-Video-2.mp4"
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                />
+              </div>
             </motion.div>
           </div>
         </div>
@@ -219,7 +224,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Story Text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -230,10 +235,10 @@ const AboutPage = () => {
                 <span className="text-scod font-bold uppercase tracking-widest">The Legacy</span>
               </div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                The Origin of a <br/>
+                The Origin of a <br />
                 <span className="text-scod">Medical Dynasty</span>
               </h2>
-              
+
               <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
                   "It all started with my great great grandfather, <span className="font-bold text-gray-900">Lala Jeevanmal Sabharwal</span>, who was a station master in Lahore. One day he heard Gandhiji talking about health and education. Inspired by Gandhiji’s speech, he then insisted that all his four sons would study medicine."
@@ -251,17 +256,17 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Visual */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="order-1 lg:order-2 relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/sabharwal-family.webp" 
-                  alt="Medical History" 
-                  className="w-full h-full object-cover transition-all duration-700" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/sabharwal-family.webp"
+                  alt="Medical History"
+                  className="w-full h-full object-cover transition-all duration-700"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm p-6 border-t border-gray-100">
                   <p className="text-gray-900 font-bold text-lg text-center">Serving Humanity Since 1919</p>
@@ -277,17 +282,17 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Column: Image */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="lg:col-span-5"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-                <img 
-                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png" 
-                  alt="Dr. Arush Sabharwal Vision" 
-                  className="w-full h-auto object-cover" 
+                <img
+                  src="https://brandingpioneers.co.in/scod/dr-arush-final-image.png"
+                  alt="Dr. Arush Sabharwal Vision"
+                  className="w-full h-auto object-cover"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
                   <p className="text-white font-bold text-lg">Dr. Arush Sabharwal</p>
@@ -297,7 +302,7 @@ const AboutPage = () => {
             </motion.div>
 
             {/* Right Column: Text */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -340,7 +345,7 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {timeline.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -379,23 +384,23 @@ const AboutPage = () => {
                 Watch expert analysis, patient stories, and deep dives into metabolic health.
               </p>
             </div>
-            
-            <motion.div 
-              initial={{ opacity: 0, x: 20 }} 
-              whileInView={{ opacity: 1, x: 0 }} 
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               className="flex flex-col items-end gap-6 mb-4 md:mb-0"
             >
               {/* Slider Controls */}
               <div className="flex items-center gap-3">
-                <button 
+                <button
                   onClick={prevPodcast}
                   className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-scod hover:text-white hover:border-scod transition-all duration-300 shadow-sm hover:shadow-md bg-white"
                   aria-label="Previous video"
                 >
                   <SafeIcon icon={FiChevronLeft} className="w-6 h-6" />
                 </button>
-                <button 
+                <button
                   onClick={nextPodcast}
                   className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center text-gray-600 hover:bg-scod hover:text-white hover:border-scod transition-all duration-300 shadow-sm hover:shadow-md bg-white"
                   aria-label="Next video"
@@ -403,10 +408,10 @@ const AboutPage = () => {
                   <SafeIcon icon={FiChevronRight} className="w-6 h-6" />
                 </button>
               </div>
-              
-              <a 
-                href="https://www.youtube.com/" 
-                target="_blank" 
+
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-2 bg-scod hover:bg-blue-700 px-6 py-3 rounded-full text-white font-semibold transition-all shadow-lg shadow-blue-900/20"
               >
@@ -418,30 +423,30 @@ const AboutPage = () => {
 
           {/* Slider Container */}
           <div className="-mx-4 overflow-hidden">
-            <motion.div 
+            <motion.div
               className="flex"
               animate={{ x: `-${currentPodcastIndex * (100 / podcastVideos.length)}%` }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
               style={{ width: `${(podcastVideos.length * 100) / itemsPerView}%` }}
             >
               {podcastVideos.map((video) => (
-                <motion.div 
-                  key={video.id} 
+                <motion.div
+                  key={video.id}
                   className="w-full md:w-1/2 lg:w-1/3 px-4 flex-shrink-0"
                   style={{ width: `${100 / podcastVideos.length}%` }}
                   initial={{ opacity: 0, scale: 0.95 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                 >
-                  <div 
+                  <div
                     className="group cursor-pointer bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 h-full flex flex-col"
                     onClick={() => setActiveVideo(video)}
                   >
                     <div className="relative aspect-video overflow-hidden">
-                      <img 
-                        src={video.thumbnail} 
-                        alt={video.title} 
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                      <img
+                        src={video.thumbnail}
+                        alt={video.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/10 transition-colors">
                         <div className="w-14 h-14 bg-scod rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -483,7 +488,7 @@ const AboutPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {memberships.map((member, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -504,7 +509,7 @@ const AboutPage = () => {
       {/* Video Modal Main */}
       <AnimatePresence>
         {isVideoOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -512,14 +517,14 @@ const AboutPage = () => {
             onClick={() => setIsVideoOpen(false)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-              <button 
+              <button
                 onClick={() => setIsVideoOpen(false)}
                 className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-white hover:text-black transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <video 
-                src="https://brandingpioneers.co.in/scod/Dr-Arush-Video-2.mp4" 
+              <video
+                src="https://brandingpioneers.co.in/scod/Dr-Arush-Video-2.mp4"
                 className="w-full h-full object-cover"
                 controls
                 autoPlay
@@ -532,7 +537,7 @@ const AboutPage = () => {
       {/* Podcast Video Modal */}
       <AnimatePresence>
         {activeVideo && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -540,19 +545,19 @@ const AboutPage = () => {
             onClick={() => setActiveVideo(null)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
-              <button 
+              <button
                 onClick={() => setActiveVideo(null)}
                 className="absolute top-4 right-4 z-10 bg-black/50 text-white p-2 rounded-full hover:bg-white hover:text-black transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={`https://www.youtube.com/embed/${activeVideo.videoId}?autoplay=1`} 
-                title={activeVideo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${activeVideo.videoId}?autoplay=1`}
+                title={activeVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>

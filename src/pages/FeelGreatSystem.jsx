@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
-const { 
-  FiActivity, FiShield, FiCheckCircle, FiArrowRight, 
-  FiInfo, FiHeart, FiZap, FiDroplet, FiUsers, 
+const {
+  FiActivity, FiShield, FiCheckCircle, FiArrowRight,
+  FiInfo, FiHeart, FiZap, FiDroplet, FiUsers,
   FiTrendingDown, FiPieChart, FiClipboard, FiCalendar,
   FiShoppingBag, FiExternalLink
 } = FiIcons;
@@ -93,20 +94,24 @@ const FeelGreatSystem = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900 bg-white"
     >
+      <SEO
+        title="Feel Great System | Holistic Wellness - SCOD Clinic"
+        description="Experience the Feel Great System at SCOD Clinic. Our holistic, science-based approach to metabolic health, vitality, and long-term sustainable wellness that goes far beyond simple weight loss."
+      />
       {/* 1. HERO SECTION */}
       <section className="relative h-[600px] flex items-center bg-slate-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&q=80" 
-            alt="Metabolic Health" 
-            className="w-full h-full object-cover opacity-30" 
+          <img
+            src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1920&q=80"
+            alt="Metabolic Health"
+            className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-scod via-scod/90 to-transparent"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -121,10 +126,10 @@ const FeelGreatSystem = () => {
               Address the root causes of metabolic disease through science-based insulin management and hormonal balancing.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a 
-                href={purchaseLink} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={purchaseLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-emerald-500 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-all shadow-xl flex items-center gap-2 group"
               >
                 <SafeIcon icon={FiShoppingBag} className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -145,7 +150,7 @@ const FeelGreatSystem = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <h2 className="text-4xl font-bold text-gray-900 mb-8 leading-tight">
-                Beyond Weight Loss: <br/><span className="text-scod">A Science-Based Reset</span>
+                Beyond Weight Loss: <br /><span className="text-scod">A Science-Based Reset</span>
               </h2>
               <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                 <p>
@@ -186,7 +191,7 @@ const FeelGreatSystem = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {components.map((comp, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -206,9 +211,9 @@ const FeelGreatSystem = () => {
                     </li>
                   ))}
                 </ul>
-                <a 
-                  href={purchaseLink} 
-                  target="_blank" 
+                <a
+                  href={purchaseLink}
+                  target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center justify-center gap-2 py-4 rounded-xl font-bold text-sm transition-all border-2 ${index === 0 ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-200' : 'bg-emerald-600 border-emerald-600 text-white shadow-lg shadow-emerald-200'}`}
                 >
@@ -232,7 +237,7 @@ const FeelGreatSystem = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {conditions.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -330,10 +335,10 @@ const FeelGreatSystem = () => {
             Ready to start your reset? Order the Feel Great System today or consult with our medical team for a tailored treatment plan.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a 
-              href={purchaseLink} 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <a
+              href={purchaseLink}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-emerald-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-emerald-600 transition-all shadow-xl flex items-center justify-center gap-2 group"
             >
               <SafeIcon icon={FiShoppingBag} className="group-hover:rotate-12 transition-transform" />

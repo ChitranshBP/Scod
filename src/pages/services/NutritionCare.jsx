@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const { FiTrendingUp, FiActivity, FiAlertCircle, FiTool, FiUsers, FiSearch, FiCalendar, FiCheckCircle, FiArrowRight, FiBarChart2, FiRefreshCw, FiShield } = FiIcons;
 
@@ -80,30 +81,34 @@ const NutritionCare = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+      <SEO
+        title="Bariatric Nutrition & Weight Regain Management | SCOD Clinic"
+        description="Master your post-op success with expert bariatric nutrition at SCOD Clinic. Personalized diet plans and long-term support to help you maintain weight loss and prevent weight regain effectively."
+      />
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Managing Weight Regain.webp" 
-            alt="Weight Management" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Managing Weight Regain.webp"
+            alt="Weight Management"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Gradient Overlay - Consistent with Treatment Pages */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-2xl"
           >
@@ -118,8 +123,8 @@ const NutritionCare = () => {
               Weight fluctuation is normal, but significant regain doesn't have to be. We provide the medical tools, diagnostics, and support to get you back on track.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiCalendar} className="w-5 h-5" />
@@ -140,10 +145,10 @@ const NutritionCare = () => {
               Obesity is a chronic disease. Surgery is a powerful tool, but biology and behavior can sometimes push back. It is not a failure of will; it is a signal to adjust treatment.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {causes.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -208,13 +213,13 @@ const NutritionCare = () => {
               We use a multimodal approach to get you back on track, combining medical science with lifestyle support.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tools.map((tool, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className={`p-6 rounded-2xl border border-gray-100 hover:shadow-xl transition-all duration-300 group`}
@@ -263,7 +268,7 @@ const NutritionCare = () => {
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Success Stories</h2>
             <p className="text-gray-600">Real examples of overcoming weight regain (Identities protected).</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {caseStudies.map((study) => (
               <div key={study.id} className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
@@ -276,7 +281,7 @@ const NutritionCare = () => {
                     <span className="text-xs text-red-500 font-bold bg-red-50 px-2 py-1 rounded">{study.issue}</span>
                   </div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div>
                     <p className="text-xs text-gray-400 uppercase font-bold">Diagnosis</p>

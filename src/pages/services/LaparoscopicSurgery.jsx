@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const { FiActivity, FiCheck, FiArrowRight, FiAlertTriangle, FiTrendingUp, FiDownload, FiCalendar, FiUserCheck, FiHelpCircle, FiClock, FiShield, FiPlus, FiMinus, FiUser, FiMail, FiPhone, FiMessageSquare, FiSend, FiAlertCircle, FiInfo, FiPlay, FiChevronLeft, FiChevronRight, FiYoutube, FiX } = FiIcons;
 
@@ -198,6 +199,10 @@ const LaparoscopicSurgery = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Advanced Laparoscopic Surgery | Minimally Invasive Procedures - SCOD"
+        description="Expert laparoscopic and minimally invasive surgeries at SCOD Clinic. Benefit from faster recovery, minimal scarring, and precision care for a wide range of surgical and metabolic conditions."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

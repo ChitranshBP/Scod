@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const { FiActivity, FiShield, FiUserCheck, FiTrendingUp, FiCheckCircle, FiArrowRight, FiClipboard, FiHeart, FiUsers, FiTarget, FiPlus, FiPieChart, FiChevronRight, FiCheck } = FiIcons;
 
@@ -124,6 +125,10 @@ const MedicalManagement = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Metabolic Surgery for Diabetes | SCOD Clinic Delhi"
+        description="Achieve Type 2 Diabetes remission with advanced metabolic surgery at SCOD Clinic. Our procedures target the hormonal root causes of diabetes for long-term blood sugar control and vitality."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

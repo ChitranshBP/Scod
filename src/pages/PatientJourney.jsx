@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiPhone, FiCalendar, FiClipboard, FiActivity, FiCheckCircle, FiHeart, FiArrowRight, FiCheck, FiClock, FiFileText, FiUserCheck } = FiIcons;
 
@@ -146,6 +147,10 @@ const PatientJourney = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Your Bariatric Journey | Step-by-Step Guide - SCOD Clinic"
+        description="Walk through your weight loss transformation at SCOD Clinic. From your initial consultation to lifelong success, we guide you through every step of your personal bariatric and metabolic journey."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

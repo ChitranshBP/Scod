@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiGlobe, FiMapPin, FiCheck, FiPhone, FiCalendar, FiBriefcase, FiHome, FiUser, FiActivity, FiArrowRight, FiPlane, FiFileText, FiMessageCircle, FiShield, FiSun, FiHeart, FiUsers, FiAward, FiDollarSign } = FiIcons;
 
@@ -73,6 +74,10 @@ const InternationalPatients = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="International Patient Services | SCOD Clinic India"
+        description="World-class bariatric care for international patients at SCOD Clinic, India. Dedicated support for travel, luxury accommodation, and global-standard surgical treatment in a caring environment."
+      />
 
       {/* 1. HERO SECTION - Standardized */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

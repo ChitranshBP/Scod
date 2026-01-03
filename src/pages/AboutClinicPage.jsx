@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const {
   FiAward, FiUsers, FiHeart, FiCheck, FiGlobe, FiMapPin,
@@ -138,6 +139,10 @@ const AboutClinicPage = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans bg-white text-gray-900"
     >
+      <SEO
+        title="About SCOD Clinic | Global Leaders in Metabolic Wellness"
+        description="Discover SCOD Clinic's 100-year medical legacy. Learn about our expert multidisciplinary team, patient-centric approach, and commitment to providing world-class metabolic care in India and beyond."
+      />
       {/* 1. HERO SECTION - About SCOD Summary */}
       <section className="relative py-12 bg-blue-50 overflow-hidden">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/50 skew-x-12 translate-x-20"></div>

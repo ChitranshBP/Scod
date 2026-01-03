@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiHelpCircle, FiSearch, FiChevronDown, FiChevronUp, FiFileText, FiActivity, FiGlobe, FiDollarSign, FiCoffee, FiShield, FiPlus, FiMinus, FiArrowRight } = FiIcons;
 
@@ -114,6 +115,10 @@ const PatientResources = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900 bg-gray-50"
     >
+      <SEO
+        title="Patient Resources & FAQs | Preparing for Surgery - SCOD"
+        description="Comprehensive resources for SCOD Clinic patients. Access pre-op checklists, FAQs, and essential guides to ensure a smooth, informed, and successful bariatric surgery journey from start to finish."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

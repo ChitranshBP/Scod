@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiCheckCircle, FiPhone, FiMail, FiHome, FiClock, FiCalendar } = FiIcons;
 
@@ -36,6 +37,10 @@ const ThankYouPage = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans bg-gradient-to-br from-blue-50 via-white to-emerald-50"
     >
+      <SEO
+        title="Thank You | SCOD Clinic Consultation"
+        description="Thank you for choosing SCOD Clinic. Your request has been received. Our expert team will contact you shortly to begin your journey toward better health, metabolic balance, and lasting wellness."
+      />
       {/* Success Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -63,7 +68,7 @@ const ThankYouPage = () => {
             </p>
           </motion.div>
 
- 
+
 
           {/* Next Steps */}
           <div className="text-left mb-12">

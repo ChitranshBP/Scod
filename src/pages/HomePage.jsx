@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 import HeroSection from '../components/home/HeroSection';
 import ServicesOverview from '../components/home/ServicesOverview';
 import AboutPreview from '../components/home/AboutPreview';
@@ -25,22 +26,26 @@ const HomePage = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen"
     >
+      <SEO
+        title="SCOD Clinic | Bariatric & Metabolic Surgery Center in Delhi"
+        description="Transform your life at SCOD Clinic, Delhi's premier institute for bariatric & metabolic surgery. Led by Dr. Arush Sabharwal, we offer advanced, minimally invasive weight loss solutions for long-term health."
+      />
       <HeroSection />
-    <AboutPreview />
+      <AboutPreview />
 
       <ServicesOverview />
-  
+
       {/* Doctor Info Section */}
       <DoctorInfo />
       {/* Why Choose Us Section */}
       <WhyChooseUs />
-<Testimonials />
+      <Testimonials />
       {/* New Patient Transformations Section */}
       <PatientTransformations />
-      
+
       <MoreStories />
       <AwardsSection />
-            {/* Medical Awareness Section - Dark Theme Break */}
+      {/* Medical Awareness Section - Dark Theme Break */}
       <MedicalAwareness />
     </motion.div>
   );

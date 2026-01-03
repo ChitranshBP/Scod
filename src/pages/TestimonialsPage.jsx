@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
 import { Link } from 'react-router-dom';
+import SEO from '../components/common/SEO';
 
 const { FiStar, FiPlay, FiX, FiArrowRight, FiCheckCircle, FiMoreHorizontal, FiChevronLeft, FiChevronRight } = FiIcons;
 
@@ -32,97 +33,97 @@ const TestimonialsPage = () => {
     { id: 3, title: "Super Obesity Transformation", author: "Mrs. Noor Bano", videoId: "1QnINDPc1WU", type: "youtube", thumbnail: "https://img.youtube.com/vi/1GjE_mEZMBM/maxresdefault.jpg", quote: "Mrs. Noor Bano who fought the battle suffering from Super obesity with Multiple Obesity associated comorbidities." },
     { id: 4, title: "Metabolic Surgery", author: "Mrs. Neetu Aggarwal", videoId: "_IBJ0_YzXog", type: "youtube", thumbnail: "https://img.youtube.com/vi/_IBJ0_YzXog/maxresdefault.jpg", quote: "Mrs. Neetu Aggarwal is a story worth sharing. Before the surgery, her weight was 88 kg with diabetes level very low." },
     { id: 5, title: "Laparoscopic Gastric Sleeve", author: "Mrs. Shabana", videoId: "6Z4eXkmuRJU", type: "youtube", thumbnail: "https://img.youtube.com/vi/6Z4eXkmuRJU/maxresdefault.jpg", quote: "Mrs. Shabana from Roorkee who underwent Laparoscopic Gastric Sleeve." },
-    
+
     // Gumlet Testimonials Following
-    { 
-      id: 6, 
-      title: "Patient Success Story 1", 
-      author: "Verified Patient", 
-      videoId: "69539d8dd73a53e69e26a898", 
+    {
+      id: 6,
+      title: "Patient Success Story 1",
+      author: "Verified Patient",
+      videoId: "69539d8dd73a53e69e26a898",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8dd73a53e69e26a898/thumbnail-1-0.png", 
-      quote: "Witness the life-changing results and incredible journey of our patients who chose health and vitality." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8dd73a53e69e26a898/thumbnail-1-0.png",
+      quote: "Witness the life-changing results and incredible journey of our patients who chose health and vitality."
     },
-    { 
-      id: 7, 
-      title: "Patient Success Story 2", 
-      author: "Verified Patient", 
-      videoId: "69539d8df3928b38fcf8f0a8", 
+    {
+      id: 7,
+      title: "Patient Success Story 2",
+      author: "Verified Patient",
+      videoId: "69539d8df3928b38fcf8f0a8",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8df3928b38fcf8f0a8/thumbnail-1-0.png", 
-      quote: "A remarkable journey of regaining health and confidence through advanced metabolic care." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8df3928b38fcf8f0a8/thumbnail-1-0.png",
+      quote: "A remarkable journey of regaining health and confidence through advanced metabolic care."
     },
-    { 
-      id: 8, 
-      title: "Patient Success Story 3", 
-      author: "Verified Patient", 
-      videoId: "69539d9415b21a591c0e9cde", 
+    {
+      id: 8,
+      title: "Patient Success Story 3",
+      author: "Verified Patient",
+      videoId: "69539d9415b21a591c0e9cde",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d9415b21a591c0e9cde/thumbnail-1-0.png", 
-      quote: "Sharing the experience of transformation and the support received during the recovery phase." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d9415b21a591c0e9cde/thumbnail-1-0.png",
+      quote: "Sharing the experience of transformation and the support received during the recovery phase."
     },
-    { 
-      id: 9, 
-      title: "Patient Success Story 4", 
-      author: "Verified Patient", 
-      videoId: "69539d8ef3928b38fcf8f0cd", 
+    {
+      id: 9,
+      title: "Patient Success Story 4",
+      author: "Verified Patient",
+      videoId: "69539d8ef3928b38fcf8f0cd",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8ef3928b38fcf8f0cd/thumbnail-1-0.png", 
-      quote: "How specialized bariatric surgery helped overcome long-standing health challenges." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d8ef3928b38fcf8f0cd/thumbnail-1-0.png",
+      quote: "How specialized bariatric surgery helped overcome long-standing health challenges."
     },
-    { 
-      id: 11, 
-      title: "Patient Success Story 6", 
-      author: "Verified Patient", 
-      videoId: "69539d56f3928b38fcf8ec28", 
+    {
+      id: 11,
+      title: "Patient Success Story 6",
+      author: "Verified Patient",
+      videoId: "69539d56f3928b38fcf8ec28",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d56f3928b38fcf8ec28/thumbnail-1-0.png", 
-      quote: "Every step of the way was handled with care, from the first consult to post-op follow-ups." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d56f3928b38fcf8ec28/thumbnail-1-0.png",
+      quote: "Every step of the way was handled with care, from the first consult to post-op follow-ups."
     },
-    { 
-      id: 12, 
-      title: "Patient Success Story 7", 
-      author: "Verified Patient", 
-      videoId: "69539d5615b21a591c0e97c5", 
+    {
+      id: 12,
+      title: "Patient Success Story 7",
+      author: "Verified Patient",
+      videoId: "69539d5615b21a591c0e97c5",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d5615b21a591c0e97c5/thumbnail-1-0.png", 
-      quote: "Finding health and wellness again. A heartfelt testimonial of a life transformed." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d5615b21a591c0e97c5/thumbnail-1-0.png",
+      quote: "Finding health and wellness again. A heartfelt testimonial of a life transformed."
     },
-    { 
-      id: 13, 
-      title: "Patient Success Story 8", 
-      author: "Verified Patient", 
-      videoId: "69539d53d73a53e69e26a3b4", 
+    {
+      id: 13,
+      title: "Patient Success Story 8",
+      author: "Verified Patient",
+      videoId: "69539d53d73a53e69e26a3b4",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d53d73a53e69e26a3b4/thumbnail-1-0.png", 
-      quote: "Overcoming obesity and diabetes. A true story of resilience and medical excellence." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539d53d73a53e69e26a3b4/thumbnail-1-0.png",
+      quote: "Overcoming obesity and diabetes. A true story of resilience and medical excellence."
     },
-    { 
-      id: 14, 
-      title: "Patient Success Story 9", 
-      author: "Verified Patient", 
-      videoId: "69539c6df3928b38fcf8d9dd", 
+    {
+      id: 14,
+      title: "Patient Success Story 9",
+      author: "Verified Patient",
+      videoId: "69539c6df3928b38fcf8d9dd",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6df3928b38fcf8d9dd/thumbnail-1-0.png", 
-      quote: "A journey of hope turned into reality. Witness the metabolic transformation that changed everything." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6df3928b38fcf8d9dd/thumbnail-1-0.png",
+      quote: "A journey of hope turned into reality. Witness the metabolic transformation that changed everything."
     },
-    { 
-      id: 15, 
-      title: "Patient Success Story 10", 
-      author: "Verified Patient", 
-      videoId: "69539cf4d73a53e69e269ca1", 
+    {
+      id: 15,
+      title: "Patient Success Story 10",
+      author: "Verified Patient",
+      videoId: "69539cf4d73a53e69e269ca1",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539cf4d73a53e69e269ca1/thumbnail-1-0.png", 
-      quote: "Reclaiming vitality and freedom. How our specialized care protocols supported this patient's success." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539cf4d73a53e69e269ca1/thumbnail-1-0.png",
+      quote: "Reclaiming vitality and freedom. How our specialized care protocols supported this patient's success."
     },
-    { 
-      id: 16, 
-      title: "Patient Success Story 11", 
-      author: "Verified Patient", 
-      videoId: "69539c6dd73a53e69e2691c8", 
+    {
+      id: 16,
+      title: "Patient Success Story 11",
+      author: "Verified Patient",
+      videoId: "69539c6dd73a53e69e2691c8",
       type: "gumlet",
-      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6dd73a53e69e2691c8/thumbnail-1-0.png", 
-      quote: "Sustainable results and a brand new lifestyle. A powerful account of the SCOD surgical experience." 
+      thumbnail: "https://video.gumlet.io/6553f91b3699cbd2c01ab6a9/69539c6dd73a53e69e2691c8/thumbnail-1-0.png",
+      quote: "Sustainable results and a brand new lifestyle. A powerful account of the SCOD surgical experience."
     }
   ];
 
@@ -158,28 +159,32 @@ const TestimonialsPage = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+      <SEO
+        title="Success Stories & Patient Testimonials | SCOD Clinic"
+        description="Be inspired by real life-transformations. Read patient success stories and watch video testimonials about their incredible weight loss journeys and health recoveries at SCOD Clinic under our expert care."
+      />
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Testimonials.webp" 
-            alt="Happy Patients" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Testimonials.webp"
+            alt="Happy Patients"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full text-left">
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
             <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/20">
@@ -200,7 +205,7 @@ const TestimonialsPage = () => {
       <div className="bg-white border-b border-gray-100 py-8 relative -mt-8 z-20 mx-4 md:mx-auto max-w-7xl rounded-xl shadow-lg flex flex-wrap justify-between items-center px-8 lg:px-16">
         <div className="flex items-center space-x-4">
           <div className="text-4xl font-bold text-scod">5k+</div>
-          <div className="text-sm text-gray-500 font-medium">Successful<br/>Surgeries</div>
+          <div className="text-sm text-gray-500 font-medium">Successful<br />Surgeries</div>
         </div>
         <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
         <div className="flex items-center space-x-4">
@@ -215,7 +220,7 @@ const TestimonialsPage = () => {
         <div className="w-px h-12 bg-gray-200 hidden md:block"></div>
         <div className="flex items-center space-x-4">
           <div className="text-4xl font-bold text-scod">15+</div>
-          <div className="text-sm text-gray-500 font-medium">Years of<br/>Excellence</div>
+          <div className="text-sm text-gray-500 font-medium">Years of<br />Excellence</div>
         </div>
       </div>
 
@@ -231,7 +236,7 @@ const TestimonialsPage = () => {
           </div>
 
           <AnimatePresence mode="wait">
-            <motion.div 
+            <motion.div
               key={currentPage}
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -240,7 +245,7 @@ const TestimonialsPage = () => {
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             >
               {currentVideos.map((video, index) => (
-                <motion.div 
+                <motion.div
                   key={video.videoId || video.id}
                   className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full"
                 >
@@ -269,14 +274,14 @@ const TestimonialsPage = () => {
           {/* Pagination Controls */}
           {totalPages > 1 && (
             <div className="mt-16 flex justify-center items-center space-x-2">
-              <button 
+              <button
                 onClick={() => paginate(Math.max(1, currentPage - 1))}
                 disabled={currentPage === 1}
                 className={`p-3 rounded-full border transition-all ${currentPage === 1 ? 'text-gray-300 border-gray-200 cursor-not-allowed' : 'text-scod border-scod hover:bg-scod hover:text-white shadow-sm'}`}
               >
                 <SafeIcon icon={FiChevronLeft} className="w-5 h-5" />
               </button>
-              
+
               <div className="flex items-center space-x-2 px-4">
                 {[...Array(totalPages)].map((_, i) => (
                   <button
@@ -289,7 +294,7 @@ const TestimonialsPage = () => {
                 ))}
               </div>
 
-              <button 
+              <button
                 onClick={() => paginate(Math.min(totalPages, currentPage + 1))}
                 disabled={currentPage === totalPages}
                 className={`p-3 rounded-full border transition-all ${currentPage === totalPages ? 'text-gray-300 border-gray-200 cursor-not-allowed' : 'text-scod border-scod hover:bg-scod hover:text-white shadow-sm'}`}
@@ -314,7 +319,7 @@ const TestimonialsPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {transformations.map((item, index) => (
-              <motion.div 
+              <motion.div
                 key={item.id}
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -330,7 +335,7 @@ const TestimonialsPage = () => {
                     <img src={item.after} alt="After" className="w-1/2 h-full object-cover" />
                   </div>
                 )}
-                
+
                 <div className="absolute top-3 left-3">
                   <div className="bg-black/70 backdrop-blur-md text-white text-[9px] font-bold px-2.5 py-1 rounded-full tracking-wider border border-white/10 uppercase shadow-lg">
                     Before
@@ -369,7 +374,7 @@ const TestimonialsPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {googleReviews.map((review, index) => (
-              <motion.div 
+              <motion.div
                 key={review.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -417,27 +422,27 @@ const TestimonialsPage = () => {
       {/* Video Modal */}
       <AnimatePresence>
         {selectedVideo && (
-          <motion.div 
-            initial={{ opacity: 0 }} 
-            animate={{ opacity: 1 }} 
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4"
             onClick={() => setSelectedVideo(null)}
           >
             <div className="relative w-full max-w-5xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl border border-gray-800" onClick={e => e.stopPropagation()}>
-              <button 
+              <button
                 onClick={() => setSelectedVideo(null)}
                 className="absolute top-4 right-4 z-10 text-white/70 hover:text-white bg-black/50 rounded-full p-2 hover:bg-black/80 transition-all"
               >
                 <SafeIcon icon={FiX} className="w-6 h-6" />
               </button>
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src={selectedVideo.type === 'gumlet' ? `https://play.gumlet.io/embed/${selectedVideo.videoId}` : `https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`} 
-                title={selectedVideo.title} 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              <iframe
+                width="100%"
+                height="100%"
+                src={selectedVideo.type === 'gumlet' ? `https://play.gumlet.io/embed/${selectedVideo.videoId}` : `https://www.youtube.com/embed/${selectedVideo.videoId}?autoplay=1`}
+                title={selectedVideo.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
                 className="w-full h-full"
               ></iframe>

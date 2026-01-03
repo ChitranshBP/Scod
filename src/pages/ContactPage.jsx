@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiMapPin, FiPhone, FiMail, FiClock, FiSend, FiUser, FiMessageSquare, FiArrowRight, FiGlobe } = FiIcons;
 
@@ -33,6 +34,10 @@ const ContactPage = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="min-h-screen pt-20 font-sans text-gray-900" >
+      <SEO
+        title="Contact SCOD Clinic | Locations in Delhi, Noida & Chandigarh"
+        description="Contact SCOD Clinic for expert weight loss consultation. Visit our state-of-the-art centers in Delhi, Noida, and Chandigarh. Start your life-transforming journey toward sustainable health today."
+      />
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">

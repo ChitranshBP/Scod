@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const { FiActivity, FiShield, FiTrendingDown, FiCheckCircle, FiAlertTriangle, FiCalendar, FiArrowRight, FiTrendingUp, FiDroplet, FiUserCheck, FiClock, FiX } = FiIcons;
 
@@ -88,6 +89,10 @@ const WeightLossInjectables = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Weight Loss Injectables & Medical Support | SCOD Clinic"
+        description="Advanced medical weight loss with FDA-approved injectables at SCOD Clinic. Professional medical support and appetite regulation for effective, non-surgical obesity management and health improvement."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

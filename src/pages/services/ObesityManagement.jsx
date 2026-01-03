@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const { FiActivity, FiCheck, FiArrowRight, FiClock, FiDroplet, FiPieChart, FiCoffee, FiSmile, FiHeart, FiClipboard, FiAlertCircle, FiCalendar, FiUsers, FiBookOpen } = FiIcons;
 
@@ -61,30 +62,34 @@ const ObesityManagement = () => {
   ];
 
   return (
-    <motion.div 
-      initial={{ opacity: 0 }} 
-      animate={{ opacity: 1 }} 
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
-      
+      <SEO
+        title="Medical Obesity Management & Treatment | SCOD Clinic"
+        description="Comprehensive non-surgical obesity management at SCOD Clinic. We combine science-backed medical weight loss, specialized nutrition, and lifestyle medicine for sustainable and healthy results."
+      />
+
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Diet,Nutrition & Counselling,.webp" 
-            alt="Healthy Nutrition" 
-            className="w-full h-full object-cover object-center opacity-40" 
+          <img
+            src="https://brandingpioneers.co.in/scod/scod-breadcrumbs/Diet,Nutrition & Counselling,.webp"
+            alt="Healthy Nutrition"
+            className="w-full h-full object-cover object-center opacity-40"
           />
           {/* Gradient Overlay - Consistent with Treatment Pages */}
           <div className="absolute inset-0 bg-gradient-to-r from-scod/95 via-scod/80 to-transparent"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }} 
-            animate={{ opacity: 1, x: 0 }} 
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-3xl"
           >
@@ -99,8 +104,8 @@ const ObesityManagement = () => {
               Surgery is the tool; nutrition is the fuel. Our comprehensive program combines medical nutrition therapy with behavioral counselling to ensure lifelong success.
             </p>
             <div className="flex flex-col sm:flex-row gap-5">
-              <Link 
-                to="/contact" 
+              <Link
+                to="/contact"
                 className="bg-white text-scod px-8 py-3 rounded-full font-bold text-base hover:bg-gray-100 transition-all shadow-lg flex items-center justify-center space-x-2"
               >
                 <SafeIcon icon={FiClipboard} className="w-5 h-5" />
@@ -121,7 +126,7 @@ const ObesityManagement = () => {
                 <span className="uppercase tracking-widest text-sm font-bold text-scod">The Foundation</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                More Than Just <br/> <span className="text-scod">Calories In, Calories Out</span>
+                More Than Just <br /> <span className="text-scod">Calories In, Calories Out</span>
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 For patients with obesity and diabetes, food acts as a hormonal signal. The right nutrition can lower insulin resistance, reduce inflammation, and enhance surgical outcomes.
@@ -129,7 +134,7 @@ const ObesityManagement = () => {
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 At SCOD, we don't believe in "dieting" in the traditional sense. We teach <strong>Metabolic Nutrition</strong>—eating to fuel your body's recovery and maintain a healthy weight set-point long-term.
               </p>
-              
+
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 mt-1">
@@ -179,8 +184,8 @@ const ObesityManagement = () => {
             {/* Phase Navigation */}
             <div className="lg:col-span-4 space-y-3">
               {phases.map((phase, idx) => (
-                <button 
-                  key={idx} 
+                <button
+                  key={idx}
                   onClick={() => setActivePhase(idx)}
                   className={`w-full text-left p-5 rounded-xl transition-all duration-300 flex items-center border-2 ${activePhase === idx ? 'bg-white border-scod shadow-md' : 'bg-white/50 border-transparent hover:bg-white hover:border-gray-200'}`}
                 >
@@ -199,7 +204,7 @@ const ObesityManagement = () => {
             {/* Phase Content */}
             <div className="lg:col-span-8">
               <AnimatePresence mode="wait">
-                <motion.div 
+                <motion.div
                   key={activePhase}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -273,7 +278,7 @@ const ObesityManagement = () => {
               <p className="text-blue-100 font-medium mb-4">Daily Protein Goal</p>
               <p className="text-sm text-blue-50 opacity-90">Essential for wound healing and preserving muscle mass during rapid weight loss.</p>
             </div>
-            
+
             <div className="bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl p-8 text-white shadow-lg">
               <div className="bg-white/20 w-12 h-12 rounded-xl flex items-center justify-center mb-6 backdrop-blur-sm">
                 <SafeIcon icon={FiDroplet} className="w-6 h-6 text-white" />
@@ -304,10 +309,10 @@ const ObesityManagement = () => {
           </div>
           <div className="space-y-4">
             {sampleMenu.map((slot, index) => (
-              <motion.div 
-                key={index} 
-                initial={{ opacity: 0, x: -20 }} 
-                whileInView={{ opacity: 1, x: 0 }} 
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col sm:flex-row items-center justify-between hover:shadow-md transition-shadow"
@@ -342,7 +347,7 @@ const ObesityManagement = () => {
                 <span className="text-sm font-bold text-orange-700 uppercase tracking-wide">Mind & Behavior</span>
               </div>
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                Healing Your Relationship <br/> with Food
+                Healing Your Relationship <br /> with Food
               </h2>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                 Surgery changes your stomach, but not your brain. Emotional eating, stress triggers, and old habits can resurface. Our behavioural counselling is designed to build mental resilience.

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
+import SEO from '../../components/common/SEO';
 
 const {
   FiActivity, FiCheck, FiArrowRight, FiAlertTriangle,
@@ -184,6 +185,10 @@ const BariatricSurgery = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Bariatric Surgery in Delhi | Weight Loss Experts - SCOD Clinic"
+        description="Reclaim your health with advanced bariatric surgery at SCOD Clinic. Specializing in Gastric Sleeve, Gastric Bypass, and Revisional surgeries for sustainable weight loss and disease remission."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
@@ -347,8 +352,8 @@ const BariatricSurgery = () => {
                 key={key}
                 onClick={() => setActiveTab(key)}
                 className={`px-8 py-4 rounded-full font-bold text-sm md:text-base transition-all duration-300 shadow-sm border-2 ${activeTab === key
-                    ? 'bg-scod text-white border-scod shadow-lg scale-105'
-                    : 'bg-white text-gray-600 border-gray-100 hover:border-scod hover:text-scod'
+                  ? 'bg-scod text-white border-scod shadow-lg scale-105'
+                  : 'bg-white text-gray-600 border-gray-100 hover:border-scod hover:text-scod'
                   }`}
               >
                 {key === 'sleeve' ? 'Gastric Sleeve' :

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiAlertTriangle, FiShield, FiDollarSign, FiFileText, FiPhone, FiActivity, FiCheckCircle, FiXCircle, FiHelpCircle, FiCreditCard, FiArrowRight, FiInfo, FiUserCheck } = FiIcons;
 
@@ -78,6 +79,10 @@ const RisksCosts = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Bariatric Surgery Risks & Costs | Transparent Pricing - SCOD"
+        description="Get reliable information on bariatric surgery risks, safety protocols, and transparent costs at SCOD Clinic. We prioritize patient education, safety, and financial clarity for every procedure."
+      />
 
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">

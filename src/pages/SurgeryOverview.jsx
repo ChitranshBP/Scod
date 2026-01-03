@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../common/SafeIcon';
+import SEO from '../components/common/SEO';
 
 const { FiActivity, FiShield, FiUserCheck, FiTrendingUp, FiCheckCircle, FiArrowRight, FiClipboard, FiAlertCircle, FiHeart, FiUsers } = FiIcons;
 
@@ -84,6 +85,10 @@ const SurgeryOverview = () => {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
+      <SEO
+        title="Surgical Services | SCOD Clinic Bariatric & Metabolic Care"
+        description="Explore SCOD Clinic's comprehensive range of surgical services. From bariatric and metabolic surgery to advanced laparoscopic procedures, we provide holistic, evidence-based care for every patient."
+      />
       {/* 1. HERO SECTION */}
       <section className="relative h-[500px] flex items-center bg-gray-900 text-white overflow-hidden">
         <div className="absolute inset-0 z-0">
