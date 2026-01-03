@@ -70,7 +70,7 @@ const AboutPreview = () => {
               {/* Removed 'autoPlay' and 'muted' attributes */}
               <video 
                 ref={videoRef}
-                src="https://brandingpioneers.co.in/scod/Dr.Arush%20Sabarwal.mp4" 
+                src="https://brandingpioneers.co.in/scod/Dr-Arush-Intro.mp4" 
                 className="w-full h-full object-cover cursor-pointer"
                 loop 
                 playsInline

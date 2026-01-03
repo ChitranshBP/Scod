@@ -28,7 +28,7 @@ const ContactPage = () => {
   const locations = [
     { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91 8130130489" },
     { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91 8130130489" },
-  
+
   ];
 
   return (
@@ -81,7 +81,7 @@ const ContactPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Left: Contact Form */}
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true}}>
+            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="mb-8 text-left">
                 <span className="text-scod font-bold tracking-widest uppercase text-sm">Consultation</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Send Us a Message</h2>
@@ -102,9 +102,14 @@ const ContactPage = () => {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
                   <select name="subject" value={formData.subject} onChange={handleInputChange} className="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:ring-2 focus:ring-scod focus:border-transparent outline-none transition-all" >
                     <option value="">Select Topic</option>
-                    <option value="New Appointment">New Appointment</option>
-                    <option value="Surgery Inquiry">Surgery Inquiry</option>
-                    <option value="International Patient">International Patient</option>
+                    <option value="Bariatric Surgery Inquiry">Bariatric Surgery Inquiry</option>
+                    <option value="Laparoscopic Surgery Inquiry">Laparoscopic Surgery Inquiry</option>
+                    <option value="Body Contouring Inquiry">Body Contouring Inquiry</option>
+                    <option value="Medical Weight Loss Program">Medical Weight Loss Program</option>
+                    <option value="Allied Specialties Consultation">Allied Specialties Consultation</option>
+                    <option value="International Patient Inquiry">International Patient Inquiry</option>
+                    <option value="Patient Support & Resources">Patient Support & Resources</option>
+                    <option value="General Inquiry">General Inquiry</option>
                   </select>
                 </div>
                 <div>
@@ -123,13 +128,18 @@ const ContactPage = () => {
                 <span className="text-scod font-bold tracking-widest uppercase text-sm">Our Network</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Visit Our Centers</h2>
               </div>
-              <div className="bg-gray-200 rounded-3xl overflow-hidden h-64 mb-8 relative shadow-md">
-                <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" alt="Locations Map" className="w-full h-full object-cover opacity-80" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className="bg-white text-gray-900 px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform flex items-center">
-                    <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mr-2" /> View on Google Maps
-                  </a>
-                </div>
+              <div className="rounded-3xl overflow-hidden h-64 mb-8 relative shadow-md border border-gray-100">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3344885842643!2d77.15318687549895!3d28.58871418606939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dbe87c8c90b%3A0x7b6c7c7c7c7c7c7c!2s87%2C%20Paschimi%20Marg%2C%20Block%20D%2C%20Vasant%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110057!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="SCOD Medical Center Location"
+                  className="w-full h-full"
+                ></iframe>
               </div>
               <div className="grid gap-4 flex-grow">
                 {locations.map((loc, index) => (
