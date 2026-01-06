@@ -22,13 +22,13 @@ const ContactPage = () => {
   const contactCards = [
     { icon: FiPhone, title: "Call Us", info: ["+91 8130130489"], action: "Call Now", link: "tel:+918130130489", color: "bg-blue-50 text-blue-600" },
     { icon: FiMail, title: "Email Us", info: ["info@scodclinic.com"], action: "Send Email", link: "mailto:info@scodclinic.com", color: "bg-emerald-50 text-emerald-600" },
-    { icon: FiMapPin, title: "Headquarters", info: ["87, Paschimi Marg", "Vasant Vihar, New Delhi"], action: "Get Directions", link: "https://maps.google.com", color: "bg-indigo-50 text-indigo-600" },
+    { icon: FiMapPin, title: "Our Locations", info: ["Vasant Vihar, New Delhi", "Karol Bagh, New Delhi"], action: "Get Directions", link: "https://maps.app.goo.gl/xYrzr8FSLaN83qMs7", color: "bg-indigo-50 text-indigo-600" },
     { icon: FiClock, title: "Working Hours", info: ["Mon - Sat: 9:00 AM - 6:00 PM", "Sunday: Closed"], action: "Book Appointment", link: "#appointment", color: "bg-orange-50 text-orange-600" }
   ];
 
   const locations = [
-    { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91 8130130489" },
-    { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91 8130130489" },
+    { city: "Vasant Vihar, New Delhi", address: "87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057", phone: "+91 8130130489", mapLink: "https://maps.app.goo.gl/g8LvvV2SuTfJihyJ6" },
+    { city: "Karol Bagh, New Delhi", address: "Pal Mohan Bhavan, 3, New Rohtak Rd, Block 66A, Karol Bagh, Delhi, 110005", phone: "+91 8130130489", mapLink: "https://maps.app.goo.gl/xYrzr8FSLaN83qMs7" },
 
   ];
 
@@ -148,14 +148,22 @@ const ContactPage = () => {
               </div>
               <div className="grid gap-4 flex-grow">
                 {locations.map((loc, index) => (
-                  <div key={index} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-start hover:border-scod transition-colors group text-left">
-                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-scod flex-shrink-0 mr-4 group-hover:bg-scod group-hover:text-white transition-colors">
-                      <SafeIcon icon={FiGlobe} className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900">{loc.city}</h4>
-                      <p className="text-sm text-gray-600 mt-1">{loc.address}</p>
-                      <a href={`tel:${loc.phone}`} className="text-sm font-bold text-scod mt-2 inline-block hover:underline">{loc.phone}</a>
+                  <div key={index} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 hover:border-scod transition-colors group text-left">
+                    <div className="flex items-start">
+                      <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-scod flex-shrink-0 mr-4 group-hover:bg-scod group-hover:text-white transition-colors">
+                        <SafeIcon icon={FiGlobe} className="w-5 h-5" />
+                      </div>
+                      <div className="flex-grow">
+                        <h4 className="font-bold text-gray-900">{loc.city}</h4>
+                        <p className="text-sm text-gray-600 mt-1">{loc.address}</p>
+                        <div className="flex items-center gap-4 mt-2">
+                          <a href={`tel:${loc.phone}`} className="text-sm font-bold text-scod hover:underline">{loc.phone}</a>
+                          <a href={loc.mapLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-sm font-bold text-scod hover:text-blue-700 transition-colors">
+                            <SafeIcon icon={FiMapPin} className="w-4 h-4 mr-1" />
+                            Directions
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
