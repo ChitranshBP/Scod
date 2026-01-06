@@ -71,12 +71,46 @@ const Footer = () => {
             </h3>
 
             <div className="space-y-6">
-              <div className="flex items-start space-x-3 group">
-                <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mt-1 shrink-0" />
-                <div className="text-sm">
-                  <p className="text-white font-bold mb-1">Vasant Vihar</p>
-                  <p className="text-slate-400">87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057</p>
+              {/* Vasant Vihar Location */}
+              <div className="group">
+                <div className="flex items-start space-x-3 mb-3">
+                  <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mt-1 shrink-0" />
+                  <div className="text-sm">
+                    <p className="text-white font-bold mb-1">Vasant Vihar</p>
+                    <p className="text-slate-400">87, Paschimi Marg, Block D, Vasant Vihar, New Delhi, 110057</p>
+                  </div>
                 </div>
+                <a
+                  href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3344885842643!2d77.15318687549895!3d28.58871418606939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dbe87c8c90b%3A0x7b6c7c7c7c7c7c7c!2s87%2C%20Paschimi%20Marg%2C%20Block%20D%2C%20Vasant%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110057!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-sm font-semibold text-scod hover:text-blue-400 transition-colors ml-8"
+                >
+                  <SafeIcon icon={FiMapPin} className="w-4 h-4" />
+                  <span>Get Directions</span>
+                  <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Karol Bagh Location */}
+              <div className="group">
+                <div className="flex items-start space-x-3 mb-3">
+                  <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mt-1 shrink-0" />
+                  <div className="text-sm">
+                    <p className="text-white font-bold mb-1">Karol Bagh</p>
+                    <p className="text-slate-400">Apollo Spectra Hospital, Karol Bagh, New Delhi</p>
+                  </div>
+                </div>
+                <a
+                  href="https://maps.app.goo.gl/AFuUEGW6NCgJLjrT9?g_st=ic"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 text-sm font-semibold text-scod hover:text-blue-400 transition-colors ml-8"
+                >
+                  <SafeIcon icon={FiMapPin} className="w-4 h-4" />
+                  <span>Get Directions</span>
+                  <SafeIcon icon={FiArrowRight} className="w-4 h-4" />
+                </a>
               </div>
 
               <div className="flex flex-col space-y-2 border-t border-slate-800 pt-4">
@@ -93,20 +127,50 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Map Section */}
+        {/* Map Section - Two Locations */}
         <div className="mb-16">
-          <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3344885842643!2d77.15318687549895!3d28.58871418606939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dbe87c8c90b%3A0x7b6c7c7c7c7c7c7c!2s87%2C%20Paschimi%20Marg%2C%20Block%20D%2C%20Vasant%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110057!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
-              width="100%"
-              height="350"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="SCOD Medical Center Location"
-              className="w-full"
-            ></iframe>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {/* Vasant Vihar Map */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+              <div className="bg-slate-800 px-4 py-3 border-b border-slate-700">
+                <h4 className="text-white font-bold text-sm flex items-center">
+                  <SafeIcon icon={FiMapPin} className="w-4 h-4 mr-2 text-scod" />
+                  Vasant Vihar Clinic
+                </h4>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.3344885842643!2d77.15318687549895!3d28.58871418606939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1dbe87c8c90b%3A0x7b6c7c7c7c7c7c7c!2s87%2C%20Paschimi%20Marg%2C%20Block%20D%2C%20Vasant%20Vihar%2C%20New%20Delhi%2C%20Delhi%20110057!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SCOD Vasant Vihar Location"
+                className="w-full"
+              ></iframe>
+            </div>
+
+            {/* Karol Bagh Map */}
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-slate-800">
+              <div className="bg-slate-800 px-4 py-3 border-b border-slate-700">
+                <h4 className="text-white font-bold text-sm flex items-center">
+                  <SafeIcon icon={FiMapPin} className="w-4 h-4 mr-2 text-scod" />
+                  Karol Bagh Clinic
+                </h4>
+              </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8937!2d77.1876!3d28.6472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzUwLjAiTiA3N8KwMTEnMTUuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="SCOD Karol Bagh Location"
+                className="w-full"
+              ></iframe>
+            </div>
           </div>
         </div>
 
