@@ -5,6 +5,7 @@ import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 import SEO from '../../components/common/SEO';
 import MedicalAwareness from '../../components/common/MedicalAwareness';
+import BMIInfoSection from '../../components/home/BMIInfoSection';
 
 const { FiActivity, FiShield, FiTrendingDown, FiCheckCircle, FiAlertTriangle, FiCalendar, FiArrowRight, FiTrendingUp, FiDroplet, FiUserCheck, FiClock, FiX } = FiIcons;
 
@@ -374,6 +375,9 @@ const WeightLossInjectables = () => {
 
       {/* Medical Awareness Section */}
       <MedicalAwareness />
+
+      {/* BMI Info Section */}
+      <BMIInfoSection />
 
       {/* 6. CTA SECTION */}
       <section className="py-20 bg-scod text-white">

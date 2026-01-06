@@ -12,13 +12,7 @@ const DoctorInfo = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Image Section (Span 5) */}
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-5 relative"
-          >
+          <div className="lg:col-span-5 relative">
             <div className="relative pr-4 pb-4">
               {/* Main Image */}
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-10">
@@ -37,16 +31,10 @@ const DoctorInfo = () => {
               <div className="absolute bottom-0 right-0 w-full h-full border-2 border-scod/20 rounded-2xl -z-10 translate-x-4 translate-y-4"></div>
               {/* Experience Badge */}
             </div>
-          </motion.div>
+          </div>
 
           {/* Content Section (Span 7) */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="lg:col-span-7 lg:pl-10"
-          >
+          <div className="lg:col-span-7 lg:pl-10">
             {/* Standardized Eyebrow Header */}
             <div className="flex items-center space-x-4 mb-4">
               <div className="h-px w-10 bg-scod"></div>
@@ -89,7 +77,7 @@ const DoctorInfo = () => {
                 <SafeIcon icon={FiArrowRight} className="w-5 h-5" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

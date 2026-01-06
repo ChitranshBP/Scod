@@ -38,12 +38,7 @@ const WhyChooseUs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Interactive Content */}
           <div className="lg:pr-8">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="mb-8"
-            >
+            <div className="mb-8">
               {/* Standardized Eyebrow Header */}
               <div className="flex items-center space-x-4 mb-4">
                 <div className="h-px w-10 bg-scod"></div>
@@ -52,7 +47,7 @@ const WhyChooseUs = () => {
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
                 Experience Care <br /> Like Never Before
               </h2>
-            </motion.div>
+            </div>
 
             <div className="space-y-2">
               {features.map((feature, index) => (
@@ -93,12 +88,7 @@ const WhyChooseUs = () => {
           </div>
 
           {/* Right Column - Image Grid */}
-          <motion.div 
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 gap-6 h-full"
-          >
+          <div className="grid grid-cols-2 gap-6 h-full">
             {/* Top Large Image - Clinic Interior */}
             <div className="col-span-2 h-80 rounded-[2rem] overflow-hidden shadow-lg">
               <img 
@@ -120,10 +110,10 @@ const WhyChooseUs = () => {
               <img 
                 src="https://brandingpioneers.co.in/scod/Why-choose-us-scod.webp" 
                 alt="Compassionate Patient Care" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" 
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

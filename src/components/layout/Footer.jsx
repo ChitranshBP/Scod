@@ -7,10 +7,10 @@ const { FiPhone, FiMail, FiMapPin, FiFacebook, FiTwitter, FiInstagram, FiLinkedi
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FiFacebook, href: "#", label: "Facebook" },
-    { icon: FiTwitter, href: "#", label: "Twitter" },
-    { icon: FiInstagram, href: "#", label: "Instagram" },
-    { icon: FiLinkedin, href: "#", label: "LinkedIn" },
+    { icon: FiFacebook, href: "https://www.facebook.com/scodllp/", label: "Facebook" },
+    // { icon: FiTwitter, href: "#", label: "Twitter" },
+    { icon: FiInstagram, href: "https://www.instagram.com/scodclinic/", label: "Instagram" },
+    { icon: FiLinkedin, href: "https://in.linkedin.com/company/scodclinic", label: "LinkedIn" },
   ];
 
   const quickLinks = [
@@ -102,7 +102,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <a
-                  href="https://maps.app.goo.gl/AFuUEGW6NCgJLjrT9?g_st=ic"
+                  href="https://maps.app.goo.gl/3NFgtZRi4VpqgMns9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-2 text-sm font-semibold text-scod hover:text-blue-400 transition-colors ml-8"
@@ -160,7 +160,7 @@ const Footer = () => {
                 </h4>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.8937!2d77.1876!3d28.6472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzUwLjAiTiA3N8KwMTEnMTUuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.0449344564686!2d77.1935835!3d28.6583732!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03b0ae47efd7%3A0xab60af21234f2b78!2sDr%20Arush%20Sabharwal%20-%20Best%20Bariatric%20Surgeon%20in%20Karol%20Bagh%20Delhi!5e0!3m2!1sen!2sin!4v1767703358049!5m2!1sen!2sin"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}

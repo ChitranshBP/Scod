@@ -5,6 +5,7 @@ import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 import SEO from '../../components/common/SEO';
 import MedicalAwareness from '../../components/common/MedicalAwareness';
+import BMIInfoSection from '../../components/home/BMIInfoSection';
 
 const { FiTrendingUp, FiActivity, FiAlertCircle, FiTool, FiUsers, FiSearch, FiCalendar, FiCheckCircle, FiArrowRight, FiBarChart2, FiRefreshCw, FiShield } = FiIcons;
 
@@ -323,6 +324,9 @@ const NutritionCare = () => {
 
       {/* Medical Awareness Section */}
       <MedicalAwareness />
+
+      {/* BMI Info Section */}
+      <BMIInfoSection />
 
     </motion.div>
   );

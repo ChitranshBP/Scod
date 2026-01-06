@@ -5,6 +5,7 @@ import * as FiIcons from 'react-icons/fi';
 import SafeIcon from '../../common/SafeIcon';
 import SEO from '../../components/common/SEO';
 import MedicalAwareness from '../../components/common/MedicalAwareness';
+import BMIInfoSection from '../../components/home/BMIInfoSection';
 
 const { FiActivity, FiShield, FiUserCheck, FiTrendingUp, FiCheckCircle, FiArrowRight, FiClipboard, FiHeart, FiUsers, FiTarget, FiPlus, FiPieChart, FiChevronRight, FiCheck } = FiIcons;
 
@@ -406,6 +407,9 @@ const MedicalManagement = () => {
 
       {/* Medical Awareness Section */}
       <MedicalAwareness />
+
+      {/* BMI Info Section */}
+      <BMIInfoSection />
 
       {/* 6. CTA SECTION */}
       <section className="py-20 bg-gray-50 border-t border-gray-200">
