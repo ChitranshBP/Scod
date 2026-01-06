@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(git remote add:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(npm run dev:*)"
     ]
   }
 }

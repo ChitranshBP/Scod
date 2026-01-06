@@ -94,6 +94,7 @@ const Navbar = () => {
                 {aboutOpen && (
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 10 }} className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border-t-4 border-scod ring-1 ring-black/5 overflow-hidden" >
                     <DesktopSubmenuItem to="/about" icon={FiUser} label="About Dr. Arush" />
+                    <DesktopSubmenuItem to="/dr-shivani-sabharwal" icon={FiHeart} label="About Dr. Shivani" />
                     <DesktopSubmenuItem to="/about-clinic" icon={FiActivity} label="About SCOD Clinic" />
                     {/* <DesktopSubmenuItem to="/media-page" icon={FiAward} label="Press & Achievements" /> */}
                   </motion.div>

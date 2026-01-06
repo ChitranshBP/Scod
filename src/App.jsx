@@ -6,6 +6,7 @@ import Footer from './components/layout/Footer';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import AboutClinicPage from './pages/AboutClinicPage';
+import DrShivaniPage from './pages/DrShivaniPage';
 import ServicesPage from './pages/ServicesPage';
 import BariatricSurgery from './pages/services/BariatricSurgery';
 import MetabolicSurgery from './pages/services/MetabolicSurgery';
@@ -49,6 +50,7 @@ function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/about-clinic" element={<AboutClinicPage />} />
+            <Route path="/dr-shivani-sabharwal" element={<DrShivaniPage />} />
             <Route path="/services" element={<SurgeryOverview />} />
             <Route path="/services/surgery-overview" element={<SurgeryOverview />} />
             <Route path="/services/bariatric-surgery" element={<BariatricSurgery />} />
