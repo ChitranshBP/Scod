@@ -40,7 +40,7 @@ const Navbar = () => {
     setMobileActiveTab(mobileActiveTab === tab ? null : tab);
   };
 
-  const isTransparent = isHome && !isScrolled;
+  const isTransparent = isHome && !isScrolled && !isOpen;
   const textColor = isTransparent ? 'text-white hover:text-blue-200' : 'text-gray-700 hover:text-scod';
   const activeColor = isTransparent ? 'text-white font-semibold' : 'text-scod font-semibold';
   const logoFilter = isTransparent ? 'brightness-0 invert' : '';
@@ -187,12 +187,42 @@ const Navbar = () => {
           </button>
         </div>
 
+        {/* Mobile Menu Overlay */}
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm lg:hidden z-40"
+              onClick={() => setIsOpen(false)}
+            />
+          )}
+        </AnimatePresence>
+
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 rounded-b-2xl overflow-hidden max-h-[85vh] overflow-y-auto" >
+            <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="lg:hidden absolute top-20 left-0 w-full bg-white shadow-2xl border-t border-gray-100 rounded-b-2xl overflow-hidden max-h-[85vh] overflow-y-auto z-50" >
               <div className="px-4 py-6 space-y-2">
                 <Link to="/" className={`block font-bold text-lg px-2 py-2 rounded-lg ${location.pathname === '/' ? 'text-scod bg-blue-50' : 'text-gray-700'}`}>Home</Link>
+
+                {/* About Section */}
+                <div className="border-b border-gray-100 pb-2">
+                  <button onClick={() => toggleMobileTab('about')} className="flex items-center justify-between w-full px-2 py-3 text-left">
+                    <span className="font-bold text-lg text-gray-700">About</span>
+                    <SafeIcon icon={mobileActiveTab === 'about' ? FiMinus : FiPlus} className="w-5 h-5" />
+                  </button>
+                  <AnimatePresence>
+                    {mobileActiveTab === 'about' && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
+                        <Link to="/about" className="block px-3 py-3 text-gray-600 font-medium">About Dr. Arush</Link>
+                        <Link to="/dr-shivani-sabharwal" className="block px-3 py-3 text-gray-600 font-medium">About Dr. Shivani</Link>
+                        <Link to="/about-clinic" className="block px-3 py-3 text-gray-600 font-medium">About SCOD Clinic</Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
 
                 <div className="border-b border-gray-100 pb-2">
                   <button onClick={() => toggleMobileTab('international')} className="flex items-center justify-between w-full px-2 py-3 text-left">
@@ -223,6 +253,24 @@ const Navbar = () => {
                         <Link to="/services/laparoscopic-surgery" className="block px-3 py-3 text-gray-600 font-medium">Laparoscopic Surgery</Link>
                         <Link to="/services/body-contouring" className="block px-3 py-3 text-gray-600 font-medium">Body Contouring</Link>
                         <Link to="/feel-great-system" className="block px-3 py-3 text-gray-600 font-medium">Plant-Based Nutrition (FGS)</Link>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                {/* Medical Management Section */}
+                <div className="border-b border-gray-100 pb-2">
+                  <button onClick={() => toggleMobileTab('medical')} className="flex items-center justify-between w-full px-2 py-3 text-left">
+                    <span className="font-bold text-lg text-gray-700">Medical Mgmt</span>
+                    <SafeIcon icon={mobileActiveTab === 'medical' ? FiMinus : FiPlus} className="w-5 h-5" />
+                  </button>
+                  <AnimatePresence>
+                    {mobileActiveTab === 'medical' && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden pl-4 space-y-1 bg-gray-50 rounded-lg mb-2">
+                        <Link to="/medical-management" className="block px-3 py-3 text-gray-600 font-medium">Metabolic Management</Link>
+                        <Link to="/services/weight-loss-injectables" className="block px-3 py-3 text-gray-600 font-medium">Weight Loss Injectables</Link>
+                        <Link to="/services/obesity-management" className="block px-3 py-3 text-gray-600 font-medium">Diet & Counselling</Link>
+                        <Link to="/services/weight-regain" className="block px-3 py-3 text-gray-600 font-medium">Weight Regain Support</Link>
                       </motion.div>
                     )}
                   </AnimatePresence>
