@@ -40,7 +40,7 @@ const Navbar = () => {
     setMobileActiveTab(mobileActiveTab === tab ? null : tab);
   };
 
-  const isTransparent = isHome && !isScrolled && !isOpen;
+  const isTransparent = isHome && !isScrolled;
   const textColor = isTransparent ? 'text-white hover:text-blue-200' : 'text-gray-700 hover:text-scod';
   const activeColor = isTransparent ? 'text-white font-semibold' : 'text-scod font-semibold';
   const logoFilter = isTransparent ? 'brightness-0 invert' : '';

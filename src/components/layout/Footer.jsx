@@ -98,7 +98,7 @@ const Footer = () => {
                   <SafeIcon icon={FiMapPin} className="w-5 h-5 text-scod mt-1 shrink-0" />
                   <div className="text-sm">
                     <p className="text-white font-bold mb-1">Karol Bagh</p>
-                    <p className="text-slate-400">Apollo Spectra Hospital, Karol Bagh, New Delhi</p>
+                    <p className="text-slate-400">JMH Prime Hospital , New Delhi</p>
                   </div>
                 </div>
                 <a
