@@ -92,8 +92,8 @@ const WeightLossInjectables = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Weight Loss Injectables & Medical Support | SCOD Clinic"
-        description="Advanced medical weight loss with FDA-approved injectables at SCOD Clinic. Professional medical support and appetite regulation for effective, non-surgical obesity management and health improvement."
+        title="Weight Loss Injections in Delhi | Dr. Arush Sabharwal"
+        description="Seeking effective weight loss injections in Delhi? Get expert-guided, medically supervised solutions with Dr. Arush Sabharwal for healthy, sustainable results."
       />
 
       {/* 1. HERO SECTION */}

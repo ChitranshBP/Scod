@@ -128,8 +128,8 @@ const MedicalManagement = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Metabolic Surgery for Diabetes | SCOD Clinic Delhi"
-        description="Achieve Type 2 Diabetes remission with advanced metabolic surgery at SCOD Clinic. Our procedures target the hormonal root causes of diabetes for long-term blood sugar control and vitality."
+        title="Best Metabolic Surgeon in Delhi | Dr. Arush Sabharwal"
+        description="Seeking expert care from the Best Metabolic Surgeon in Delhi? Consult Dr. Arush Sabharwal for advanced weight loss and metabolic surgery with safe, proven outcomes."
       />
 
       {/* 1. HERO SECTION */}

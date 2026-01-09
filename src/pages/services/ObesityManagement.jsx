@@ -71,8 +71,8 @@ const ObesityManagement = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Medical Obesity Management & Treatment | SCOD Clinic"
-        description="Comprehensive non-surgical obesity management at SCOD Clinic. We combine science-backed medical weight loss, specialized nutrition, and lifestyle medicine for sustainable and healthy results."
+        title="Dietician in Delhi | Nutrition Counselling- Dr. Arush Sabharwal"
+        description="Seeking expert dietician in Delhi? Get personalized nutrition counselling with Dr. Arush Sabharwal for weight management and balanced, healthy eating plans."
       />
 
       {/* 1. HERO SECTION */}

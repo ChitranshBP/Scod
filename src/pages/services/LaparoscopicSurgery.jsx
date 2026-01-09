@@ -385,8 +385,8 @@ const LaparoscopicSurgery = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Advanced Laparoscopic Surgery | Minimally Invasive Procedures - SCOD"
-        description="Expert laparoscopic and minimally invasive surgeries at SCOD Clinic. Benefit from faster recovery, minimal scarring, and precision care for a wide range of surgical and metabolic conditions."
+        title="Best Laparoscopic Surgeon in Delhi NCR | Dr. Arush Sabharwal"
+        description="Seeking the best laparoscopic surgeon in Delhi NCR? Dr. Arush Sabharwal offers advanced minimally invasive surgery, faster recovery, and expert care you can trust."
       />
 
       {/* 1. HERO SECTION */}

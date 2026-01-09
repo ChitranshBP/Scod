@@ -392,8 +392,8 @@ const BodyContouring = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Post-Bariatric Body Contouring Surgery | SCOD Clinic"
-        description="Complete your transformation with post-bariatric body contouring at SCOD Clinic. Expert procedures to reshape your body, enhance comfort, and celebrate your success after major weight loss."
+        title="Body Contouring Treatment in Delhi | Dr. Arush Sabharwal"
+        description="Seeking Body Contouring Treatment in Delhi? Get safe, sculpted results with expert care by Dr. Arush Sabharwal, offering personalized, modern body shaping solutions."
       />
 
       {/* 1. HERO SECTION */}

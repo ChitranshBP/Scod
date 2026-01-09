@@ -398,8 +398,8 @@ const BariatricSurgery = () => {
       className="min-h-screen pt-20 font-sans text-gray-900"
     >
       <SEO
-        title="Bariatric Surgery in Delhi | Weight Loss Experts - SCOD Clinic"
-        description="Reclaim your health with advanced bariatric surgery at SCOD Clinic. Specializing in Gastric Sleeve, Gastric Bypass, and Revisional surgeries for sustainable weight loss and disease remission."
+        title="Best Bariatric Surgeon in Delhi | Dr. Arush Sabharwal"
+        description="Seeking the best bariatric surgeon in Delhi? Dr. Arush Sabharwal offers advanced weight loss surgery, safe procedures, and personalized bariatric care."
       />
 
       {/* 1. HERO SECTION */}
